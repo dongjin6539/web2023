@@ -4,64 +4,84 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>레이아웃5</title>
+    <title>레이아웃5 - float 방식</title>
     <style>
         * {
             margin: 0;
             padding: 0;
         }
-        body {
-            background-color: #FFF3E0;
-        }
         #wrap {
-            width: 1200px;
-            height: 1080px;
-            margin: 0 auto;
+            width: 100%;
         }
         #header {
-            width: 1200px;
+            width: 100%;
             height: 100px;
-            background-color: #FFE0B2;
+            background-color: #EEEBE9;
         }
         #nav {
-            width: 1200px;
+            width: 100%;
             height: 100px;
-            background-color: #FFCC80;
-        }
-        #side {
-            width: 400px;
-            height: 780px;
-            background-color: #FFB74D;
-            float: left;
-        }
-        #aside {
-            width: 400px;
-            height: 580px;
-            background-color: #000000;
+            background-color: #B9AAA5;
         }
         #section {
-            width: 800px;
+            width: 100%;
             height: 780px;
-            background-color: #FFA726;
-            float: left;
+            background-color: #886F65;
         }
         #footer {
+            width: 100%;
+            height: 100px;
+            background-color: #4E342E;
+        }
+        .container {
+            width: 1200px;
+            height: inherit;
+            background-color: rgba(0, 0, 0, 0.2);
+            margin: 0 auto;
+        }
+        .header__container {
             width: 1200px;
             height: 100px;
-            background-color: #FF9800;
-            clear: both;
+            background-color: #74574A;
+        }
+        .nav__container {
+            width: 1200px;
+            height: 200px;
+            background-color: #684D43;
+        }
+        .section__container {
+            width: 600px;
+            height: 480px;
+            background-color: #594139;
+            float: left;
+        }
+        .footer__container {
+            width: 600px;
+            height: 480px;
+            background-color: #3E2723;
+            float: left;
         }
     </style>
 </head>
 <body>
     <div id="wrap">
-        <div id="header"></div>
-        <div id="nav"></div>
-        <div id="side">
-            <div id="aside"></div>
+        <div id="header">
+            <div class="container"></div>
         </div>
-        <div id="section"></div>
-        <div id="footer"></div>
+        <div id="nav">
+            <div class="container"></div>
+        </div>
+        <div id="section">
+            <div class="container">
+                <div class="header__container"></div>
+                <div class="nav__container"></div>
+                <div class="section__container"></div>
+                <div class="footer__container"></div>
+            </div>
+        </div>
+        <div id="footer">
+            <div class="container"></div>
+        </div>
     </div>
 </body>
 </html>
