@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        #wrap {
+            width: 1200px;
+            margin: 0 auto;
+        }
+        #side {
+            width: 30%;
+            float: left;
+        }
+        .aside1 {
+            height: 200px;
+            background-color: #111;
+        }
+        .aside2 {
+            height: 200px;
+            background-color: #123;
+        }
+        .aside3 {
+            height: 680px;
+            background-color: #222;
+        }
+        #contents {
+            width: 70%;
+            height: 1080px;
+            background-color: #345;
+            float: left;
+        }
+        .main {
+            height: 600px;
+            background-color: #653;
+        }
+        .c1 {
+            width: 34%;
+            height: 280px;
+            background-color: #467;
+            float: left;
+        }
+        .c2 {
+            width: 34%;
+            height: 280px;
+            background-color: #497;
+            float: left;
+        }
+        .c3 {
+            width: 32%;
+            height: 280px;
+            background-color: #567;
+            float: left;
+        }
+        .f1 {
+            width: 20%;
+            height: 200px;
+            background-color: #353;
+            float: left;
+        }
+        .f2 {
+            width: 80%;
+            height: 100px;
+            background-color: #409;
+            float: left;
+        }
+        .f3 {
+            width: 80%;
+            height: 100px;
+            background-color: #345;
+            float: left;
+        }
+        .clearfix::before,
+        .clearfix::after {
+            content: '';
+            display: block;
+            line-height: 0;
+        }
+        .clearfix::after {
+            clear: both;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <div id="side">
+            <div class="aside1"></div>
+            <div class="aside2"></div>
+            <div class="aside3"></div>
+        </div>
+        <div id="contents">
+            <div class="main"></div>
+            <div class="content clearfix">
+                <div class="c1"></div>
+                <div class="c2"></div>
+                <div class="c3"></div>
+            </div>
+            <div class="footer clearfix">
+                <div class="f1"></div>
+                <div class="f2"></div>
+                <div class="f3"></div>
+            </div>    
+        </div>
+    </div>
+</body>
+</html>

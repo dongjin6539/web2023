@@ -205,7 +205,7 @@
 <pre><code class="language-js">{
     const arr = [100, 200, 300, 400, 500, 600, 700, 800, 900];
 
-    for(let i = 0; i &lt 9; i++){
+    for(let i=0; i&lt;9; i++){
         console.log(arr[i]);
     }
 }
@@ -221,19 +221,59 @@
                     </div>                    
                     <div class="notice">
                         <h4>for( )문을 이용한 연산 방식</h4>
-                        <p>i=0; 0 &lt 9; console.log(arr[0]); i++   //100 <br>
-                            i=1; 1 &lt 9; console.log(arr[1]); i++   //200 <br>
-                            i=2; 2 &lt 9; console.log(arr[2]); i++   //300 <br>
-                            i=3; 3 &lt 9; console.log(arr[3]); i++   //400 <br>
-                            i=4; 4 &lt 9; console.log(arr[4]); i++   //500 <br>
-                            i=5; 5 &lt 9; console.log(arr[5]); i++   //600 <br>
-                            i=6; 6 &lt 9; console.log(arr[6]); i++   //700 <br>
-                            i=7; 7 &lt 9; console.log(arr[7]); i++   //800 <br>
-                            i=8; 8 &lt 9; console.log(arr[8]); i++   //900 <br>
+                        <p>i=0; 0&lt;9; console.log(arr[0]); i++   //100 <br>
+                            i=1; 1&lt;9; console.log(arr[1]); i++   //200 <br>
+                            i=2; 2&lt;9; console.log(arr[2]); i++   //300 <br>
+                            i=3; 3&lt;9; console.log(arr[3]); i++   //400 <br>
+                            i=4; 4&lt;9; console.log(arr[4]); i++   //500 <br>
+                            i=5; 5&lt;9; console.log(arr[5]); i++   //600 <br>
+                            i=6; 6&lt;9; console.log(arr[6]); i++   //700 <br>
+                            i=7; 7&lt;9; console.log(arr[7]); i++   //800 <br>
+                            i=8; 8&lt;9; console.log(arr[8]); i++   //900 <br>
                         </p>
                     </div>                        
                 </div>
                 <!-- //sample06 -->
+
+                <div id="sample05" class="sample">
+                    <h3>07. 배열 : 데이터 불러오기 : 중첩 for( )문</h3>
+                    <p>여러개의 배열된 데이터를 for( )문을 이용해서 불러오는 방법입니다.<br>
+                        for( )문 안에 새로운 for( )문이 들어가 있는 것이다. ex) for(초기값; 조건식; 증감식){실행문; for(초기값; 조건식; 증감식){실행문;}}<br>
+                        실행 : (첫번째 for( )문 반복횟수) *  (두번째 for( )문 반복횟수)
+                    </p>
+                    <div class="script">
+<pre><code class="language-js">for(let i=1; i&lt;=10; i++){
+    console.log("i : " + i);
+    for(let j=1; j&lt;=10; j++){
+        console.log("j : " + j);
+    }
+}
+</code></pre>                        
+                    </div>
+                    <div class="result">
+                        <details>
+                            <summary>결과 확인하기</summary>
+                            <div>
+                                i : 1 , j : 1 , j : 2 , j : 3 , j : 4 , j : 5 , j : 6 , j : 7 , j : 8 , j : 9 , j : 10<br>
+                                i : 2 , j : 1 , j : 2 , j : 3 , j : 4 , j : 5 , j : 6 , j : 7 , j : 8 , j : 9 , j : 10<br>
+                                i : 3 , j : 1 , j : 2 , j : 3 , j : 4 , j : 5 , j : 6 , j : 7 , j : 8 , j : 9 , j : 10<br>
+                                i : 4 , j : 1 , j : 2 , j : 3 , j : 4 , j : 5 , j : 6 , j : 7 , j : 8 , j : 9 , j : 10<br>
+                                i : 5 , j : 1 , j : 2 , j : 3 , j : 4 , j : 5 , j : 6 , j : 7 , j : 8 , j : 9 , j : 10<br>
+                                i : 6 , j : 1 , j : 2 , j : 3 , j : 4 , j : 5 , j : 6 , j : 7 , j : 8 , j : 9 , j : 10<br>
+                                i : 7 , j : 1 , j : 2 , j : 3 , j : 4 , j : 5 , j : 6 , j : 7 , j : 8 , j : 9 , j : 10<br>
+                                i : 8 , j : 1 , j : 2 , j : 3 , j : 4 , j : 5 , j : 6 , j : 7 , j : 8 , j : 9 , j : 10<br>
+                                i : 9 , j : 1 , j : 2 , j : 3 , j : 4 , j : 5 , j : 6 , j : 7 , j : 8 , j : 9 , j : 10<br>
+                                i : 10 , j : 1 , j : 2 , j : 3 , j : 4 , j : 5 , j : 6 , j : 7 , j : 8 , j : 9 , j : 10<br>
+                            </div>
+                        </details>
+                    </div>
+                    <div class="notice">
+                        <h4>실행 방법</h4>
+                        <p>첫번째 for(초기값; 조건식; 증감식){실행문}; 출력 후 두번째 for(초기값; 조건식; 증감식){실행문}; 전체 출력 한 다음에 다시 첫번째 for문으로 이동해서 증감식에 맞게 실행해서 반복해주시면 됩니다.
+                        </p>
+                    </div>              
+                </div>
+                <!-- //sample07 -->
         </div>
     </main>
     <!-- //main -->
@@ -246,84 +286,75 @@
     <script src="assets/js/highlight.min.js"></script>
     <script>hljs.highlightAll();</script>
     <script>
-        // 01. : 변수 데이터 불러오기
-        // 변수안에 저장된 데이터를 불러오는 방법입니다.
-        {
-            let x = 100, y = 200, z = "javascript";
-
-            console.log(x, y, z);
-        }
-
-        // 02. 상수 : 데이터 불러오기
-        // 상수안에 저장된 데이터를 불러오는 방법입니다.
-        {
-            const x = 100, y = 200, z = "javascript";
-
-            console.log(x, y, z);
-        }
-
-        // 03. 배열 : 데이터 불러오기
-        // 여러개의 배열된 데이터를 불러오는 방법입니다.
-        {
-            const arr = [100, 200, "javascript"]
-
-            console.log(arr[0], arr[1], arr[2]);
-        }
-
-        // 04. 배열 : 데이터 불러오기 : 2차 배열
-        // 여러개의 배열된 데이터를 불러오는 방법입니다. ex) const 키 = [값1, 값2, [값3, 값4]] / 값3 : console.log(arr[2[0]]); / 값4 : console.log(arr[2[1]]);
-        {
-            const arr = [100, 200, ["javascript","react"]];
-
-            console.log(arr[0]);
-            console.log(arr[1]);
-            console.log(arr[2][0]);
-            console.log(arr[2][1]);
-        }
-
-        // 05. 배열 : 데이터 불러오기 : 갯수 구하기
-        // 여러개의 배열된 데이터를 불러오는 값의 갯수를 구하는 방법입니다. ex) console.log(키.length);
-        {
-            const arr = [100, 200, "javascript"];
-
-            console.log(arr.length);
-        }
-
         // 06. 배열 : 데이터 불러오기 : for( )문
         // 여러개의 배열된 데이터를 for( )문을 이용해서 불러오는 방법입니다. 
         // for()문 작성 방법 : for(초기값; 조건식; 증감식){실행문}
         // for()문 실행 순서 : 초기값 -> 조건식(true, false 초기값이 맞는지 확인) -> 실행문 -> 증감식
+        // {
+        //     const arr = [100, 200, 300, 400, 500, 600, 700, 800, 900];
+
+        //     // // console.log(arr[0]);
+        //     // // console.log(arr[1]);
+        //     // // console.log(arr[2]);
+        //     // // console.log(arr[3]);
+        //     // // console.log(arr[4]);
+        //     // // console.log(arr[5]);
+        //     // // console.log(arr[6]);
+        //     // // console.log(arr[7]);
+        //     // // console.log(arr[8]);
+        //     // // console.log(arr[9]);
+
+        //     // // //for(초기값; 조건식; 증감식){
+        //     // //     //실행문
+        //     // // }
+
+        //     // for(let i = 0; i<9; i++){
+        //     //     console.log(arr[i]);
+        //     // }
+        //     // i=0; 0<9; console.log(arr[0]); i++   //100
+        //     // i=1; 1<9; console.log(arr[1]); i++   //200
+        //     // i=2; 2<9; console.log(arr[2]); i++   //300
+        //     // i=3; 3<9; console.log(arr[3]); i++   //400
+        //     // i=4; 4<9; console.log(arr[4]); i++   //500
+        //     // i=5; 5<9; console.log(arr[5]); i++   //600
+        //     // i=6; 6<9; console.log(arr[6]); i++   //700
+        //     // i=7; 7<9; console.log(arr[7]); i++   //800
+        //     // i=8; 8<9; console.log(arr[8]); i++   //900
+        //     // i=9; 9<9; END
+        // }
+
+        // {
+        //     const A = [1,2,3,4,5,6,7,8,9,10]
+
+        //     console.log(A.length);      // 10
+
+        //     for(let i=0; i<A.length; i++){
+        //         console.log(A[i]);
+        //         // i=0; 0<10; A[0]=1; i=1;
+        //         // i=1; 1<10; A[1]=2; i=2;
+        //         // i=2; 2<10; A[2]=3; i=3;
+        //         // i=3; 3<10; A[3]=4; i=4;
+        //         // i=4; 4<10; A[4]=5; i=5;
+        //         // i=5; 5<10; A[5]=6; i=6;
+        //         // i=6; 6<10; A[6]=7; i=7;
+        //         // i=7; 7<10; A[7]=8; i=8;
+        //         // i=8; 8<10; A[8]=9; i=9;
+        //         // i=9; 9<10; A[9]=10; i=10;
+        //         // i=10; 10<10;
+        //     }
+        // }
+
+        // 07. 배열 : 데이터 불러오기 : 중첩 for( )문
+        // 여러개의 배열된 데이터를 for( )문을 이용해서 불러오는 방법입니다.
+        // for( )문 안에 새로운 for( )문이 들어가 있는 것이다. ex) for(초기값; 조건식; 증감식){실행문; for(초기값; 조건식; 증감식){실행문;}}
+        // 실행 : (첫번째 for( )문 반복회수) *  (두번째 for( )문 반복횟수)
         {
-            const arr = [100, 200, 300, 400, 500, 600, 700, 800, 900];
-
-            // // console.log(arr[0]);
-            // // console.log(arr[1]);
-            // // console.log(arr[2]);
-            // // console.log(arr[3]);
-            // // console.log(arr[4]);
-            // // console.log(arr[5]);
-            // // console.log(arr[6]);
-            // // console.log(arr[7]);
-            // // console.log(arr[8]);
-            // // console.log(arr[9]);
-
-            // // //for(초기값; 조건식; 증감식){
-            // //     //실행문
-            // // }
-
-            for(let i = 0; i<9; i++){
-                console.log(arr[i]);
+            for(let i=1; i<=3; i++){
+                console.log("i : " + i);
+                for(let j=1; j<=5; j++){
+                    console.log("j : " + j);
+                }
             }
-            i=0; 0<9; console.log(arr[0]); i++   //100
-            i=1; 1<9; console.log(arr[1]); i++   //200
-            i=2; 2<9; console.log(arr[2]); i++   //300
-            i=3; 3<9; console.log(arr[3]); i++   //400
-            i=4; 4<9; console.log(arr[4]); i++   //500
-            i=5; 5<9; console.log(arr[5]); i++   //600
-            i=6; 6<9; console.log(arr[6]); i++   //700
-            i=7; 7<9; console.log(arr[7]); i++   //800
-            i=8; 8<9; console.log(arr[8]); i++   //900
-            i=9; 9<9; END
         }
     </script>
 </body>

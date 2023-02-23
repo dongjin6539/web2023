@@ -4,11 +4,20 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>레이아웃03 - float 유형</title>
+    <title>레이아웃08 - float 유형 - 반응형</title>
     <style>
         * {
             margin: 0;
             padding: 0;
+        }
+        .clearfix::before,
+        .clearfix::after {
+            content: '';
+            display: block;
+            line-height: 0;
+        }
+        .clearfix::after {
+            clear: both;
         }
         body {
             background-color: #E1F5FE;
@@ -18,47 +27,87 @@
             margin: 0 auto;
         }
         #header {
-            width: 1200px;
+            width: 100%;
             height: 100px;
             background-color: #B3E5FC;
         }
         #nav {
-            width: 1200px;
+            width: 100%;
             height: 100px;
             background-color: #81D4FA;
         }
-        #main {
-            width: 1200px;
-            overflow: hidden;
-        }
         #aside {
-            width: 300px;
+            width: 30%;
             height: 780px;
             background-color: #4FC3F7;
             float: left;
         }
         #article1 {
-            width: 900px;
+            width: 70%;
             height: 260px;
             background-color: #29B6F6;
             float: left;
         }
         #article2 {
-            width: 900px;
+            width: 70%;
             height: 260px;
             background-color: #03A9F4;
             float: left;
         }
         #article3 {
-            width: 900px;
+            width: 70%;
             height: 260px;
             background-color: #039BE5;
             float: left;
         }
         #footer {
-            width: 1200px;
+            width: 100%;
             height: 100px;
             background-color: #0288D1;
+        }
+
+        @media (max-width: 1220px){
+            #wrap {
+                width: 96%;
+            }
+            #article2 {
+                width: 35%;
+                height: 520px;
+            }
+            #article3 {
+                width: 35%;
+                height: 520px;
+            }
+        }
+        @media (max-width: 768px){
+            #wrap {
+                width: 100%;
+            }
+            #article1 {
+                width: 70%;
+                height: 390px;
+            }
+            #article2 {
+                width: 70%;
+                height: 390px;
+            }
+            #article3 {
+                display: none;
+            }
+        }
+        @media (max-width: 600px){
+            #aside {
+                width: 100%;
+                height: 200px;
+            }
+            #article1 {
+                width: 100%;    
+                height: 430px;
+            }
+            #article2 {
+                width: 100%;
+                height: 150px;
+            }
         }
     </style>
 </head>
@@ -66,7 +115,7 @@
     <div id="wrap">
         <div id="header"></div>
         <div id="nav"></div>
-        <div id="main">
+        <div id="main" class="clearfix">
             <div id="aside"></div>
             <div id="article1"></div>
             <div id="article2"></div>
