@@ -171,7 +171,7 @@ for(let i=1; i&lt;=100; i++){
                                         document.write("<span style='color:blue'>" + i + "</span>")
                                     }
                                     if(i % 2 == 1){
-                                        document.write("<span style='color:red''>" + i + "</span>")
+                                        document.write("<span style='color:red'>" + i + "</span>")
                                     }
                                 }
                             </script>
@@ -190,19 +190,19 @@ for(let i=1; i&lt;=100; i++){
                 <div id="sample06" class="sample">
                     <h3>06. 데이터 이펙트 : for문을 이용해서 테이블 만들기</h3>
                     <p>중첩 for문을 이용해서 10행 & 10열 칸짜리 테이블 만들기 예제입니다.</p>
-<pre data-line="6-8"class="line-numbers"><code class="language-js">let table = "&lt;table border=1&gt;";
+<pre data-line="6-8"class="line-numbers"><code class="language-js">let table = "&lt;table border=1>";
             
     for(let i=1; i&lt;=10; i++){
-        table += "&lt;tr&gt;";
+        table += "&lt;tr>";
         
         for(let j=1; j&lt;=10; j++){
-            table+= "&lt;td&gt;" + j + "&lt;/td&gt;";
+            table+= "&lt;td>" + j + "&lt;/td>";
         }
 
-        table += "&lt;/tr&gt;";
+        table += "&lt;/tr>";
     }
         
-table += "&lt;/table&gt;";
+    table += "&lt;/table>";
 
 document.write(table);
 </code></pre>
@@ -297,38 +297,23 @@ document.write(table);
         //         }
         //     }
         // }
-
-        // // 05. 데이터 이펙트 : for문을 이용해서 테이블 만들기
-        // {
-        //     let table = "<table border=1>";
-            
-        //     for(let i=1; i<=10; i++){
-        //         table += "<tr>";
-                
-        //         for(let j=1; j<=10; j++){
-        //             table+= "<td>" + j + "</td>";
-        //         }
-
-        //         table += "</tr>";
+        // for(let i=1; i<=10; i++){
+        //     if(i % 2 == 0){
+        //         document.write(i);
+        //     } else {
+        //         document.write(i);
         //     }
-                
-        //     table += "</table>";
-
-        //     document.write(table);
+        // };
+        // for(let i=0; i<=100; i+=3){
+        //     document.write(i);
         // }
-
-        // 07. 데이터 이펙트 : 중첩 for문을 이용해서 구구단 만들기
-        // {
-        //     for(let i=2; i<=9; i++){
-        //         document.write(i + "단","<br>");
-
-        //         for(let j=1; j<=9; j++){
-        //             document.write(i + "*" + j + "=" + i*j);
-        //             document.write("<br>");
-        //         }
-        //     document.write("<br><br>");
-        //     }
-        // }
+        // for(let i=6; i<=6; i++){
+        //     document.write(i + "단","<br>");
+        //     for(let j=1; j<=9; j++){
+        //         document.write(i + "*" + j + "=" + i*j);
+        //         document.write("<br>");
+        //     };
+        // };
     </script>
 </body>
 </html>
