@@ -388,9 +388,9 @@
 
     for(let i=1; i&lt;=arr.length; i++){
         if(i % 2 ==0){
-            document.write("&lt;span style='color:red'>" + i + "&lt;/span>");
+            document.write("&lt;span style='color:red'&gt;" + i + "&lt;/span&gt;");
         } else {
-            document.write(`&lt;span style='color:blue'>${i}&lt;/span>`);
+            document.write(`&lt;span style='color:blue'&gt;${i}&lt;/span&gt;`);
         };
     };
 }
@@ -422,7 +422,7 @@
         document.write(arr[i]);
         sum += num[i];
     }
-    document.write("&lt;br>");
+    document.write("&lt;br&gt;");
     document.write(sum);
 }
 </code></pre>
@@ -449,19 +449,19 @@
                     <p>중첩 for문을 이용해서 테이블 1~25의 숫자가 나오고 칸 만들기 예제입니다.</p>
                     <div class="script">
 <pre><code class="language-js">{
-    let table = "&lt;table border='1'>";
+    let table = "&lt;table border='1'&gt;";
     let count = 0;
 
     for(let i=0; i&lt;5; i++){
-        table += "&lt;tr>";
+        table += "&lt;tr&gt;";
         for(let j=0; j&lt;5; j++){
             count++;
-            table += "&lt;td>" + count + "&lt;/td>";                    
+            table += "&lt;td&gt;" + count + "&lt;/td&gt;";                    
         };
-        table += "&lt;/tr>";
+        table += "&lt;/tr&gt;";
     };
 
-    table += "&lt;/table>";
+    table += "&lt;/table&gt;";
     
     document.write(table);
 

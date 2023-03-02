@@ -182,8 +182,8 @@ for(let i=1; i&lt;=100; i++){
                     <div class="notice">
                         <h4>css 스타일보다 우선 순위로 스타일 주기</h4>
                         <p>css 스타일보다 우선적으로 스타일을 주기 위해서 태그에다가 직접적으로 스타일을 주게 되면 우선적으로 인식하기 때문에 css 스타일을 무시하고 적용된다.<br>
-                            ex) &lt;span style='color:blue', 'font-size=12px'> + 스타일 우선 순위 + &lt;/span><br>
-                            결과) <span style='color:blue'>스타일 우선 순위</span>
+                            ex&#41; span style='color:blue', 'font-size=12px'&gt; + 스타일 우선 순위 + &lt;/span&gt;<br>
+                            결과&#41; &lt;span style='color:blue'&gt;스타일 우선 순위</span>
                         </p>
                     </div>  
                 </div>
@@ -192,19 +192,19 @@ for(let i=1; i&lt;=100; i++){
                 <div id="sample06" class="sample">
                     <h3>06. 데이터 이펙트 : for문을 이용해서 테이블 만들기</h3>
                     <p>중첩 for문을 이용해서 10행 & 10열 칸짜리 테이블 만들기 예제입니다.</p>
-<pre data-line="6-8"class="line-numbers"><code class="language-js">let table = "&lt;table border=1>";
+<pre data-line="6-8"class="line-numbers"><code class="language-js">let table = "&lt;table border=1&gt;";
             
     for(let i=1; i&lt;=10; i++){
-        table += "&lt;tr>";
+        table += "&lt;tr&gt;";
         
         for(let j=1; j&lt;=10; j++){
-            table+= "&lt;td>" + j + "&lt;/td>";
+            table+= "&lt;td&gt;" + j + "&lt;/td&gt;";
         }
 
-        table += "&lt;/tr>";
+        table += "&lt;/tr&gt;";
     }
         
-    table += "&lt;/table>";
+    table += "&lt;/table&gt;";
 
 document.write(table);
 </code></pre>
@@ -242,13 +242,13 @@ document.write(table);
                     <h3>07. 데이터 이펙트 : 중첩 for문을 이용해서 구구단 만들기</h3>
                     <p>for문을 이용해서 구구단 만들기 예제입니다.</p>
 <pre class="line-numbers"><code class="language-js">for(let i=2; i&lt;=9; i++){
-    document.write(i + "단","&lt;br>");
+    document.write(i + "단","&lt;br&gt;");
 
     for(let j=1; j&lt;=9; j++){
         document.write(i + "*" + j + "=" + i*j);
-        document.write("&lt;br>");
+        document.write("&lt;br&gt;");
     }
-    document.write("&lt;br>&lt;br>");
+    document.write("&lt;br&gt;&lt;br&gt;");
 }
 </code></pre>
                     <div class="result">
@@ -273,27 +273,25 @@ document.write(table);
                 <div id="sample08" class="sample">
                     <h3>08. 데이터 이펙트 : 테이블 25칸(짝수:빨간색, 홀수:파란색)</h3>
                     <p>중첩 for문, if문을 이용해서 테이블 25칸(짝수:빨간색, 홀수:파란색) 만들기 예제입니다.</p>
-<pre class="line-numbers"><code class="language-js">{
-    let table = "&lt;table border='1'>";
-    let num = 0;
-        
-    for(let i=0; i&lt;5; i++){
-        table += "&lt;tr>";
-        for(let j=0; j&lt;5; j++){
-            num++;
-            if(num % 2 == 0){
-                table += "&lt;td style='color:red'>" + num + "&lt;/td>";
-            } else {
-                table += "&lt;td style='color:blue'>" + num + "&lt;/td>";
-            }
-        };
-        table += "&lt;/tr>";
-    }
-
-    table += "&lt;/table>";
+<pre class="line-numbers"><code class="language-js">let table = "&lt;table border='1'&gt;";
+let num = 0;
     
-    document.write(table);    
+for(let i=0; i&lt;5; i++){
+    table += "&lt;tr&gt;";
+    for(let j=0; j&lt;5; j++){
+        num++;
+        if(num % 2 == 0){
+            table += "&lt;td style='color:red'&gt;" + num + "&lt;/td&gt;";
+        } else {
+            table += "&lt;td style='color:blue'&gt;" + num + "&lt;/td&gt;";
+        }
+    };
+    table += "&lt;/tr&gt;";
 }
+
+table += "&lt;/table&gt;";
+
+document.write(table);  
 </code></pre>
                     <div class="result">
                         <details>
@@ -329,29 +327,27 @@ document.write(table);
                 <div id="sample09" class="sample">
                     <h3>09. 데이터 이펙트 : 테이블 25칸(3의 배수 출력(5의 배수는 빨간색))</h3>
                     <p>f중첩 for문, if문을 이용해서 테이블 25칸(3의 배수 출력(5의 배수는 빨간색)) 만들기 예제입니다.</p>
-<pre class="line-numbers"><code class="language-js">{
-    let table = "&lt;table border='1'>";
-    let num = 0;
+<pre class="line-numbers"><code class="language-js">let table = "&lt;table border='1'&gt;";
+let num = 0;
   
-    for(let i=0; i&lt;5; i++){
-        table += "&lt;tr>";
-        for(let j=0; j&lt;5; j++){
-            num++;
-            let sum = num*3
-            if(sum % 3 == 0 && sum % 5 == 0){
-                table += "&lt;td style='color:red'>" + sum + "&lt;/td>"
-            } else if(sum&lt;100){
-                table += "&lt;td>" + sum + "&lt;/td>"
-            } else {
-            };      
-        };
-        table += "&lt;/tr>";
+for(let i=0; i&lt;5; i++){
+    table += "&lt;tr&gt;";
+    for(let j=0; j&lt;5; j++){
+        num++;
+        let sum = num*3
+        if(sum % 3 == 0 && sum % 5 == 0){
+            table += "&lt;td style='color:red'&gt;" + sum + "&lt;/td&gt;"
+        } else if(sum&lt;100){
+            table += "&lt;td&gt;" + sum + "&lt;/td&gt;"
+        } else {
+        };      
     };
+    table += "&lt;/tr&gt;";
+};
 
-    table += "&lt;/table>";
-    
-    document.write(table);    
-}
+table += "&lt;/table&gt;";
+
+document.write(table);
 </code></pre>
                     <div class="result">
                         <details>
