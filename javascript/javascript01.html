@@ -626,6 +626,57 @@
                     </div>
                 </div>
                 <!-- //sample16 -->
+
+                <div id="sample17" class="sample">
+                    <h3>* 형변화, typeof( )</h3>
+                    <p>typeof()는 JavaScript에서 사용하는 연산자이며, 주어진 값의 데이터 유형을 반환합니다.</p>
+                    <div class="script">
+<pre><code class="language-js">{
+    let x = 100, y = "200", z;
+    const func = function(){}
+
+    document.write(x);
+    document.write(typeof(x));
+    document.write(y);
+    document.write(typeof(y));
+    document.write(z);
+    document.write(typeof(z));
+    document.write(func);
+    document.write(typeof(func));
+}
+</code></pre>
+                    </div>
+                    <div class="result">
+                        <details>
+                            <summary>결과 확인하기</summary>
+                            <div>
+                                100<br>
+                                number<br>
+                                200<br>
+                                string<br>
+                                undefined<br>
+                                undefined<br>
+                                function(){}<br>
+                                function
+                            </div>
+                        </details>
+                    </div>
+                    <div class="notice">
+                        <h4>변수의 데이터 형태를 설정하면 형태가 변형할 수 있습니다.</h4>
+<pre><code class="language-js">{
+    let x = 100, y = "200";
+
+    x = String (x);                 // 숫자 형태의 데이터를 문자 형태로 변형
+    document.write(typeof(x));
+
+    y = Number(y);              // 문자 형태의 데이터를 숫자 형태로 변형
+    document.write(typeof(y));
+}
+</code></pre>
+                        <p>값 : string, number</p>
+                    </div>    
+                </div>
+                <!-- //sample17 -->
             </div>
         </div>
     </main>
