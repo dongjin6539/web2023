@@ -52,23 +52,24 @@
                     <li><a href="#">01. 변수 : 데이터 저장</a></li>
                     <li><a href="#">02. 변수 : 데이터 저장 + 데이터 변경</a></li>
                     <li><a href="#">03. 변수 : 데이터 저장 + 데이터 변경 + 데이터 추가</a></li>
-                    <li><a href="#">04. 상수 : 데이터 저장 + 데이터 변경(X)</a></li>
-                    <li><a href="#">05. 배열 : 데이터 저장(여러개) : 표현방법1</a></li>
-                    <li><a href="#">06. 배열 : 데이터 저장(여러개) : 표현방법2</a></li>
-                    <li><a href="#">07. 배열 : 데이터 저장(여러개) : 표현방법3</a></li>
-                    <li><a href="#">08. 배열 : 데이터 저장(여러개) : 표현방법4</a></li>
-                    <li><a href="#">09. 객체 : 데이터 저장(키와값) : 표현방법1</a></li>
-                    <li><a href="#">10. 객체 : 데이터 저장(키와값) : 표현방법2</a></li>
-                    <li><a href="#">11. 객체 : 데이터 저장(키와값) : 표현방법3</a></li>
-                    <li><a href="#">12. 객체 : 데이터 저장(키와값) : 표현방법4</a></li>
-                    <li><a href="#">13. 객체 : 데이터 저장(키와값) : 표현방법5</a></li>
-                    <li><a href="#">14. 객체 : 데이터 저장(키와값) : 표현방법6</a></li>
-                    <li><a href="#">15. 객체 : 데이터 저장(키와값) : 표현방법7</a></li>
-                    <li><a href="#">16. 객체 : 데이터 저장(키와값) : 표현방법8</a></li>
-                </ul>                
-                <ul>
-                    <li>* 형변화, typeof( )</li>
-                </ul>
+                    <li><a href="#">04. 변수 : 지역 변수 + 전역 변수(스코프)</a></li>
+                    <li><a href="#">05. 상수 : 데이터 저장 + 데이터 변경(X)</a></li>
+                    <li><a href="#">06. 배열 : 데이터 저장(여러개) : 표현방법1</a></li>
+                    <li><a href="#">07. 배열 : 데이터 저장(여러개) : 표현방법2</a></li>
+                    <li><a href="#">08. 배열 : 데이터 저장(여러개) : 표현방법3</a></li>
+                    <li><a href="#">09. 배열 : 데이터 저장(여러개) : 표현방법4</a></li>
+                    <li><a href="#">10. 객체 : 데이터 저장(키와값) : 표현방법1</a></li>
+                    <li><a href="#">11. 객체 : 데이터 저장(키와값) : 표현방법2</a></li>
+                    <li><a href="#">12. 객체 : 데이터 저장(키와값) : 표현방법3</a></li>
+                    <li><a href="#">13. 객체 : 데이터 저장(키와값) : 표현방법4</a></li>
+                    <li><a href="#">14. 객체 : 데이터 저장(키와값) : 표현방법5</a></li>
+                    <li><a href="#">15. 객체 : 데이터 저장(키와값) : 표현방법6</a></li>
+                    <li><a href="#">16. 객체 : 데이터 저장(키와값) : 표현방법7</a></li>
+                    <li><a href="#">17. 객체 : 데이터 저장(키와값) : 표현방법8</a></li>
+                    <li><a href="#">++ 식별자, 예약자</a></li>
+                    <li><a href="#">++ 연산자(전치, 후치)</a></li>
+                    <li><a href="#">++ 형변화, typeof( )</a></li>
+                </ul> 
             </div>
             <div class="main__sample">
                 <div id="sample01" class="sample">
@@ -178,7 +179,51 @@
                 <!-- //sample03 -->
 
                 <div id="sample04" class="sample">
-                    <h3>04. 상수 : 데이터 저장 + 데이터 변경(X)</h3>
+                    <h3>04. 변수 : 지역 변수 + 전역 변수(스코프)</h3>
+                    <p>지역 변수는 정의된 블록(함수 블록) 내에서만 사용할 수 있는 변수입니다.<br>
+                        전역 변수는 자바스크립트 코드 내의 어느곳(함수 밖이나 안)에서나 자유롭게 접근할 수 있는 변수입니다.</p>
+                    <div class="script">
+<pre><code class="language-js">{
+    let x = 100;        // 전역 변수 : 자바스크립트 어느곳에서나 사용해서 실행문에 실행되는 변수
+    let y = 200;        // 전역 변수
+
+    function func(){
+        let x = 300;        // 지역 변수 : 정의된 블록 내에서만 사용해서 블럭 내의 실행문에만 실행되는 변수
+        y = 400;            // 전역 변수 : 저장된 y의 데이터를 변경
+        z = "javascript"    // 전역 변수(틀린 문법, 코드 내에서 잡아줌... 원래는 쓰면 안됩니다.)
+
+        function func(){}
+
+        console.log("함수안" + x);
+        console.log("함수안" + y);
+        console.log("함수안" + z);
+    }
+    func();
+
+    console.log("함수밖" + x);
+    console.log("함수밖" + y);
+    console.log("함수밖" + z);
+}
+</code></pre>      
+                    </div>
+                    <div class="result">
+                        <details>
+                            <summary>결과 확인하기</summary>
+                            <div>
+                                함수안300<br>
+                                함수안400<br>
+                                함수안javascript<br>
+                                함수밖100<br>
+                                함수밖400<br>
+                                함수밖javascript<br>
+                            </div>
+                        </details>
+                    </div>
+                </div>
+                <!-- //sample04 -->
+
+                <div id="sample05" class="sample">
+                    <h3>05. 상수 : 데이터 저장 + 데이터 변경(X)</h3>
                     <p>상수는 데이터 저장은 가능하나 변경은 불가능합니다. 상수(const)는 이미 선언한 상수에 대해 중복 선언이 불가능하며 상수의 값을 재지정 할 수도 없습니다.</p>
                     <div class="script">
 <pre><code class="language-js">{
@@ -212,10 +257,10 @@
                             하지만 상수가 변수와 다른 점은 프로그램이 실행되는 동안 상수에 저장된 데이터는 변경할 수 없다는 점입니다.</p>
                     </div>    
                 </div>    
-                <!-- //sample04 -->
+                <!-- //sample05 -->
 
-                <div id="sample05" class="sample">
-                    <h3>05. 배열 : 데이터 저장(여러개) : 표현방법1</h3>
+                <div id="sample06" class="sample">
+                    <h3>06. 배열 : 데이터 저장(여러개) : 표현방법1</h3>
                     <p>
                         여러 개의 데이터를 하나의 변수에 저장하기 위한 것이다.
                     </p>
@@ -253,10 +298,10 @@
                         </p>
                     </div>
                 </div>
-                <!-- //sample05 -->
+                <!-- //sample06 -->
                 
-                <div id="sample06" class="sample">
-                    <h3>06. 배열 : 데이터 저장(여러개) : 표현방법2</h3>
+                <div id="sample07" class="sample">
+                    <h3>07. 배열 : 데이터 저장(여러개) : 표현방법2</h3>
                     <p>여러 개의 데이터를 하나의 변수에 저장하기 위한 것이다.<br>
                         ex&#41; const arr = new Array(값, 값, 값);</p>
                     <div class="script">
@@ -280,10 +325,10 @@
                         </details>
                     </div>
                 </div>
-                <!-- //sample06 -->
+                <!-- //sample07 -->
 
-                <div id="sample07" class="sample">
-                    <h3>07. 배열 : 데이터 저장(여러개) : 표현방법3</h3>
+                <div id="sample08" class="sample">
+                    <h3>08. 배열 : 데이터 저장(여러개) : 표현방법3</h3>
                     <p>여러 개의 데이터를 하나의 변수에 저장하기 위한 것이다.<br>
                         ex&#41; const arr = [ ]; / 밑줄에 값 나열</p>
                     <div class="script">
@@ -311,10 +356,10 @@
                         </details>
                     </div>
                 </div>
-                <!-- //sample07 -->
+                <!-- //sample08 -->
 
-                <div id="sample08" class="sample">
-                    <h3>08. 배열 : 데이터 저장(여러개) : 표현방법4</h3>
+                <div id="sample09" class="sample">
+                    <h3>09. 배열 : 데이터 저장(여러개) : 표현방법4</h3>
                     <p>여러 개의 데이터를 하나의 변수에 저장하기 위한 것이다.<br>
                         ex&#41; const arr = [값, 값, 값];</p>
                     <div class="script">
@@ -338,10 +383,10 @@
                         </details>
                     </div>
                 </div>
-                <!-- //sample08 -->
+                <!-- //sample09 -->
 
-                <div id="sample09" class="sample">
-                    <h3>09. 객체 : 데이터 저장(키와 값) : 표현방법1</h3>
+                <div id="sample10" class="sample">
+                    <h3>10. 객체 : 데이터 저장(키와 값) : 표현방법1</h3>
                     <p>여러 개의 데이터를 하나의 변수에 저장하고 데이터가 추가되면 추가된 데이터를 식별해서 가져올 수 있다.<br>
                         배열 형식으로도 입력할 수 있다.<br>
                         ex&#41; obj[키] = 값; / 출력 : console.log(obj[키]);</p>
@@ -378,10 +423,10 @@
                             하지만 숫자, 문자열, 불리언과 같은 원시 타입은 값이 정해진 객체로 취급되어, 객체로서의 특징도 함께 가지게 됩니다.</p>
                     </div>
                 </div>
-                <!-- //sample09 -->
+                <!-- //sample10 -->
 
-                <div id="sample10" class="sample">
-                    <h3>10. 객체 : 데이터 저장(키와 값) : 표현방법2</h3>
+                <div id="sample11" class="sample">
+                    <h3>11. 객체 : 데이터 저장(키와 값) : 표현방법2</h3>
                     <p>여러 개의 데이터를 하나의 변수에 저장하고 데이터가 추가되면 추가된 데이터를 식별해서 가져올 수 있다.<br>
                         ex&#41; obj.키 = 값;</p>
                     <div class="script">
@@ -409,10 +454,10 @@
                         </details>
                     </div>
                 </div>
-                <!-- //sample10 -->
+                <!-- //sample11 -->
 
-                <div id="sample11" class="sample">
-                    <h3>11. 객체 : 데이터 저장(키와 값) : 표현방법3</h3>
+                <div id="sample12" class="sample">
+                    <h3>12. 객체 : 데이터 저장(키와 값) : 표현방법3</h3>
                     <p>여러 개의 데이터를 하나의 변수에 저장하고 데이터가 추가되면 추가된 데이터를 식별해서 가져올 수 있다.<br>
                         ex&#41; const obj = { }; / 밑줄에 키와 값 나열</p>
                     <div class="script">
@@ -440,10 +485,10 @@
                         </details>
                     </div>
                 </div>
-                <!-- //sample11 -->
+                <!-- //sample12 -->
 
-                <div id="sample12" class="sample">
-                    <h3>12. 객체 : 데이터 저장(키와 값) : 표현방법4</h3>
+                <div id="sample13" class="sample">
+                    <h3>13. 객체 : 데이터 저장(키와 값) : 표현방법4</h3>
                     <p>여러 개의 데이터를 하나의 변수에 저장하고 데이터가 추가되면 추가된 데이터를 식별해서 가져올 수 있다.<br>
                         ex&#41; const obj = {키:값, 키:값, 키:값};</p>
                     <div class="script">
@@ -467,10 +512,10 @@
                         </details>
                     </div>
                 </div>
-                <!-- //sample12 -->
+                <!-- //sample13 -->
 
-                <div id="sample13" class="sample">
-                    <h3>13. 객체 : 데이터 저장(키와 값) : 표현방법5</h3>
+                <div id="sample14" class="sample">
+                    <h3>14. 객체 : 데이터 저장(키와 값) : 표현방법5</h3>
                     <p>여러 개의 데이터를 하나의 변수에 저장하고 데이터가 추가되면 추가된 데이터를 식별해서 가져올 수 있다.<br>
                         배열 안에 객체가 있는 방법 <br>
                         ex&#41; 출력 : console.log(obj[배열].객체);</p>
@@ -498,10 +543,10 @@
                         </details>
                     </div>
                 </div>
-                <!-- //sample13 -->
+                <!-- //sample14 -->
 
-                <div id="sample14" class="sample">
-                    <h3>14. 객체 : 데이터 저장(키와 값) : 표현방법6</h3>
+                <div id="sample15" class="sample">
+                    <h3>15. 객체 : 데이터 저장(키와 값) : 표현방법6</h3>
                     <p>여러 개의 데이터를 하나의 변수에 저장하고 데이터가 추가되면 추가된 데이터를 식별해서 가져올 수 있다.<br>
                         객체 안에 배열이 있는 방법<br>
                         ex&#41; 출력 : console.log(obj.객체); / console.log(obj.객체[배열]); / console.log(obj.객체.객체)</p>
@@ -537,10 +582,10 @@
                         </details>
                     </div>
                 </div>
-                <!-- //sample14 -->
+                <!-- //sample15 -->
 
-                <div id="sample15" class="sample">
-                    <h3>15. 객체 : 데이터 저장(키와 값) : 표현방법7</h3>
+                <div id="sample16" class="sample">
+                    <h3>16. 객체 : 데이터 저장(키와 값) : 표현방법7</h3>
                     <p>여러 개의 데이터를 하나의 변수에 저장하고 데이터가 추가되면 추가된 데이터를 식별해서 가져올 수 있다.<br>
                         키 값을 대신해서 변수를 입력시키는 방법<br>
                         ex&#41; const 키 = 값; / console.log(키);</p>
@@ -569,10 +614,10 @@
                         </details>
                     </div>
                 </div>
-                <!-- //sample15 -->
+                <!-- //sample16 -->
 
-                <div id="sample16" class="sample">
-                    <h3>16. 객체 : 데이터 저장(키와 값) : 표현방법8</h3>
+                <div id="sample17" class="sample">
+                    <h3>17. 객체 : 데이터 저장(키와 값) : 표현방법8</h3>
                     <p>여러 개의 데이터를 하나의 변수에 저장하고 데이터가 추가되면 추가된 데이터를 식별해서 가져올 수 있다.<br>
                         함수 입력시키는 방법 ex&#41; const obj = &#123;키: function( ){console.log(값);}; / 출력 : obj.키( );<br>
                         함수 안에 다른 키 값과 문자를 입력 ex&#41; const obj = &#123;키: function( )&#123;console.log(obj.키 + "문자");,   키: function( ){console.log(this.키 + "문자");}; / 출력 : obj.키( );</p>
@@ -625,11 +670,93 @@
                         </details>
                     </div>
                 </div>
-                <!-- //sample16 -->
+                <!-- //sample17 -->
 
-                <div id="sample17" class="sample">
-                    <h3>* 형변화, typeof( )</h3>
-                    <p>typeof()는 JavaScript에서 사용하는 연산자이며, 주어진 값의 데이터 유형을 반환합니다.</p>
+                <div id="sample18" class="sample">
+                    <h3>++ 식별자, 예약자</h3>
+                    <p>식별자는 변수, 함수, 매개변수 등의 이름을 지정하는 데 사용됩니다.<br>
+                        예약자는 언어에서 특별한 의미를 가지는 단어로, 변수 또는 함수 이름으로 사용할 수 없습니다.</p>
+                    <div class="script">
+<pre><code class="language-js">{
+    식별자 규칙
+        식별자는 반드시 문자, 밑줄(_), 달러 기호($)로 시작해야 합니다.
+        식별자는 문자, 숫자, 밑줄, 달러 기호를 포함할 수 있습니다.
+        식별자는 예약자가 아니어야 합니다.
+    
+    에약자 목록
+        break, case, catch, class, const, continue, debugger, default, delete, do, else, export, extends, false, finally, for, function, if, import, in, instanceof,<br>
+        new, null, return, super, switch, this, throw, true, try, typeof, var, void, while, with, yield 등이 있습니다.
+}
+</code></pre>
+                    </div>                      
+                </div>
+                <!-- //sample18 -->
+
+                <div id="sample19" class="sample">
+                    <h3>++ 연산자(전치, 후치)</h3>
+                    <p>연산자에는 전치, 후치의 개념이 있습니다.<br>
+                        개념에 따라 결과 값이 달라집니다.<br>
+                        <a href="https://dongjin6539.tistory.com/9"><span style="color:red"><b>연산자의 종류 참고</b></span></a>
+                    </p>
+                    <div class="script">
+<pre><code class="language-js">{
+    var score = 10;
+    // ++score;    // 11
+    // score++;    // 12
+    // var result = ++score;    // 11
+    var result = score++;       
+    // 출력 시 '=' 연산자가 '++' 연산자가 후치에 있으면 우선순위가 '=' 연산자이므로 먼저 실행 출력 후 '++' 연산자가 실행하고 출력됩니다.
+
+    console.log(result, score);
+}
+</code></pre>
+                    </div>
+                    <div class="result">
+                        <details>
+                            <summary>결과 확인하기</summary>
+                            <div>
+                                10, 11
+                            </div>
+                        </details>
+                    </div>
+                    <div class="notice">
+                        <h4>연산자를 혼합 사용한 예시</h4>
+<pre><code class="language-js">{
+    let a = 1, b = 2, c = 3, result;
+    result = ++a + b++ + ++c;       
+    // 변수보다 전치(++a, ++c)에 있으면 '=' 연산자보다 전치 '++' 연산자가 먼저 실행되고 실행문 실행 후 후치 '++' 연산자가 실행됩니다.
+
+    console.log(result);    // 8
+    console.log(a);         // 2
+    console.log(b);         // 3
+    console.log(c);         // 4
+}
+</code></pre>
+                        <p>값 : 8, 2, 3, 4</p>
+                    </div>  
+                    <p></p>
+                    <div class="notice">
+                        <h4>삼항 연산자를 사용한 예시</h4>
+<pre><code class="language-js">{
+    let a, b, c, result;
+    a = 20, b = 30, c = 30;
+    
+    result = a &lt; b ? b++ : --c;      // 삼항 연산자의 조건식에 맞는 실행문만 실행됩니다.
+                                        
+    console.log(result);        // 30   // 실행문의 결과는 true인데 결과가 30인 이유는 '++' 연산자는 후치에 있으므로 이후에 실행됩니다.
+    console.log(a);             // 20
+    console.log(b + c);         // 61
+    console.log(c);             // 30
+}
+</code></pre>
+                        <p>값 : 30, 20, 61, 30</p>
+                    </div> 
+                </div>
+                <!-- //sample19 -->
+
+                <div id="sample20" class="sample">
+                    <h3>++ 형변화, typeof( )</h3>
+                    <p>typeof( )는 JavaScript에서 사용하는 연산자이며, 주어진 값의 데이터 유형을 반환합니다.</p>
                     <div class="script">
 <pre><code class="language-js">{
     let x = 100, y = "200", z;
@@ -676,7 +803,7 @@
                         <p>값 : string, number</p>
                     </div>    
                 </div>
-                <!-- //sample17 -->
+                <!-- //sample20 -->
             </div>
         </div>
     </main>
@@ -690,58 +817,61 @@
     <script src="assets/js/highlight.min.js"></script>
     <script>hljs.highlightAll();</script>
     <script>
-        // {
-            // const x = 100;  //숫자,문자,논리형,underfined,null,객체,심벌 --> 자료형(typeof)
-            // const y = true;
-            // const b = false; 
-        // }
-        // {
-            // const x = 100;
-            // const y = 200;
-            // const z = "javascript";
-            
-            // document.write(x);
-            // console.log(y);
-            // alert(z);
-        // }
-        // {
-            // let x = 100;
-            // let y = 200;
-            // let z = "javascript"
+        // let hap, j, k, l;
+        // j = k = l = 1;
+        // hap = ++j + k++ + ++l;
 
-            // x -= 1000;      //100 - 1000 = -900
+        // console.log(hap);
+        // console.log(j);
+        // console.log(k);
+        // console.log(l);
 
-            // x += 1000;      //-900 + 1000 = 100
+        // let a = 1, b = 2, c = 3, result;
+        // result = ++a + b++ + ++c;
 
-            // console.log(x, y, z);
-        // }
-        // {
-            // const brr = new Array();
-            // const crr = new Array(200, "react", false);
-            // const drr = [[100,200], [400], [200,300]];
-            // const err = [300, "arrat", true];
+        // console.log(result);    // 8
+        // console.log(a);         // 2
+        // console.log(b);         // 3
+        // console.log(c);         // 4
 
-            // brr[0] = 100;
-            // brr[1] = "javavscript";
-            // brr[2] = true;
-            // drr[0] = 100;
-            // drr[1] = "javavscript";
-            // drr[2] = true;
+        // let x= 7, y = 7, result;
 
+        // result = x > y ? ++x : y--;     // 조건식에 맞는 실행문만 실행됩니다.(삼항 연산자)
 
-            // console.log(brr[0], brr[1], brr[2]);
-            // console.log(crr[0], crr[1], crr[2]);
-            // console.log(drr[0], drr[1], drr[2]);
-            // console.log(err[0], err[1], err[2]);            
-        // }
+        // console.log(result);    // 7
+        // console.log(x);         // 7
+        // console.log(y);         // 6
+
+        let a, b, c, result;
+        a = 20, b = 30, c = 30;
         
-        // 변수 : 저장문
-        // 상수 : 저장문
-        // 배열 : 저장문
-        // 객체 : 저장문
+        result = a < b ? b++ : --c;
 
-        // 함수 : 실행문
-        // 클래스 : 함수의 집합체
+        console.log(result);        // 30
+        console.log(a);             // 20
+        console.log(b + c);         // 61
+        console.log(c);             // 30
+
+        // 04. 변수 : 지역 변수 + 전역 변수(스코프)
+        let x = 100;        // 전역 변수 : 함수 밖에 있어도 변수가 확인 됩니다. 함수 안에 저장된 변수 값이 없으면 함수 안에 실행문에도 실행됩니다.
+        let y = 200;        // 전역 변수
+
+        function func(){
+            let x = 300;        // 지역 변수 : 함수 안에 있는 변수로 함수 안에 있는 실행문에만 실행됩니다.(let이 없으면 전역 변수)
+            y = 400;            // 전역 변수
+            z = "javascript"    // 전역 변수 : let 생략
+
+            function func(){}
+
+            console.log("함수안" + x);
+            console.log("함수안" + y);
+            console.log("함수안" + z);
+        }
+        func();
+
+        console.log("함수밖" + x);
+        console.log("함수밖" + y);
+        console.log("함수밖" + z);
     </script>
 </body>
 </html>
