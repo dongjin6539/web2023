@@ -8,8 +8,8 @@
 
     <link href="https://webfontworld.github.io/NexonLv1Gothic/NexonLv1Gothic.css" rel="stylesheet">
     <style>
-        /* reset */
-        * {
+       /* reset */
+       * {
             margin: 0;
             padding: 0;
         }
@@ -23,6 +23,14 @@
         img {
             vertical-align: top;
             width: 100%;
+        }
+        .blind{
+            position: absolute;
+            clip: rect(0 0 0 0);
+            width: 1px;
+            height: 1px;
+            margin: -1px;
+            overflow: hidden;
         }
         .mt10 {margin-top: 10px !important;}
         .mt20 {margin-top: 20px !important;}
@@ -54,8 +62,18 @@
         .section {
             padding: 120px 0;            
         }
-        .section.center{
+        .section.center {
             text-align: center;
+        }
+        .section__small {
+            font-size: 14px;
+            border-radius: 50px;
+            background-color: #FF0000;
+            color: #fff;
+            padding: 1px 23px;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+            display: inline-block;
         }
         .section__h2 {
             font-size: 50px;
@@ -69,7 +87,7 @@
             margin-bottom: 70px;
             font-weight: 300;
             line-height: 1.5;
-        } 
+        }
 
         /* card__type */
         .card__inner {
