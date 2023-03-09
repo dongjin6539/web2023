@@ -8,6 +8,8 @@
     padding: 10px;
     width: 100%;
     z-index: 1000;
+    display: flex;
+    justify-content: space-between;
 }
 #header::before {
     content: '';
@@ -20,16 +22,36 @@
 }
 #header h1 {
     font-size: 28px;
-    padding: 0px 5px 5px 10px;
+    padding: 5px 5px 5px 10px;
     font-family: 'DungGeunMo';
     z-index: 10;
     position: relative;
 }
-#header a {
+#header h1 a {
     color: #fff;
 }
-#header em {
+#header h1 em {
     font-size: 0.5em;
+}
+#header ul {
+    padding: 5px;
+}
+#header li {
+    display: inline;
+    z-index: 10;
+    position: relative;
+}
+#header li a {
+    color: #fff;
+    font-family: 'DungGeunMo';
+    border: 1px dashed #fff;
+    display: inline-block;
+    padding: 5px;
+}
+#header li.active a,
+#header li a:hover {
+    background-color: #fff;
+    color: #000;
 }
 
 /* footer */
@@ -69,7 +91,7 @@
     flex-wrap: wrap;
 }
 .quiz__wrap .quiz {
-    max-width: 500px;
+    width: 500px;
     background-color: #fff;
     border: 8px ridge #cacaca;
 }
@@ -99,7 +121,6 @@
     padding: 20px;
     text-align: center;
     font-size: 24px;
-    border-bottom: 6px ridge #cacaca;
 }
 .quiz__answer .confirm {
     background-color: #cacaca;
@@ -116,16 +137,39 @@
     background-color: #cacaca55;
 }
 .quiz__answer .result {
-    background-color: #fff;
+    background-color: #cacaca55;
     border: 6px ridge #cacaca;
     width: 100%;
     font-family: 'PyeongChang';
     padding: 10px 20px;
     font-size: 22px;
 }
+.quiz__answer .input {
+    background-color: #fff;
+    border: 6px groove #cacaca;
+    width: 100%;
+    font-family: 'PyeongChang';
+    padding: 10px 20px;
+    font-size: 22px;
+    margin-bottom: 10px;
+}
 .quiz__view {
     border-bottom: 6px ridge #cacaca;
     overflow: hidden;
+}
+.quiz__footer {
+    border-top: 6px ridge #cacaca;
+    padding: 20px;
+    font-family: 'PyeongChang';
+    background-color: #cacaca55;
+}
+.quiz__footer::before {
+    content: '✍️Tip';
+    color: #ff3c3c;
+    font-weight: bold;
+}
+.quiz__desc {
+    padding-top: 5px;
 }
 
 /* dog__wrap */

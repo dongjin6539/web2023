@@ -68,6 +68,7 @@
                     <li><a href="#">17. 객체 : 데이터 저장(키와값) : 표현방법8</a></li>
                     <li><a href="#">++ 식별자, 예약자</a></li>
                     <li><a href="#">++ 연산자(전치, 후치)</a></li>
+                    <li><a href="#">++ 비트 연산자</a></li>
                     <li><a href="#">++ 형변화, typeof( )</a></li>
                 </ul> 
             </div>
@@ -755,6 +756,36 @@
                 <!-- //sample19 -->
 
                 <div id="sample20" class="sample">
+                    <h3>++ 비트 연산자</h3>
+                    <p>컴퓨터에서 비트 단위로 데이터를 처리할 때 사용되는 연산자입니다.<br>
+                        비트 연산자는 이진수로 표현된 데이터에서 비트를 조작하거나 추출하는데 사용됩니다.</p>
+                    <div class="script">
+<pre><code class="language-js">비트 연산자 종류
+    & (AND연산자) : 두 비트가 모두 1일 경우에만 결과가 1이 되며, 그 외에는 0이 됩니다.
+    | (OR연산자) : 두 비트 중 하나 이상이 1일 경우 결과는 1이 되며, 둘 다 0인 경우에만 0이 됩니다.
+    ~ (NOT연산자) : 비트를 반전시킵니다. 0은 1로, 1은 0으로 바꿉니다.
+    ^ (XOR연산자) : 두 비트가 서로 다른 경우 결과는 1이 되며, 같은 경우에는 0이 됩니다.
+    &lt;&lt; (LEFT SHIFT) : 왼쪽으로 이동시 오른쪽 끝자리는 0이 됩니다.
+    &gt;&gt; (RIGHT SHIFT) : 오른쪽으로 이동시 왼쪽 끝자리는 0이 됩니다.
+</code></pre>
+                    </div>
+                    <div class="notice">
+                        <h4>예시</h4>
+<pre><code class="language-js">{
+    let num1 = 16, num2 = 80;
+    let result;
+
+    result = num1 &gt; num2 ? num1 & num2 : num1 ^ num2;
+
+    document.write(result);
+}
+</code></pre>
+                        <p>값 : 64</p>
+                    </div>    
+                </div>
+                <!-- //sample20 -->
+
+                <div id="sample21" class="sample">
                     <h3>++ 형변화, typeof( )</h3>
                     <p>typeof( )는 JavaScript에서 사용하는 연산자이며, 주어진 값의 데이터 유형을 반환합니다.</p>
                     <div class="script">
@@ -803,7 +834,7 @@
                         <p>값 : string, number</p>
                     </div>    
                 </div>
-                <!-- //sample20 -->
+                <!-- //sample21 -->
             </div>
         </div>
     </main>
@@ -817,41 +848,6 @@
     <script src="assets/js/highlight.min.js"></script>
     <script>hljs.highlightAll();</script>
     <script>
-        // let hap, j, k, l;
-        // j = k = l = 1;
-        // hap = ++j + k++ + ++l;
-
-        // console.log(hap);
-        // console.log(j);
-        // console.log(k);
-        // console.log(l);
-
-        // let a = 1, b = 2, c = 3, result;
-        // result = ++a + b++ + ++c;
-
-        // console.log(result);    // 8
-        // console.log(a);         // 2
-        // console.log(b);         // 3
-        // console.log(c);         // 4
-
-        // let x= 7, y = 7, result;
-
-        // result = x > y ? ++x : y--;     // 조건식에 맞는 실행문만 실행됩니다.(삼항 연산자)
-
-        // console.log(result);    // 7
-        // console.log(x);         // 7
-        // console.log(y);         // 6
-
-        let a, b, c, result;
-        a = 20, b = 30, c = 30;
-        
-        result = a < b ? b++ : --c;
-
-        console.log(result);        // 30
-        console.log(a);             // 20
-        console.log(b + c);         // 61
-        console.log(c);             // 30
-
         // 04. 변수 : 지역 변수 + 전역 변수(스코프)
         let x = 100;        // 전역 변수 : 함수 밖에 있어도 변수가 확인 됩니다. 함수 안에 저장된 변수 값이 없으면 함수 안에 실행문에도 실행됩니다.
         let y = 200;        // 전역 변수
@@ -872,6 +868,15 @@
         console.log("함수밖" + x);
         console.log("함수밖" + y);
         console.log("함수밖" + z);
+
+        {
+            let num1 = 16, num2 = 80;
+            let result;
+
+            result = num1 > num2 ? num1 & num2 : num1 ^ num2;
+
+            document.write(result);
+        }
     </script>
 </body>
 </html>
