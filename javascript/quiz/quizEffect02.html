@@ -17,6 +17,7 @@
         <ul>
             <li><a href="quizEffect01.html">1</a></li>
             <li class="active"><a href="quizEffect02.html">2</a></li>
+            <li><a href="quizEffect03.html">3</a></li>
         </ul>
     </header>
     <!-- //header -->
@@ -57,14 +58,10 @@
                     </div>
                     <div class="quiz__answer">
                         <input class="input" type="text" placeholder="정답을 적어주세요!">
-                        <button class="confirm"></button>
+                        <button class="confirm">정답 확인하기</button>
                         <div class="result"></div>
                     </div>
-                </div>
-                <div class="quiz__footer">
-                    <div class="quiz__desc">
-                        설명
-                    </div>
+                    <div class="quiz__desc"></div>
                 </div>
             </div>
         </div>
@@ -88,7 +85,6 @@
         const quizAnswerResult = quizWrap.querySelector(".quiz__answer .result");
         const quizAnswerInput = quizWrap.querySelector(".quiz__answer .input");
         const dogWrap = quizWrap.querySelector(".dog__wrap");
-        const quizFooter = quizWrap.querySelector(".quiz__footer");
 
         // 문제 정보
         const infoType = "정보처리 기능사";
@@ -108,16 +104,16 @@
         quizAnswerCofirm.textContent = infoCofirm;
         quizAnswerResult.textContent = infoAnswer;
 
-        // 정답 숨기기 & 해설 숨기기
+        // 정답 & 해설 숨기기
         quizAnswerResult.style.display = "none";        // 정답 숨기기
-        quizFooter.style.display = "none";              // 설명 숨기기
+        quizDesc.style.display = "none";                // 해설 숨기기
 
         // 사용자 정답
         quizAnswerCofirm.addEventListener("click", function(){
             const userAnswer = quizAnswerInput.value.trim();
             quizAnswerCofirm.style.display = "none";    // 정답 확인 버튼 숨김
             quizAnswerResult.style.display = "block";   // 정답 보이기
-            quizFooter.style.display = "block";         // 설명 보이기
+            quizDesc.style.display = "block";           // 해설 보이기
             if(infoAnswer == userAnswer){
                 quizAnswerInput.style.display = "none"; // 답 입력창 숨기기
                 dogWrap.classList.add("like");
