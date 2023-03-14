@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>이미지 유형01</title>
+    <title>이미지 텍스트 유형 01</title>
 
     <link href="https://webfontworld.github.io/NexonLv1Gothic/NexonLv1Gothic.css" rel="stylesheet">
     <style>
@@ -90,67 +90,82 @@
             line-height: 1.5;
         }
 
-        /* image__type */
-        .image__inner {
+        /* imgtext__wrap */
+        .imgtext__inner {
             display: flex;
+            flex-wrap: wrap;
             justify-content: space-between;
         }
-        .image__inner .image {
-            width: 570px;
-            height: 370px;
-            background-color: #ccc;
-            position: relative;
+        .imgtext {
+            width: 32.3333%;
+            height: 500px;
         }
-        .image__body {
-            position: absolute;
-            left: 0;
-            bottom: 0;
-            color: #fff;
-            text-align: left;
-            padding: 30px;
-        }
-        .image__body .title {
-            font-size: 32px;
-            line-height: 1;
+        .imgtext__body .title {
+            font-size: 50px;
+            line-height: 120%;
+            margin-right: 50px;
             margin-bottom: 15px;
         }
-        .image__body .desc {
+        .imgtext__body .desc {
+            font-size: 16px;
+            line-height: 155%;
+            margin-right: 10px;
             margin-bottom: 15px;
-            line-height: 1.5;
-            padding-right: 20%;
         }
-        .image__body .btn {
-            color: #fff;
-            background-color: rgba(0, 0, 0, 0.5);
-            padding: 10px 30px;
-            display: inline-block;
+        .imgtext__body .nav{
+            font-size: 16px;
+            line-height: 155%;
+            margin-left: 15px;
+        }
+        .imgtext__header {
+            border-radius: 10px;
+        }
+
+        @media only screen and (-webkit-min-device-pixel-ratio: 2),
+            only screen and (min-device-pixel-ratio: 2),
+            only screen and (min-resolution: 2dppx) {
+                .imgtext .imgtext__body {
+                    background-image: url(../asset/img/imgtext-Type01_01@2x.jpg);
+                    background-image: url(../asset/img/imgtext-Type01_02@2x.jpg);
+                }
         }
     </style>
 </head>
 <body>
-    <section class="image__wrap section center nexon">
+    <section class="imgtext__wrap section nexon">
         <div class="container">
-            <h2 class="section__h2">운동을 하는 이유</h2>
-            <p class="section__desc">운동을 하는 이유는 체력을 키우고 건강을 얻기 위해서 입니다.</p>
-            <div class="image__inner">
-                <article class="image">
-                    <figure class="image__header">
-                        <img src="../asset/img/imageType01_01.jpg" alt="근골격 건강 증진">
-                    </figure>  
-                    <div class="image__body">
-                        <h3 class="title">근골격 건강 증진</h3>
-                        <p class="desc">운동을 하면 근육과 골격계 효과로 관절의 연골 두께를 증가시키고 인대 등을 크고 강하게 해줍니다.</p>
-                        <a href="#" class="btn">자세히 보기</a>
-                    </div>              
+            <div class="imgtext__inner">
+                <article class="imgtext">
+                    <div class="imgtext__body">
+                        <span class="section__small">notice</span>
+                        <h2 class="title">운동 시 가장 주의할 점</h2>
+                        <p class="desc">운동을 할 때에는 몸의 건강과 안전을 최우선으로 생각해야 합니다. 아래는 운동 시 주의해야 할 점입니다.</p>
+                        <ul class="nav">
+                            <li>적절한 스트레칭</li>
+                            <li>자신의 체력 상태</li>
+                            <li>올바른 자세</li>
+                            <li>적절한 운동량</li>
+                            <li>적절한 장비 착용</li>
+                            <li>충분한 수분 섭취</li>
+                            <li>적절한 휴식</li>
+                            <li>질병과 상태 고려</li>
+                            <li>부상 방지</li>
+                            <li>운동 전문가와 상담</li>
+                        </ul>
+                    </div>
                 </article>
-                <article class="image">
-                    <figure class="image__header">
-                        <img src="../asset/img/imageType01_02.jpg" alt="조기 사망 감소">
-                    </figure>
-                    <div class="image__body">
-                        <h3 class="title">조기 사망 감소</h3>
-                        <p class="desc">운동은 대표적인 사망 원인인 심장병, 암, 그리고 다른 원인에 의한 조기 사망의 위험을 감소시킨다.</p>
-                        <a href="#" class="btn">자세히 보기</a>
+                <article class="imgtext">
+                    <div class="imgtext__body">
+                        <figure class="imgtext__header">
+                            <img src="../asset/img/imgtext-Type01_01@2x.jpg" alt="적절한 스트레칭">
+                        </figure>
+                    </div>
+                </article>
+                <article class="imgtext">
+                    <div class="imgtext__body">
+                        <figure class="imgtext__header">
+                            <img src="../asset/img/imgtext-Type01_02@2x.jpg" alt="충분한 수분 섭취">
+                        </figure>
                     </div>
                 </article>
             </div>
