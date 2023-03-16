@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>레이아웃 타입(A-2)</title> 
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        #header {
+            width: 100%;
+            height: 100px;
+        }
+        #header .container {
+            display: flex;
+        }
+        #header .container .logo {
+            width: 20%;
+            height: 100px;
+            background-color: #edcaca;
+        }
+        #header .container .nav {
+            width: 80%;
+            height: 100px;
+            background-color: #df7171;
+        }
+        #slider .container {
+            height: 300px;
+            background-color: #894141;
+        }
+        #contnets .container {
+            display: flex;
+        }
+        #contnets .container .cont1 {
+            width: 33.3333%;
+            height: 200px;
+            background-color: #cc8686;
+        }
+        #contnets .container .cont2 {
+            width: 33.3333%;
+            height: 200px;
+            background-color: #692222;
+        }
+        #contnets .container .cont3 {
+            width: 33.3333%; 
+            height: 200px;
+            background-color: #aa7777;   
+        }
+        #footer {
+            width: 100%;
+            height: 100px;
+        }
+        #footer .container {
+            display: flex;
+        }
+        #footer .container .foot1 {
+            width: 20%;
+            height: 100px;
+            background-color: #b85e5e;
+        }
+        #footer .container .foot2 {
+            width: 60%;
+            height: 100px;
+            background-color: #987878;
+        }
+        #footer .container .foot3 {
+            width: 20%;
+            height: 100px;
+            background-color: #6c2e2e;
+        }
+        .container {
+            width: 1200px;
+            margin: 0 auto;
+        }
+    </style> 
+</head>
+<body>
+    <header id="header">
+        <div class="container">
+            <div class="logo">로고</div>
+            <nav class="nav">메뉴</nav>
+        </div>
+    </header>
+    <!-- //header -->
+
+    <article id="slider">
+        <div class="container">
+            이미지 슬라이드
+        </div>
+    </article>
+    <!-- //slider -->
+
+    <section id="contnets">
+        <div class="container">
+            <article class="cont1">공지사항</article>
+            <article class="cont2">갤러리</article>
+            <article class="cont3">배너</article>
+        </div>
+    </section>
+    <!-- //contents -->
+
+    <footer id="footer">
+        <div class="container">
+            <div class="foot1">로고</div>
+            <div class="foot2">Copyright</div>
+            <div class="foot3">패밀리사이트</div>
+        </div>
+    </footer>
+    <!-- //footer -->
+</body>
+</html>
