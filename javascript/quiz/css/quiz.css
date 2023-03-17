@@ -3,7 +3,7 @@
     position: fixed;
     left: 0;
     top: 0;
-    background-color: #0243f1;
+    background-color: #000;
     color: #fff;
     padding: 10px;
     width: 100%;
@@ -13,7 +13,7 @@
 }
 #header::before {
     content: '';
-    border: 4px ridge #00f7ff55;
+    border: 4px ridge #cacaca;
     position: absolute;
     left: 5px;
     top: 5px;
@@ -60,7 +60,7 @@
     left: 0;
     bottom: 0;
     width: 100%;
-    background-color: #0243f1;
+    background-color: #000;
     text-align: center;
 }
 #footer a {
@@ -73,7 +73,7 @@
 }
 #footer::before {
     content: '';
-    border: 4px ridge #00f7ff55;
+    border: 4px ridge #cacaca;
     position: absolute;
     left: 5px;
     top: 5px;
@@ -94,12 +94,12 @@
 .quiz__wrap .quiz {
     width: 500px;
     background-color: #fff;
-    border: 8px ridge #0243f1;
+    border: 8px ridge #000;
     margin: 10px;
 }
 .quiz__title {
-    background-color: #0243f1;
-    border: 3px ridge #00f7ff55;
+    background-color: #000;
+    border: 3px ridge #cacaca;
     border-bottom-width: 6px;
     padding: 5px;
     font-family: 'DungGeunMo';
@@ -113,10 +113,10 @@
     font-family: 'PyeongChang';
     font-weight: 300;
     line-height: 1.4;
-    border-bottom: 6px ridge #0243f1;
+    border-bottom: 6px ridge #cacaca;
 }
 .quiz__question em {
-    color: #0243f1;
+    color: #cacaca;
 }
 .quiz__answer {
     font-family: 'PyeongChang';
@@ -126,8 +126,8 @@
 }
 .quiz__answer .confirm {
     color: #fff;
-    background-color: #0243f1;
-    border: 6px ridge #0243f1;
+    background-color: #000;
+    border: 6px ridge #000;
     width: 100%;
     font-family: 'PyeongChang';
     padding: 10px 20px;
@@ -138,11 +138,11 @@
 }
 .quiz__answer .confirm:hover {
     color: #000;
-    background-color: #0243f155;
+    background-color: #cacaca;
 }
 .quiz__answer .result {
-    background-color: #0243f155;
-    border: 6px ridge #0243f1;
+    background-color: #cacaca;
+    border: 6px ridge #000;
     width: 100%;
     font-family: 'PyeongChang';
     padding: 10px 20px;
@@ -150,7 +150,7 @@
 }
 .quiz__answer .input {
     background-color: #fff;
-    border: 6px groove #0243f1;
+    border: 6px groove #000;
     width: 100%;
     font-family: 'PyeongChang';
     padding: 10px 20px;
@@ -158,14 +158,14 @@
     margin-bottom: 10px;
 }
 .quiz__view {
-    border-bottom: 6px ridge #0243f1;
+    border-bottom: 6px ridge #000;
     overflow: hidden;
 }
 .quiz__desc {
-    border-top: 6px ridge #0243f1;
+    border-top: 6px ridge #000;
     padding: 20px;
     font-family: 'PyeongChang';
-    background-color: #0243f155;
+    background-color: #cacaca;
 }
 .quiz__desc::before {
     content: '✍️ Tip ';
@@ -174,7 +174,7 @@
 }
 .quiz__choice {
     padding: 20px;
-    border-bottom: 6px ridge #0243f1;
+    border-bottom: 6px ridge #000;
     font-family: 'PyeongChang';
 }
 .quiz__choice label {
@@ -202,17 +202,18 @@
     height: 26px;
     border-radius: 50%;
     background: #fff;
-    box-shadow: inset 0 0 0 4px #0243f1;
+    box-shadow: inset 0 0 0 4px #000;
     margin-right: 15px;
     transition: all 0.2s;
     flex-shrink: 0;
 }
 .quiz__choice label input:checked + span {
-    background-color: #0243f155;
+    background-color: #cacaca;
     border-radius: 10px;
 }
 .quiz__choice label input:checked + span::before {
-    box-shadow: inset 0 0 0 8px #0243f1;
+    box-shadow: inset 0 0 0 5px #cacaca;
+    border: 4px solid #000;
 }
 .quiz__check {
     position: fixed;
@@ -224,25 +225,26 @@
     border-radius: 50%;
     z-index: 1000;
     text-align: center;
-    background: #0242f199;
-    color: #fff;
+    background: #cacaca;
+    color: #000;
     font-family: 'PyeongChang';
     cursor: pointer;
-    border: 5px solid #0243f1;
+    border: 5px solid #000;
     font-size: 24px;
 }
 .quiz__info {
     position: fixed;
     right: 20px;
     bottom: 220px;
-    background-color: #0243f1;    
+    background-color: #cacaca;    
     text-align: center;
     width: 130px;
     height: 50px;
     line-height: 50px;
     border-radius: 10px;
     font-family: 'PyeongChang';
-    color: #fff;
+    color: #000;
+    border: 5px solid #000;
 }
 .quiz__info::after {
     content: '';
@@ -250,7 +252,7 @@
     left: 50%;
     margin-left: -10px;
     bottom: -10px;
-    border-top: 10px solid #0243f1;
+    border-top: 10px solid #000;
     border-left: 10px solid transparent;
     border-right: 10px solid transparent;
 }
@@ -278,31 +280,33 @@
     width: 120px;
     height: 120px;
     line-height: 120px;
-    background-color: #0243f1;
+    background-color: #cacaca;
     border-radius: 50%;
     text-align: center;
-    color: #fff;
+    color: #000;
     position: absolute;
     left: 70%;
     top: 100px;
     font-family: 'PyeongChang';
     font-size: 20px;
     opacity: 0;
+    border: 2px solid #000;
 }
 .dog__wrap .false {
     width: 120px;
     height: 120px;
     line-height: 120px;
-    background-color: #0243f1;
+    background-color: #cacaca;
     border-radius: 50%;
     text-align: center;
-    color: #fff;
+    color: #000;
     position: absolute;
     right: 70%;
     top: 100px;
     font-family: 'PyeongChang';
     font-size: 20px;
     opacity: 0;
+    border: 2px solid #000;
 }
 .dog__wrap.like .true {
     opacity: 1;
@@ -593,7 +597,7 @@
     }
 }
 .like {
-    background: #00eeff;
+    background: #ffd798;
 }
 .like .face::before {
     margin-top: 10px;
@@ -638,7 +642,7 @@
     animation: movetail 0.1s linear infinite alternate forwards;
 }
 .dislike {
-    background: #5e5ed2b0;
+    background: #7272ffb0;
 }
 .dislike .ears::before {
     transform: rotate(-50deg) translate(-7px, 2px);
