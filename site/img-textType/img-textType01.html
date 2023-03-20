@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>이미지 텍스트 유형 01</title>
+    <title>이미지/텍스트 유형 01</title>
 
     <link href="https://webfontworld.github.io/NexonLv1Gothic/NexonLv1Gothic.css" rel="stylesheet">
     <style>
@@ -23,6 +23,9 @@
         img {
             vertical-align: top;
             width: 100%;
+        }
+        li {
+            list-style: none;
         }
         .blind{
             position: absolute;
@@ -91,34 +94,79 @@
         }
 
         /* imgtext__wrap */
-        .imgtext__inner {
+        .imgText__inner {
             display: flex;
             flex-wrap: wrap;
             justify-content: space-between;
         }
-        .imgtext {
+        .imgText__inner article {
             width: 32.3333%;
-            height: 500px;
         }
-        .imgtext__body .title {
+        .imgText__inner .text span {
+            background-color: red;
+            font-size: 14px;
+            color: #fff;
+            padding: 1px 20px;
+            border-radius: 50px;
+            margin-bottom: 15px;
+            display: inline-block;
+        }
+        .imgText__inner .text h3 {
             font-size: 50px;
-            line-height: 120%;
-            margin-right: 50px;
-            margin-bottom: 15px;
+            margin-bottom: 17px;
         }
-        .imgtext__body .desc {
+        .imgText__inner .text p {
             font-size: 16px;
-            line-height: 155%;
-            margin-right: 10px;
-            margin-bottom: 15px;
+            line-height: 1.5;
+            color: #666;
+            margin-bottom: 12px;
         }
-        .imgtext__body .nav{
+        .imgText__inner .text li{
+            position: relative;
+            padding-left: 14px;
+        }
+        .imgText__inner .text li::before {
+            content: "";
+            width: 4px;
+            height: 4px;
+            border-radius: 50%;
+            background-color: #666;
+            position: absolute;
+            left: 0;
+            top: 8px;
+        }
+        .imgText__inner .text li a {
+            color: #666;
+            line-height: 1.6;
             font-size: 16px;
-            line-height: 155%;
-            margin-left: 15px;
         }
-        .imgtext__header {
+        .imgText__inner .img {
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 500px;
             border-radius: 10px;
+            position: relative;
+        }
+        .imgText__inner .img a {
+            position: absolute;
+            left: 20px;
+            bottom: 20px;
+            background: #000;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 40px;
+        }
+        .imgText__inner .img.i1 {
+            background-image: url(../asset/img/imgtext-Type01_01@2x.jpg);
+        }
+        .imgText__inner .img.i2 {
+            background-image: url(../asset/img/imgtext-Type01_02@2x.jpg);
+        }
+        .imgText__inner .img.i1 a {
+            background-color: rgba(255, 0, 0, 0.6);
+        }
+        .imgText__inner .img.i2 a {
+            background-color: rgba(0, 85, 255, 0.6);
         }
 
         @media only screen and (-webkit-min-device-pixel-ratio: 2),
@@ -133,40 +181,31 @@
 </head>
 <body>
     <section class="imgtext__wrap section nexon">
+        <h2 class="blind">운동 시 가장 주의할 점</h2>
         <div class="container">
-            <div class="imgtext__inner">
-                <article class="imgtext">
-                    <div class="imgtext__body">
-                        <span class="section__small">notice</span>
-                        <h3 class="title">운동 시 가장 주의할 점</h3>
-                        <p class="desc">운동을 할 때에는 몸의 건강과 안전을 최우선으로 생각해야 합니다. 아래는 운동 시 주의해야 할 점입니다.</p>
-                        <ul class="nav">
-                            <li>적절한 스트레칭</li>
-                            <li>자신의 체력 상태</li>
-                            <li>올바른 자세</li>
-                            <li>적절한 운동량</li>
-                            <li>적절한 장비 착용</li>
-                            <li>충분한 수분 섭취</li>
-                            <li>적절한 휴식</li>
-                            <li>질병과 상태 고려</li>
-                            <li>부상 방지</li>
-                            <li>운동 전문가와 상담</li>
-                        </ul>
-                    </div>
+            <div class="imgText__inner">
+                <article class="text">
+                    <span>NOTICE</span>
+                    <h3>운동 시 가장 주의할 점</h3>
+                    <p>운동을 할 때에는 몸의 건강과 안전을 최우선으로 생각해야 합니다. 아래는 운동 시 주의해야 할 점입니다.</p>
+                    <ul>
+                        <li><a href="#">적절한 스트레칭</a></li>
+                        <li><a href="#">자신의 체력 상태</a></li>
+                        <li><a href="#">올바른 자세</a></li>
+                        <li><a href="#">적절한 운동량</a></li>
+                        <li><a href="#">적절한 장비 착용</a></li>
+                        <li><a href="#">충분한 수분 섭취</a></li>
+                        <li><a href="#">적절한 휴식</a></li>
+                        <li><a href="#">질병과 상태 고려</a></li>
+                        <li><a href="#">부상 방지</a></li>
+                        <li><a href="#">운동 전문가와 상담</a></li>
+                    </ul>
                 </article>
-                <article class="imgtext">
-                    <div class="imgtext__body">
-                        <figure class="imgtext__header">
-                            <img src="../asset/img/imgtext-Type01_01@2x.jpg" alt="적절한 스트레칭">
-                        </figure>
-                    </div>
+                <article class="img i1">
+                    <a href="#">적절한 스트레칭</a>
                 </article>
-                <article class="imgtext">
-                    <div class="imgtext__body">
-                        <figure class="imgtext__header">
-                            <img src="../asset/img/imgtext-Type01_02@2x.jpg" alt="충분한 수분 섭취">
-                        </figure>
-                    </div>
+                <article class="img i2">
+                    <a href="#">충분한 수분섭취</a>
                 </article>
             </div>
         </div>

@@ -1,0 +1,68 @@
+@import url('https://webfontworld.github.io/NexonLv1Gothic/NexonLv1Gothic.css');
+@import url('https://webfontworld.github.io/earlyfont/EF_Hyunygothic.css');
+@import url('https://webfontworld.github.io/Healthset/HealthsetGothic.css');
+@import url('https://webfontworld.github.io/nixgon/NixgonFonts.css');
+@import url('https://webfontworld.github.io/woori/Wooridaum.css');
+@import url('https://webfontworld.github.io/NanumSquare/NanumSquare.css');
+@import url('https://webfontworld.github.io/amore/AritaBuri.css');
+@import url('https://webfontworld.github.io/tmoney/TmoneyRoundWind.css');
+@import url('https://webfontworld.github.io/jikji/JHaebaragi.css');
+@import url('https://webfontworld.github.io/nhn/Godo.css');
+
+/* reset */
+* {
+    margin: 0;
+    padding: 0;
+    color: #fff;
+}
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+a {
+    text-decoration: none;
+    color: #222;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-weight: normal;
+}
+li, ul, ol {
+    list-style: none;
+}
+img {
+    vertical-align: top;
+    width: 100%;
+}
+em {
+    font-style: normal;
+}
+.font01 {
+    font-family: 'NexonLv1Gothic';
+    font-weight: 300;
+}
+.font02 {
+    font-family: 'EF_Hyunygothic';
+}
+.font03 {
+    font-family: 'HealthsetGothic';
+}
+.font04 {
+    font-family: 'NixgonFonts';
+}
+.font05 {
+    font-family: 'Wooridaum';
+}
+.font06 {
+    font-family: 'NanumSquare';
+}
+.font07 {
+    font-family: 'AritaBuri';
+}
+.font08 {
+    font-family: 'TmoneyRoundWind';
+}
+.font09 {
+    font-family: 'JHaebaragi';
+}
+.font10 {
+    font-family: 'Godo';
+}
