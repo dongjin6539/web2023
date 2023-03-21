@@ -160,6 +160,13 @@ body {
 .main__sample .notice p {
     margin-bottom: 0;
 }
+.main__text span {
+    font-weight: bold;
+    font-size: 24px;
+    color: #0243f1;
+    display: flex;
+    margin-bottom: 5px;
+}
 
 /* 푸터 영역 */
 #footer {
