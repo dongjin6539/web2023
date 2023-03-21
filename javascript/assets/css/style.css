@@ -88,6 +88,10 @@ body {
     padding-bottom: 40px;
     border-bottom: 1px dashed #dcdcdc;
 }
+.main__menu span {
+    color: #0243f1;
+    font-weight: bold;
+}
 .main__desc h3 {
     font-size: 24px;
     margin-bottom: 5px;
@@ -106,7 +110,14 @@ body {
 .main__desc li{
     list-style: square;
 }
-.main__desc a {
+.main__desc li a {
+    transition: all 0.2s;
+}
+.main__desc li a:hover {
+    color: #0243f1;
+    font-size: 20px;
+}
+.main__desc .link {
     display: block;
     border: 1px dotted #0243f1;
     margin: 10px 0;
@@ -115,7 +126,7 @@ body {
     margin-bottom: 50px;
     transition: all 0.2s;
 }
-.main__desc a:hover {
+.main__desc .link:hover {
     background-color: #0243f1;
     color: #fff;
 }
@@ -159,6 +170,12 @@ body {
 }
 .main__sample .notice p {
     margin-bottom: 0;
+}
+.main__text ul {
+    padding-left: 15px;
+}
+.main__text li {
+    list-style: square;
 }
 .main__text span {
     font-weight: bold;
