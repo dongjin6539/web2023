@@ -118,6 +118,11 @@
 .quiz__question em {
     color: #cacaca;
 }
+.quiz__total {
+    text-align: center;
+    font-family: 'PyeongChang';
+    font-size: 20px;
+}
 .quiz__answer {
     font-family: 'PyeongChang';
     padding: 20px;

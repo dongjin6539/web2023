@@ -32,9 +32,10 @@
                     <h2 class="quiz__title"></h2>
                 </div>
                 <div class="quiz__main">
-                    <div class="quiz__question"></div>
-                    <div class="quiz__view">                        
-                        <div class="dog__wrap">                            
+                    <div class="quiz__question"></div>                    
+                    <div class="quiz__view">                                               
+                        <div class="dog__wrap">  
+                            <div class="quiz__total">총 문제</div>                        
                             <div class="true">정답입니다!</div>
                             <div class="false">틀렸습니다!</div>
                             <div class="card-container">
@@ -83,7 +84,9 @@
                     <div class="quiz__desc"></div>
                 </div>
             </div>
-        </div>
+        </div>        
+        <div class="quiz__info">??점</div>
+        <div class="quiz__check">정답 수</div>
     </main>     
     <!-- //main -->
 
@@ -150,6 +153,7 @@
         const quizWrap = document.querySelector(".quiz__wrap");
         const quizTitle = quizWrap.querySelector(".quiz__title");
         const quizQuestion = quizWrap.querySelector(".quiz__question");
+        const quizTotal = quizWrap.querySelector(".quiz__total");
         const quizChoice = quizWrap.querySelector(".quiz__choice");
         const dogWrap = quizWrap.querySelector(".dog__wrap");
         const quizAnswer = quizWrap.querySelector(".quiz__answer"); 
@@ -169,6 +173,10 @@
             let questionTag = `
                 <em>${index+1}</em>.
                 <span>${quizInfo[index].infoQuestion}</span>
+            `;
+
+            let totalTag = `
+                현재 문제 ${index+1} / 총 문제 ${quizInfo.length}
             `;
 
             let choiceTag = `
@@ -197,6 +205,7 @@
             quizTitle.innerHTML = typeTag;
             quizChoice.innerHTML = choiceTag;
             quizQuestion.innerHTML = questionTag;
+            quizTotal.innerHTML = totalTag;
             quizDesc.innerHTML = descTag;
 
             // 보기 선택자
@@ -224,6 +233,7 @@
             let currentAnswer = quizInfo[quizCount].infoAnswer;     // 문제 정답
 
             if(userAnswer == currentAnswer){
+                quizScore++;
                 console.log("정답입니다.");
                 dogWrap.classList.add("like");
             } else {
@@ -238,9 +248,11 @@
         // 정답 확인
         quizNext.addEventListener("click", () => {
             quizCount++;
-            updateQuiz(quizCount);
-
             dogWrap.classList.remove("like", "dislike");
+            if(quizCount == quizInfo.length){
+                document.querySelector(".quiz__info").innerHTML = Math.ceil((quizScore / quizInfo.length) * 100) + "점";
+            }
+            updateQuiz(quizCount);
         });
     </script>
 </body>
