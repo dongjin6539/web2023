@@ -83,10 +83,10 @@
                     </div>
                     <div class="quiz__desc"></div>
                 </div>
-            </div>
+            </div>            
+            <div class="quiz__info"><span>??</span>점</div>
+            <div class="quiz__check">정답 : <span>?</span> 개</div>
         </div>        
-        <div class="quiz__info">??점</div>
-        <div class="quiz__check">정답 수</div>
     </main>     
     <!-- //main -->
 
@@ -159,6 +159,7 @@
         const quizAnswer = quizWrap.querySelector(".quiz__answer"); 
         const quizNext = quizWrap.querySelector(".quiz__answer .next"); 
         const quizDesc = quizWrap.querySelector(".quiz__desc"); 
+        const quizCheck = quizWrap.querySelector(".quiz__check span"); 
 
         let quizCount = 0;
         let quizScore = 0;
@@ -250,8 +251,9 @@
             quizCount++;
             dogWrap.classList.remove("like", "dislike");
             if(quizCount == quizInfo.length){
-                document.querySelector(".quiz__info").innerHTML = Math.ceil((quizScore / quizInfo.length) * 100) + "점";
-            }
+                document.querySelector(".quiz__info span").innerHTML = Math.ceil((quizScore / quizInfo.length) * 100);   
+                quizCheck.innerHTML = quizScore;      
+            }    
             updateQuiz(quizCount);
         });
     </script>
