@@ -298,7 +298,7 @@
     width: 120px;
     height: 120px;
     line-height: 120px;
-    background-color: #cacaca;
+    background-color: #ffbe55;
     border-radius: 50%;
     text-align: center;
     color: #000;
@@ -308,13 +308,12 @@
     font-family: 'PyeongChang';
     font-size: 20px;
     opacity: 0;
-    border: 2px solid #000;
 }
 .dog__wrap .false {
     width: 120px;
     height: 120px;
     line-height: 120px;
-    background-color: #cacaca;
+    background-color: #5555fd;
     border-radius: 50%;
     text-align: center;
     color: #000;
@@ -324,7 +323,6 @@
     font-family: 'PyeongChang';
     font-size: 20px;
     opacity: 0;
-    border: 2px solid #000;
 }
 .dog__wrap.like .true {
     opacity: 1;

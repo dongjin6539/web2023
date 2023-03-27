@@ -101,7 +101,7 @@
                 infoNumber: "20100201",
                 infoQuestion: "입출력 채널의 기능으로 적합하지 않은 것은?",
                 infoChoice: ["입출력 명령을 해독한다.", "각 입출력 장치의 명령 실행을 지시한다.", "지시된 명령의 실행 상황을 제어한다.", "많은 입출력 장치를 한 번에 종속적으로 동작시킨다."],
-                infoAnswer: "4",
+                infoAnswer: "많은 입출력 장치를 한 번에 종속적으로 동작시킨다.",
                 infoDesc: "채널은 한번에 1개의 입출력장치를 동작 시킵니다. 많은 입출력 장치를 동시에 제어 하기 위해서는 여러 채널을사용해야 합니다."
             },{
                 infoType: "정보처리 기능사",
@@ -109,7 +109,7 @@
                 infoNumber: "20100202",
                 infoQuestion: " 연속되는 2개의 숫자를 표현한 코드에서 한 개의 비트를변경하면 새로운 코드가 되기 때문에 아날로그-디지털 변환, 데이터 전송 등에 주로 사용되는 코드는?",
                 infoChoice: ["DEBDIC Code", "Hamming Code", "ASCII Code", "Gray Code"],
-                infoAnswer: "4",
+                infoAnswer: "Gray Code",
                 infoDesc: "Gray Code 는 입출력변환할 때, 아날로그와 디지털 변환할때 사용하는 코드입니다."
             },{
                 infoType: "정보처리 기능사",
@@ -117,7 +117,7 @@
                 infoNumber: "20100203",
                 infoQuestion: " 1비트(bit)를 기억할 수 있는 능력을 가진 기억의 최소 단위로 클록이 있는 순서회로에 기억된 기억 소자는?",
                 infoChoice: ["플립플롭(Flip-Flop)", "전가산기(Full Adder)", "반가산기(Half Adder)", "부호기(Encoder)"],
-                infoAnswer: "1",
+                infoAnswer: "플립플롭(Flip-Flop)",
                 infoDesc: "전가산기, 반가산기, 부호기, 멀티플렉서 등은 조합논리회로입니다."
             },{
                 infoType: "정보처리 기능사",
@@ -125,7 +125,7 @@
                 infoNumber: "20100204",
                 infoQuestion: "다음 그림과 같은 논리회로는?<br><img style='width:300px'src='../assets/img/20100204.jpg'>",
                 infoChoice: ["Inhibit", "OR", "AND", "Flip-Flop"],
-                infoAnswer: "1",
+                infoAnswer: "Inhibit",
                 infoDesc: "금지 회로(Inhibit Circuit)로써 AND게이트의 여러 입력 중 한 입력을 NOT회로를 이용하여금지 입력으로 사용하는 회로입니다. 금지 입력값이 1인경우 AND게이트의 출력이 1이 될수 없는회로입니다."
             },{
                 infoType: "정보처리 기능사",
@@ -133,7 +133,7 @@
                 infoNumber: "20100205",
                 infoQuestion: "연산의 중심이 되는 레지스터(Register)는?",
                 infoChoice: ["General Register", "Address Register", "Accumulator", "Filp-Flop"],
-                infoAnswer: "3",
+                infoAnswer: "Accumulator",
                 infoDesc: "Accumulator는 누산기(연산결과 일시(임시)저장)입니다."
             },{
                 infoType: "정보처리 기능사",
@@ -141,7 +141,7 @@
                 infoNumber: "20100206",
                 infoQuestion: "순차적인 주소지정 등에 유리하며, 주소지정에 2개의 레지스터가 사용되는 방식은?",
                 infoChoice: ["직접 Addressing", "간접 Addressing", "상대 Addressing", "색인 Addressing"],
-                infoAnswer: "4",
+                infoAnswer: "색인 Addressing",
                 infoDesc: "순차적인 주소지정 등에 유리하며, 주소지정에 2개의 레지스터가 사용되는 방식은 색인 Addressing입니다."
             }
         ];
@@ -151,6 +151,10 @@
         const quizTitle = quizWrap.querySelector(".quiz__title");
         const quizQuestion = quizWrap.querySelector(".quiz__question");
         const quizChoice = quizWrap.querySelector(".quiz__choice");
+        const dogWrap = quizWrap.querySelector(".dog__wrap");
+        const quizAnswer = quizWrap.querySelector(".quiz__answer"); 
+        const quizNext = quizWrap.querySelector(".quiz__answer .next"); 
+        const quizDesc = quizWrap.querySelector(".quiz__desc"); 
 
         let quizCount = 0;
         let quizScore = 0;
@@ -184,11 +188,16 @@
                     <input type="radio" id="choice4" name="choice" value="4">
                     <span>${quizInfo[index].infoChoice[3]}</span>
                 </label>
-            `
+            `;
+
+            let descTag = `
+                <em>정답은 '${quizInfo[index].infoAnswer}'입니다.</em><br>${quizInfo[index].infoDesc}
+            `;
 
             quizTitle.innerHTML = typeTag;
             quizChoice.innerHTML = choiceTag;
             quizQuestion.innerHTML = questionTag;
+            quizDesc.innerHTML = descTag;
 
             // 보기 선택자
             const quizChoiceSpan = quizWrap.querySelectorAll(".quiz__choice span");
@@ -199,18 +208,40 @@
             // });
             for(let i=0; i<quizChoiceSpan.length; i++){
                 quizChoiceSpan[i].setAttribute("onclick", "choiceSelected(this)"); 
-                quizChoiceInput[i].disabled = "true";
+                // quizChoiceInput[i].disabled = "true";
             };
-        };
 
-        function choiceSelected(answer){
-            let userAnswer = answer.textContent;
-            console.log(userAnswer);
+            // 다음 버튼, 해설 숨기기
+            quizAnswer.style.display = "none";
+            quizDesc.style.display = "none";
         };
 
         updateQuiz(quizCount);
 
+        // 객관식 선택
+        function choiceSelected(answer){
+            let userAnswer = answer.textContent;                    // 사용자 정답
+            let currentAnswer = quizInfo[quizCount].infoAnswer;     // 문제 정답
+
+            if(userAnswer == currentAnswer){
+                console.log("정답입니다.");
+                dogWrap.classList.add("like");
+            } else {
+                console.log("오답입니다.");
+                dogWrap.classList.add("dislike");
+            };
+
+            quizAnswer.style.display = "block";
+            quizDesc.style.display = "block";
+        };
+
         // 정답 확인
+        quizNext.addEventListener("click", () => {
+            quizCount++;
+            updateQuiz(quizCount);
+
+            dogWrap.classList.remove("like", "dislike");
+        });
     </script>
 </body>
 
