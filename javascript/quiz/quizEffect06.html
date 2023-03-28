@@ -20,6 +20,7 @@
             <li><a href="quizEffect04.html">4</a></li>
             <li><a href="quizEffect05.html">5</a></li>
             <li class="active"><a href="quizEffect06.html">6</a></li>
+            <li><a href="quizEffect07.html">7</a></li>
             <li><a href="quizWebd.html">W</a></li>
         </ul>
     </header>
@@ -35,9 +36,10 @@
                     <div class="quiz__question"></div>                    
                     <div class="quiz__view">                                               
                         <div class="dog__wrap">  
-                            <div class="quiz__total">총 문제</div>                        
+                            <div class="quiz__total"></div>                        
                             <div class="true">정답입니다!</div>
                             <div class="false">틀렸습니다!</div>
+                            <div class="count"></div>
                             <div class="card-container">
                                 <div class="dog">
                                     <div class="head">
@@ -84,8 +86,8 @@
                     <div class="quiz__desc"></div>
                 </div>
             </div>            
-            <div class="quiz__info"><span>??</span>점</div>
-            <div class="quiz__check">정답 : <span>?</span> 개</div>
+            <!-- <div class="quiz__info"><span>??</span>점</div>
+            <div class="quiz__check">정답 : <span>?</span> 개</div> -->
         </div>        
     </main>     
     <!-- //main -->
@@ -156,13 +158,15 @@
         const quizTotal = quizWrap.querySelector(".quiz__total");
         const quizChoice = quizWrap.querySelector(".quiz__choice");
         const dogWrap = quizWrap.querySelector(".dog__wrap");
+        const dogWrapCount = quizWrap.querySelector(".dog__wrap .count");
         const quizAnswer = quizWrap.querySelector(".quiz__answer"); 
         const quizNext = quizWrap.querySelector(".quiz__answer .next"); 
         const quizDesc = quizWrap.querySelector(".quiz__desc"); 
+        const quizInfoSpan = quizWrap.querySelector(".quiz__info span"); 
         const quizCheck = quizWrap.querySelector(".quiz__check span"); 
 
-        let quizCount = 0;
-        let quizScore = 0;
+        let quizCount = 0;  // 퀴즈 번호
+        let quizScore = 0;  // 퀴즈 점수
 
         // 문제 출력
         const updateQuiz = (index) => {
@@ -209,6 +213,9 @@
             quizTotal.innerHTML = totalTag;
             quizDesc.innerHTML = descTag;
 
+            // let quizLength = quizInfo.length - quizCount;
+            // dogWrapCount.innerHTML = `총 ${quizInfo.length}문제 중 ${quizLength-1}문제 남았습니다.`;
+
             // 보기 선택자
             const quizChoiceSpan = quizWrap.querySelectorAll(".quiz__choice span");
             const quizChoiceInput = quizWrap.querySelectorAll(".quiz__choice input");
@@ -237,23 +244,34 @@
                 quizScore++;
                 console.log("정답입니다.");
                 dogWrap.classList.add("like");
+                quizAnswer.style.display = "block";
+                quizDesc.style.display = "block";
             } else {
                 console.log("오답입니다.");
                 dogWrap.classList.add("dislike");
+                quizAnswer.style.display = "block";
+                quizDesc.style.display = "block";
             };
 
-            quizAnswer.style.display = "block";
-            quizDesc.style.display = "block";
+            let countLast = Math.ceil((quizScore/quizInfo.length)*100);
+            let countResult = (countLast > 60) ? "합격" : "불합격"
+
+            // 마지막 문제일 때
+            if(quizCount == quizInfo.length -1){
+                quizAnswer.style.display = "none";
+                quizTotal.innerHTML = "🎉문제를 다 풀었습니다.🎉"
+                dogWrapCount.innerHTML = `총 ${quizScore}문제를 맞췄습니다. 점수는 ${countLast}점입니다. ${countResult}입니다.`
+            };
         };
 
         // 정답 확인
         quizNext.addEventListener("click", () => {
             quizCount++;
             dogWrap.classList.remove("like", "dislike");
-            if(quizCount == quizInfo.length){
-                document.querySelector(".quiz__info span").innerHTML = Math.ceil((quizScore / quizInfo.length) * 100);   
-                quizCheck.innerHTML = quizScore;      
-            }    
+            // if(quizCount == quizInfo.length){
+            //     quizInfoSpan.innerHTML = Math.ceil((quizScore / quizInfo.length) * 100);   
+            //     quizCheck.innerHTML = quizScore;     
+            // }    
             updateQuiz(quizCount);
         });
     </script>
