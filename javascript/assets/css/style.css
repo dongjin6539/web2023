@@ -239,6 +239,28 @@ body {
     display: flex;
     margin-bottom: 5px;
 }
+.btn {
+    position: fixed;
+    right: 25px;
+    bottom: 25px;
+    background-color: #0243f1;
+    border-radius: 50%;
+    border: 1px solid #0243f1;
+    width: 50px;
+    height: 50px;
+}
+.btn:hover {
+    background-color: #6e95ff;
+    border: 1px solid #6e95ff;
+}
+.btn a {
+    color: #fff;
+    font-weight: bold;
+}
+.btn a:hover {
+    color: #000;
+}
+
 
 /* 푸터 영역 */
 #footer {
