@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>finalQestion01</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        .section {
+            margin: 0 auto;
+            width: 1200px;
+            text-align: center;
+        }
+        .section h1 {
+            margin: 20px;
+        }
+    </style>
+</head>
+<body>
+    <section class="section">
+        <h1>마우스 오버하면 이미지 바꾸기</h1>
+        <img src="img/finalQuestion01_01.jpg" alt="이미지">
+    </section>
+
+    <script>
+        let img = document.querySelector(".section img");
+
+        img.addEventListener("mouseover", () => {
+            img.src= "img/finalQuestion01_02.jpg"
+        });
+
+        img.addEventListener("mouseout", () => {
+            img.src= "img/finalQuestion01_01.jpg"
+        });
+    </script>
+</body>
+</html>

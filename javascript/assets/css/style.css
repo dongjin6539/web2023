@@ -208,6 +208,24 @@ body {
     left: 0;
     top: 9px;
 }
+.main__sample .table {
+    width: 100%;
+}
+.main__sample .table th {
+    background-color: #0243f1;
+    color: #fff;
+    padding: 2px;
+}
+.main__sample .table td {
+    text-align: center;
+    border: 1px solid #f3f3f3;
+    background-color: #f3f3f3;
+    padding: 2px;
+}
+.main__sample .table button {
+    cursor: pointer;
+    padding: 3px 20px;
+}
 .main__text ul {
     padding-left: 15px;
 }
