@@ -1,149 +1,403 @@
-    <!DOCTYPE html>
-    <html lang="ko">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Document</title>
-    </head>
-    <body>
-        <script>
-            //01 1-50까지 for문으로 출력
-            {
-                for(let i=1; i<=50; i++){
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //01 1-50까지 for문으로 출력
+        {
+            for(let i=1; i<=50; i++){
+                document.write(i);
+            };
+        }
+
+        document.write("<br>");
+
+        //02 1-50까지 while문으로 출력
+        {
+            let num = 0;
+            while(num<50){
+                num++;
+                document.write(num);
+            };
+        }
+
+        document.write("<br>");
+
+        //03 1-100까지 짝수로 출력(if문 사용X)
+        { 
+            for(let i=0; i<=100; i+=2){
+                document.write(i);
+            };
+        }
+
+        document.write("<br>");
+
+        //04 1-100까지 홀수로 출력(if문 사용)
+        {
+            for(let i=1; i<=100; i++){
+                if(i % 2 == 1){
                     document.write(i);
                 };
-            }
+            };
+        }
 
-            document.write("<br>");
+        document.write("<br>");
 
-            //02 1-50까지 while문으로 출력
-            {
-                let num = 0;
-                while(num<50){
+        //05 테이블 50칸 출력(1-50숫자 출력)
+        {
+            table = "<table border='1'>";
+            let num = 0;
+            for(let i=0; i<5; i++){
+                table += "<tr>";
+                for(let j=0; j<10; j++){
                     num++;
-                    document.write(num);
+                    table += "<td>" + num + "</td>";
                 };
-            }
+                table += "</tr>";
+            };
+            table += "</table>";
+            document.write(table);
+        }
 
-            document.write("<br>");
+        document.write("<br>");
 
-            //03 1-100까지 짝수로 출력(if문 사용X)
-            { 
-                for(let i=0; i<=100; i+=2){
-                    document.write(i);
+        //06 1-10까지 합 출력
+        {
+            let sum = 0;
+            for(let i=1; i<=10; i++){
+                sum += i;
+            };
+            document.write(sum); 
+        }
+
+        document.write("<br>");
+
+        //07 구구단 출력
+        {
+            for(let i=2; i<=9; i++){
+                document.write(i + "단","<br>");
+                for(let j=1; j<=9; j++){
+                    document.write(i + "*" + j + "=" + i*j);
                 };
-            }
+                document.write("<br>");
+            };
+        }
 
-            document.write("<br>");
+        document.write("<br>");
 
-            //04 1-100까지 홀수로 출력(if문 사용)
-            {
-                for(let i=1; i<=100; i++){
-                    if(i % 2 == 1){
-                        document.write(i);
-                    };
-                };
-            }
+        //08 함수 유형 4가지 작성
+        {
+            function func(){
+                document.write("선언적 함수가 실행되었습니다.<br>");
+            };
+            func();
+        }
+        {
+            const func = function(){
+                document.write("익명 함수가 실행되었습니다.<br>");
+            };
+            func();
+        }
+        {
+            function func(str){
+                document.write(str);
+            };
+            func("매개변수 함수가 실행되었습니다.<br>");
+        }
+        {
+            function func(){
+                const str = "리턴값 함수가 실행되었습니다<br>"
+                return str;
+            };
+            document.write(func());
+        }
 
-            document.write("<br>");
+        document.write("<br>");
 
-            //05 테이블 50칸 출력(1-50숫자 출력)
-            {
-                table = "<table border='1'>";
-                let num = 0;
-                for(let i=0; i<5; i++){
-                    table += "<tr>";
-                    for(let j=0; j<10; j++){
-                        num++;
-                        table += "<td>" + num + "</td>";
-                    };
-                    table += "</tr>";
-                };
-                table += "</table>";
-                document.write(table);
-            }
+        //09 화살표 함수유형 4가지 작성
+        {
+            func = () => document.write("화살표 선언적 함수가 실행되었습니다.<br>");
+            func();
+        }
+        {
+            const func = () => {
+                document.write("화살표 익명 함수가 실행되었습니다.<br>");
+            };
+            func();
+        }
+        {
+            func = (str) => {
+                document.write(str);
+            };
+            func("화살표 매개변수 함수가 실행되었습니다<br>");
+        }
+        {
+            func = () => {
+                const str = "화살표 리턴값 함수가 실행되었습니다.<br>";
+                return str;
+            };
+            document.write(func());
+        }
+        //10 스크립트하면서 제일 어려운 부분과 이해 안되는 부분 서술
 
-            document.write("<br>");
+        
+// 1  
+{
+    let num = 0;
+    
+    while(false){
+        num++;
+        if(num == 3){
+            continue;
+        }
+        if(num > 10){
+            break;
+        }
+    }
+    console.log(num);
+}
 
-            //06 1-10까지 합 출력
-            {
-                let sum = 0;
-                for(let i=1; i<=10; i++){
-                    sum += i;
-                };
-                document.write(sum); 
-            }
+// 2
+{
+    let a = 6, b = 9, c = 3, result;
+    result = ++a + b++ + ++c;
 
-            document.write("<br>");
+    console.log(result);
+    console.log(a+b+c);
+}
 
-            //07 구구단 출력
-            {
-                for(let i=2; i<=9; i++){
-                    document.write(i + "단","<br>");
-                    for(let j=1; j<=9; j++){
-                        document.write(i + "*" + j + "=" + i*j);
-                    };
-                    document.write("<br>");
-                };
-            }
+// 3
+{
+    function func(){
+        let a =[];
 
-            document.write("<br>");
+        for(i=1; i<=5; i++){
+            a += [i];
+        }
+        console.log(a);
+    }
+    func();
+}
 
-            //08 함수 유형 4가지 작성
-            {
-                function func(){
-                    document.write("선언적 함수가 실행되었습니다.<br>");
-                };
-                func();
-            }
-            {
-                const func = function(){
-                    document.write("익명 함수가 실행되었습니다.<br>");
-                };
-                func();
-            }
-            {
-                function func(str){
-                    document.write(str);
-                };
-                func("매개변수 함수가 실행되었습니다.<br>");
-            }
-            {
-                function func(){
-                    const str = "리턴값 함수가 실행되었습니다<br>"
-                    return str;
-                };
-                document.write(func());
-            }
+// 4
+{
+    let arr = [3,4,1,4,1,3,4,9,8,3];
 
-            document.write("<br>");
+    for(let i=0; i<10; i++){
+        if(i%3==2){
+            console.log(arr[i]);
+        }
+    }
+}
 
-            //09 화살표 함수유형 4가지 작성
-            {
-                func = () => document.write("화살표 선언적 함수가 실행되었습니다.<br>");
-                func();
-            }
-            {
-                const func = () => {
-                    document.write("화살표 익명 함수가 실행되었습니다.<br>");
-                };
-                func();
-            }
-            {
-                func = (str) => {
-                    document.write(str);
-                };
-                func("화살표 매개변수 함수가 실행되었습니다<br>");
-            }
-            {
-                func = () => {
-                    const str = "화살표 리턴값 함수가 실행되었습니다.<br>";
-                    return str;
-                };
-                document.write(func());
-            }
-            //10 스크립트하면서 제일 어려운 부분과 이해 안되는 부분 서술
-        </script>
-    </body>
-    </html>
+// 5 
+{
+    function func(num1, num2){
+        if(num1>num2) return num1;
+        else return num2;
+    }
+    console.log(func(17,23) + func(50,40));
+}
+
+//6 
+{
+    function func(index){
+        console.log("함수가 실행되었습니다." + index);
+    }
+    function callback(num){
+        for(let i=0; i<=5; i++){
+            num(i);
+        }
+    }
+    callback(func);
+}
+
+// 7
+{
+    for(let i=1; i<=5; i++){
+        console.log(i);
+        
+        if(i == 4){
+            break;
+        }
+    }
+}
+
+//8 
+{
+    const arr = [100,200,300,400,500];
+
+    const text1 = arr.join("*");
+    arr.push("600");
+    const text3 = arr.join("");
+    arr.pop();
+    const text4 = arr.join(" ");
+
+    console.log(text1);
+    console.log(text3);
+    console.log(text4);
+}
+
+// 9
+{
+    let a,b = 10;
+
+    for(let i=0; i<5; i++){
+        a = i;
+        b -= a;
+    }
+    console.log(a,b);
+}
+
+// 10
+{
+    function func(){
+        let i = 10, j = 20, k = 30;
+        i /= j;
+        j -= i;
+        k %= j;
+
+        console.log(i);
+        console.log(j);
+        console.log(k);
+    }
+    func();
+}
+
+// 11 
+{
+    let k = 2;
+    let temp;
+    for(let i=0; i<=3; i++){
+        temp = k;
+        k++;
+        console.log(temp + "번");
+    }
+}
+
+// 12 
+{
+    let num = 10;
+    num += 2;
+    num -= 3;
+    num *= 5;
+    num /= 5;
+    num %= 9;
+
+    console.log(num)
+}
+
+// 13
+{
+    let num = [1,5,1,2,7,5];
+    for(let i=0; i<6; i++){
+        if((i+2)%2==0){
+            console.log(num[i]);
+        }
+    }
+}
+
+// 14
+{
+    let num = [0,1,2,3,4,5,6,7,8,9];
+    for(let i=0; i<=9; i++){
+        switch(num[i]%2){
+            case 1:
+                console.log(num[i]);
+                break;
+            default:
+                console.log("**");
+        }
+    }
+} 
+
+// 15
+{
+    let cnt = 0;
+    let sum = 0;
+    for(let i=0; i<=7; i++){
+        if(i%2==1){
+            cnt++;
+            sum += i;
+        }
+    }
+    console.log(cnt + "," + sum/2);
+}
+
+// 16
+{
+    let data = [70,80,75,60,90];
+    let best = 1;
+    let score = 0;
+
+    for(let i=0; i<data.length; i++){
+        if(data[i]>=80){
+            best++;
+        }
+        if(score<data[i]){
+            score = data[i];
+        }
+    }
+    
+    console.log(best,score)
+}
+
+// 17
+{
+    let a, b, result;
+    a = 7, b = 4
+    result = a|b;
+
+    console.log(result);
+}
+
+// 18
+{
+    function solution(a, b, c){
+        let answer = "YES", max;
+        let total = a + b + c;
+
+        if(a>b)max = a;
+        else max = b;
+        if(c>max)max = c;
+        if(total-max<=max)answer = "NO";
+
+        return answer;
+    }
+
+    console.log(solution(53, 93, 107));
+}
+
+// 19
+{
+    function solution(a, b, c){
+        let anwer;
+        if(a<b)answer = a;
+        else answer = b;
+        if(c<=answer)answer = c;
+        return answer;
+    }
+    console.log(solution(15, 12, 11));
+}
+
+// 20
+{
+    function solution(day, arr){
+        let answer = 0;
+        for(let x of arr){
+            if(x%10==day)answer++;
+        }
+        return answer;
+    }
+
+    arr = [25, 23, 11, 47, 53, 17, 33, 40];
+    console.log(solution(0, arr));
+}
+    </script>
+</body>
+</html>
