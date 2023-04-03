@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>퀴즈 이펙트07</title>
+    <title>퀴즈 웹디02</title>
 
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/quiz.css">
@@ -25,9 +25,9 @@
             <li><a href="quizEffect04.html">4</a></li>
             <li><a href="quizEffect05.html">5</a></li>
             <li><a href="quizEffect06.html">6</a></li>
-            <li class="active"><a href="quizEffect07.html">7</a></li>
+            <li><a href="quizEffect07.html">7</a></li>
             <li><a href="quizWebd_01.html">W1</a></li>
-            <li><a href="quizWebd_02.html">W2</a></li>
+            <li class="active"><a href="quizWebd_02.html">W2</a></li>
         </ul>
     </header>
     <!-- //header -->
@@ -35,7 +35,7 @@
     <main id="main">
         <div class="quiz__wrap__cbt">
             <div class="cbt__header">
-                <h2>2020년 1회 정보처리기능사 기출문제</h2>
+                <h2>2011년 2회 웹디자인기능사 기출문제</h2>
             </div>
             <div class="cbt__time">남은 시간 59분 10초</div>
             <div class="cbt__submit">답안지 제출하기</div>
@@ -59,6 +59,24 @@
                         <div class="cbt__desc">객체지향언어는 이다.</div>
                         <div class="cbt__keyword">객체지향언어</div>
                     </div> -->
+                    <div class="cbt">
+                        <div class="cbt__question">다음 빈칸을 채우시오.</div>
+                        <div class="cbt__question__desc">객체지향언어는 _____이다.</div>
+                        <div class="cbt__selects">
+                            <div>
+                                <input type="radio" id="select1">
+                                <label for="select1"><span>클래스</span></label>
+                                <input type="radio" id="select2">
+                                <label for="select2"><span>메서드</span></label>
+                                <input type="radio" id="select3">
+                                <label for="select3"><span>상속</span></label>
+                                <input type="radio" id="select4">
+                                <label for="select4"><span>메시지</span></label>
+                            </div>  
+                        </div>
+                        <div class="cbt__desc">객체지향언어는 이다.</div>
+                        <div class="cbt__keyword">객체지향언어</div>
+                    </div>
                 </div>                
             </div>
             <div class="cbt__aside">
@@ -107,7 +125,7 @@
 
         // 데이터 불러오기
         const dataQuestion = () => {
-            fetch("json/gisa2020_01.json")      // json파일 불러오는 형식
+            fetch("json/gineungsaWD2011_02.json")      // json파일 불러오는 형식
             .then(res => res.json())
             .then(items => {
                 questionAll = items.map((item, index) => {
@@ -144,9 +162,14 @@
                 }); 
                 newQuestion();  // 문제 만들기 실행문
             })
-            .catch((err) => console.log(err));            
+            .catch((err) => console.log(err));  
+            
+            const quizImg = document.querySelectorAll(".cbt__question__img");
+                if(quizImg[number].innerText == "img/undefined.jpg"){
+                    quizImg[number].classList.add("hide");
+                }
         };
-
+        
         // 문제 만들기
         const newQuestion = () => {
             const exam = [];
@@ -156,7 +179,7 @@
                 exam.push(`
                     <div class="cbt">
                         <div class="cbt__question"><span>${question.number}</span>. ${question.question}</div>
-                        <div class="cbt__question__img"></div>
+                        <div class="cbt__question__img"><img src="img/${question.questionImg}.jpg" alt=""></div>
                         <div class="cbt__selects">
                             <div>
                                 <input type="radio" id="select${number}_1" name="select${number}" value="${number+1}_1" onclick="answerSelect(this)">
@@ -184,9 +207,10 @@
                         <input type="radio" id="omr${number}_4" name="omr${number}" value="${number}_3">
                         <label for="omr${number}_4"><span class="label-inner">4</span></label>  
                     </div>
-                `);
-            });
+                `);                
+            });            
 
+            
             let scoreTag = `
                 전체 문제 수 : ${questionAll.length}문항<br>
                 남은 문제 수 : 59문항
@@ -230,7 +254,6 @@
             });
 
             document.querySelector(".score").innerHTML = `총 점수는 ${Math.ceil((quizScore / questionAll.length) * 100)}점입니다.`
-            
         };
 
         const answerSelect = () => {
