@@ -37,7 +37,7 @@
             <div class="cbt__header">
                 <h2>2011년 2회 웹디자인기능사 기출문제</h2>
             </div>
-            <div class="cbt__time">남은 시간 59분 10초</div>
+            <div class="cbt__time">남은 시간 : 60분 00초</div>
             <div class="cbt__submit">답안지 제출하기</div>
             <div class="cbt__conts">
                 <div class="cbt__quiz">
@@ -115,13 +115,40 @@
     <!-- //main -->
 
     <script>
+        const name = prompt("안녕하세요. 시험을 시작하겠습니다. 수험자 성함을 입력하세요.");
+
         const cbtQuiz = document.querySelector(".cbt__quiz");
         const cbtOmr = document.querySelector(".cbt__omr");
         const cbtSubmit = document.querySelector(".cbt__submit");
         const cbtScore = document.querySelector(".cbt__score");
+        const cbtName = document.querySelector(".cbt__title em");
         let quizScore = 0;
 
         let questionAll = [];   // 모든 퀴즈 정보
+
+        cbtName.innerText = name;
+
+        let minutes = 60;
+        let seconds = 0;
+
+        function countdown() {
+            const timerElement = document.querySelector(".cbt__time");
+            timerElement.innerHTML = `남은 시간 : ${minutes}분 ${seconds.toString().padStart(2, '0')}초`;
+            
+            if (seconds === 0) {
+                seconds = 59;
+                minutes--;
+            } else {
+                seconds--;
+            }
+
+            if (minutes < 0) {
+                clearInterval(timer);
+                alert("시험시간이 끝났습니다. 답안을 제출해주세요.");
+            }
+        }
+
+        const timer = setInterval(countdown, 1000);
 
         // 데이터 불러오기
         const dataQuestion = () => {
@@ -165,9 +192,9 @@
             .catch((err) => console.log(err));  
             
             const quizImg = document.querySelectorAll(".cbt__question__img");
-                if(quizImg[number].innerText == "img/undefined.jpg"){
-                    quizImg[number].classList.add("hide");
-                }
+            if(quizImg.innerHTML == "img/undefined.jpg"){
+                quizImg.classList.add("hide");
+            };
         };
         
         // 문제 만들기
