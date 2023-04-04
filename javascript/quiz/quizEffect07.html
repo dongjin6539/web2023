@@ -71,7 +71,6 @@
                             <span>전체 문제 수 : <em class="cbt__length">60</em>문항</span>
                             <span>남은 문제 수 : <em class="cbt__rest">59</em>문항</span>
                         </div>
-                        <div class="score"></div>
                     </div>                                     
                 </div>
                 <div class="cbt__omr">
@@ -151,7 +150,15 @@
                             <option value="gineungsaWD2016_04">웹디자인기능사 2016년 4회</option>
                         </select>
                     </div>
+                    <input type="text" id="myinfo" placeholder="응시자 성함을 입력하세요.">
                     <button class="minimal">시작하기</button>
+                </div>
+            </div>
+            <div class="cbt__end">
+                <div class="cbt__modal2">
+                    <h2>수고하셨습니다.</h2>
+                    <div class="score"></div>
+                    <button class="minimal">문제 확인하기</button>
                 </div>
             </div>
         </div>        
@@ -159,15 +166,19 @@
     <!-- //main -->
 
     <script>
-        const cbtBtn = document.querySelector(".minimal");
+        // 모달 창1 없애기
+        const cbtBtn = document.querySelector(".cbt__modal1 .minimal");
         const cbtStart = document.querySelector(".cbt__start");
 
         cbtBtn.addEventListener("click", () => {
             cbtStart.style.display = "none";
-        });
-        // const userName = prompt("안녕하세요. 시험을 시작하겠습니다. 수험자 성함을 입력하세요.");
+            const timer = setInterval(countdown, 1000);
+            const cbtName = document.querySelector(".cbt__name");
+            const myInfo = document.getElementById("myinfo");
+            const myInfoValue = myInfo.value;
 
-        // cbtName.innerHTML = userName;
+            cbtName.innerHTML = myInfoValue;
+        });
 
         const cbtQuiz = document.querySelector(".cbt__quiz");
         const cbtOmr = document.querySelector(".cbt__omr");
@@ -175,7 +186,6 @@
         const cbtRest = document.querySelector(".cbt__rest");
         const cbtLength = document.querySelector(".cbt__length");
         const cbtScore = document.querySelector(".cbt__score");
-        const cbtName = document.querySelector(".cbt__name");
         
         let quizScore = 0;
 
@@ -183,6 +193,7 @@
         let questionLength = 0;             // 전체 문제 수
         let questionRest = questionLength;  // 남은 문제 수     
 
+        // 타이머 만들기
         let minutes = 60;
         let seconds = 0;
 
@@ -201,8 +212,6 @@
                 alert("시험시간이 끝났습니다. 답안을 제출해주세요.");
             }
         }
-
-        const timer = setInterval(countdown, 1000);
 
         // 데이터 불러오기
         const dataQuestion = () => {
@@ -310,8 +319,8 @@
             //     if(el.innerHTML == "undefined"){
             //         el.style.display = "none";
             //     }
-            // });       
-
+            // }); 
+            
         };
         
 
@@ -348,6 +357,8 @@
             });
 
             document.querySelector(".score").innerHTML = `총 점수는 ${Math.ceil((quizScore / questionAll.length) * 100)}점입니다.`;
+            
+            cbtEnd.style.display = "block";
         };
 
         // 보기 체크
@@ -376,52 +387,16 @@
             cbtRest.innerHTML = questionLength - answerInput.length;
         };
 
+        // 모달 창2 없애기
+        const cbtBtn2 = document.querySelector(".cbt__modal2 .minimal");
+        const cbtEnd = document.querySelector(".cbt__end");
+
+        cbtBtn2.addEventListener("click", () => {
+            cbtEnd.style.display = "none";
+        });
+
         cbtSubmit.addEventListener("click", answerQuiz);
         dataQuestion();
-
-        // 버븥 버튼
-        const bubbleBtn = () => {
-            const clip = (v, min, max = Infinity) => {
-                if (v < min) return min;
-                else if (v > max) return max;
-                else return v;
-            };
-
-            const randRange = (min, max) => Math.random() * max + min;
-
-            // create bubble on x and y position inside target with given hue theme
-            function bubble(x, y, rect, hue, target) {
-                // 변수 설정
-                const size = randRange(20, rect.width / 5);
-                const circleHue = hue + randRange(-20, 20);
-                const animDuration = randRange(clip(size ** 2/1000, 1), 6) 
-                const zIndex = Math.random() < 0.1 ? 2 : -1;
-                // 원 만들기
-                const circle = document.createElement("span");
-                circle.className = "lit";
-                circle.style.left = x + "px";
-                circle.style.top = y + "px";
-                circle.style.width = size + "px";
-                circle.style.height = size + "px";
-                circle.style.background = `hsl(${circleHue}deg, 100%, 60%)`;
-                circle.style.zIndex = zIndex
-                circle.style.animationDuration = animDuration + "s";
-                target.appendChild(circle);
-            }
-
-            document.querySelectorAll("[data-lit-hue]").forEach((target) => {
-                const rect = target.getBoundingClientRect();
-                const hue = Number(target.getAttribute("data-lit-hue"));
-                const count = Number(target.getAttribute("data-lit-count") || 50);
-
-                for (let i = 0; i < count; i++) {
-                    const x = randRange(0, rect.width);
-                    const y = randRange(0, rect.height);
-                    bubble(x, y, rect, hue, target);
-                }
-            });
-        };
-        bubbleBtn();
     </script>
 </body>
 </html>
