@@ -286,12 +286,12 @@
     font-family: 'PyeongChang';
 }
 .cbt__conts {
-    width: calc(100% - 300px);
+    width: calc(100% - 280px);
     background-color: #fff;
 }
 .cbt__header {
     font-family: 'DungGeunMo';
-    width: calc(100% - 300px);
+    width: calc(100% - 280px);
     border: 8px ridge #cacaca;
     margin-bottom: 20px;
     padding: 20px;
@@ -312,30 +312,34 @@
 .cbt__aside {
     position: fixed;
     right: 20px;
-    top: 180px;
-    width: 280px;
+    top: 80px;
+    width: 250px;
     height: calc(100vh - 200px);
     background-color: #fff;
+}
+.cbt__info {
     border: 8px ridge #cacaca;
-    overflow-y: auto;
+    margin-bottom: 10px;
+    background-color: #000;
+    color: #fff;
+    padding: 20px;
+    line-height: 1.4;
 }
 .cbt__time {
     position: relative;
     padding-left: 40px !important;
-    margin: 10px 0;
+    margin: 0 0 5px;
     background-color: #cacaca;
-    padding: 5px 80px 5px;
+    padding: 5px 15px 5px;
     border-radius: 50px;
     color: #000;
-    position: fixed;
-    right: 30px;
-    top: 90px;
+    font-size: 14px;
 }
 .cbt__time::before {
     content: '';
     position: absolute;
-    left: 12px;
-    top: 5px;
+    left: 11px;
+    top: 3px;
     width: 24px;
     height: 24px;
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke-width='1.5' stroke='black' class='w-6 h-6'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' d='M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z' /%3E%3C/svg%3E%0A");
@@ -353,37 +357,35 @@
     position: relative;
     padding-left: 40px !important;
     cursor: pointer;
-    margin: 15px 0;
+    margin: 5px 0 20px;
     background-color: #cacaca;
-    padding: 5px 120px 5px;
+    padding: 5px 45px 5px;
     border-radius: 50px;
     color: #000;
-    position: fixed;
-    right: 30px;
-    top: 125px;
-
+    border: 1px solid #cacaca;
 }
 .cbt__submit::before {
     content: '';
     position: absolute;
     left: 12px;
-    top: 3px;
+    top: 2px;
     width: 24px;
     height: 24px;
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke-width='1.5' stroke='black' class='w-6 h-6'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' d='M16.862 4.487l1.687-1.688a1.875 1.875 0 112.652 2.652L10.582 16.07a4.5 4.5 0 01-1.897 1.13L6 18l.8-2.685a4.5 4.5 0 011.13-1.897l8.932-8.931zm0 0L19.5 7.125M18 14v4.75A2.25 2.25 0 0115.75 21H5.25A2.25 2.25 0 013 18.75V8.25A2.25 2.25 0 015.25 6H10' /%3E%3C/svg%3E%0A");
 }
 .cbt__submit:hover {
-    background-color: #000;
-    color: #fff;
+    background-color: #fff;
+    color: #000;
+    font-weight: bold;
 }
 .cbt__submit:hover::before {
     content: '';
     position: absolute;
     left: 12px;
-    top: 3px;
+    top: 2px;
     width: 24px;
     height: 24px;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke-width='1.5' stroke='white' class='w-6 h-6'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' d='M16.862 4.487l1.687-1.688a1.875 1.875 0 112.652 2.652L10.582 16.07a4.5 4.5 0 01-1.897 1.13L6 18l.8-2.685a4.5 4.5 0 011.13-1.897l8.932-8.931zm0 0L19.5 7.125M18 14v4.75A2.25 2.25 0 0115.75 21H5.25A2.25 2.25 0 013 18.75V8.25A2.25 2.25 0 015.25 6H10' /%3E%3C/svg%3E%0A");
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke-width='1.5' stroke='black' class='w-6 h-6'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' d='M16.862 4.487l1.687-1.688a1.875 1.875 0 112.652 2.652L10.582 16.07a4.5 4.5 0 01-1.897 1.13L6 18l.8-2.685a4.5 4.5 0 011.13-1.897l8.932-8.931zm0 0L19.5 7.125M18 14v4.75A2.25 2.25 0 0115.75 21H5.25A2.25 2.25 0 013 18.75V8.25A2.25 2.25 0 015.25 6H10' /%3E%3C/svg%3E%0A");
 }
 .cbt__quiz {
     display: flex;
@@ -424,14 +426,6 @@
     left: -100px;
     top: -100px;
 }
-.cbt__info {
-    background-color: #000;
-    color: #fff;
-    border-bottom: 8px ridge #cacaca;
-    padding: 20px;
-    text-align: center;
-}
-
 .cbt__info .cbt__title {
     text-decoration: underline;
     text-decoration-color: #fff;
@@ -442,8 +436,12 @@
     display: inline-block;
 }
 .cbt__omr {
-    padding: 20px;
+    padding: 12px;
     overflow: hidden;
+    border: 8px ridge #cacaca;
+    overflow-y: auto;
+    height: 400px;
+    background-color: #fff;
 }
 .cbt__omr .omr {
     margin: 5px 0;
@@ -603,6 +601,36 @@
     width: 20px;
     height: 20px;
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke-width='1.5' stroke='currentColor' class='w-6 h-6'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' d='M15.042 21.672L13.684 16.6m0 0l-2.51 2.225.569-9.47 5.227 7.917-3.286-.672zM12 2.25V4.5m5.834.166l-1.591 1.591M20.25 10.5H18M7.757 14.743l-1.59 1.59M6 10.5H3.75m4.007-4.243l-1.59-1.59' /%3E%3C/svg%3E%0A");
+}
+.cbt__start {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(255, 255, 255, 0.4);
+    z-index: 10000;
+    backdrop-filter: blur(10px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.cbt__start > div {
+    width: 50%;
+    height: 50vh;
+    background-color: #fff;
+    border: 8px ridge #cacaca;
+    text-align: center;
+}
+.cbt__modal1 h2 {
+    font-size: 30px;
+    margin: 30px;
+}
+.cbt__modal1 select {
+    border: 1px solid #cacaca;
+    padding: 10px 30px;
+    margin-bottom: 40px;
+    font-family: 'PyeongChang';
 }
 
 /* dog__wrap */
@@ -1062,4 +1090,19 @@
     .cbt__aside {
         display: none;
     }
+}
+
+/* 버블 버튼 */
+.minimal {
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.15);
+    background: #cacaca;
+    display: grid;
+    align-content: center;
+    justify-content: center;
+    border-radius: 5px;
+    width: 300px;
+    height: 80px;
+    margin: 0 auto;
+    font-family: 'PyeongChang';
+    border: 1px solid #cacaca;
 }
