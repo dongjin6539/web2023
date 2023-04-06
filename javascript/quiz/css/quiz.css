@@ -705,11 +705,12 @@
 }
 .cbt__modal2 h2 {
     font-size: 30px;
-    margin: 40px;
+    margin: 30px;
 }
 .cbt__modal2 .score{
-    font-size: 30px;
-    margin-bottom: 30px;
+    font-size: 24px;
+    margin-bottom: 20px;
+    line-height: 1.8;
 }
 
 
