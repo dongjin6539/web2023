@@ -113,8 +113,8 @@
         "subject": "정보처리 기능사",
         "question": "다음 진리표에 해당하는 논리식은?",
         "question_img": "gineungsaJC2010_02_03",
-        "correct_answer": "C = <p style='text-decoration: overline;'>A</p> &middot <p style='text-decoration: overline;'>B</p>",
-        "incorrect_answers": ["C = A + B","C = A &middot B","C = <p style='text-decoration: overline;'>A</p> + <p style='text-decoration: overline;'>B</p>"],
+        "correct_answer": "C = <div style='text-decoration: overline;'>A</div> &middot <div style='text-decoration: overline;'>B</div>",
+        "incorrect_answers": ["C = A + B","C = A &middot B","C = <div style='text-decoration: overline;'>A</div> + <div style='text-decoration: overline;'>B</div>"],
         "desc" : "출력값이 A와 B가 0 일때만 다르므로 00일때 0인것은 OR(+) (반면 11일때 1인것은 AND *) 출력값이 0이 아니라 1이므로 추가로 NOT이 되어있으므로 NOR이 답이며 NOR 을 드모르간의 법칙으로 바꾸어보면 + -> * 가 되므로 4번이 답입니다."
     },{
         "subject": "정보처리 기능사",
