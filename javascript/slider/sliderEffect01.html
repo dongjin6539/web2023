@@ -97,17 +97,20 @@
         let currentIndex = 0;               // 현재 보이는 이미지
         let sliderCount = slider.length;    // 이미지 갯수
         let sliderInterval = 3000;          // 이미지 변경 간격 시간
+    </script>
 
-        setInterval(() => {
-            // 0 1 2 3 4 0 1 2 3 4 0 1 2 3 4 0 currentIndex
-            // 1 2 3 4 0 1 2 3 4 0 1 2 3 4 0 1 nextIndex
-            let nextIndex = (currentIndex + 1) % sliderCount;
+    <!-- javascript -->
+    <script>
+        // setInterval(() => {
+        //     // 0 1 2 3 4 0 1 2 3 4 0 1 2 3 4 0 currentIndex
+        //     // 1 2 3 4 0 1 2 3 4 0 1 2 3 4 0 1 nextIndex
+        //     let nextIndex = (currentIndex + 1) % sliderCount;
 
-            slider[currentIndex].style.opacity = "0";
-            slider[nextIndex].style.opacity = "1";
+        //     slider[currentIndex].style.opacity = "0";
+        //     slider[nextIndex].style.opacity = "1";
 
-            currentIndex = nextIndex;
-        }, sliderInterval);
+        //     currentIndex = nextIndex;
+        // }, sliderInterval);
 
         // // 첫번째 이미지를 안보이게, 두번째 이미지를 보이게
         // slider[0].style.opacity = "0";
@@ -128,6 +131,36 @@
         // // 다섯번째 이미지를 안보이게, 첫번째 이미지를 보이게
         // slider[4].style.opacity = "0";
         // slider[0].style.opacity = "1";
+    </script>
+
+    <!-- GSAP -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+    <script>
+        setInterval(() => {
+            let nextIndex = (currentIndex + 1) % sliderCount;
+
+            gsap.to(slider[currentIndex], {
+                opacity: "0"
+            });
+            gsap.to(slider[nextIndex], {
+                opacity: "1"
+            });
+
+            currentIndex = nextIndex;
+        },sliderInterval);
+    </script> -->
+
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        setInterval(() => {
+            let nextIndex = (currentIndex + 1) % $(".slider").length;
+
+            $(slider[currentIndex]).animate({opacity: 0}, 600);
+            $(slider[nextIndex]).animate({opacity: 1}, 600);
+
+            currentIndex = nextIndex;
+        }, sliderInterval);
     </script>
 </body>
 </html>
