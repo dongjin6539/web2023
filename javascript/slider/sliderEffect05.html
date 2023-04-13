@@ -128,9 +128,9 @@
             // 마지막 이미지에 위치 했을 때
             if(currentIndex == sliderCount){
                 setTimeout(() => {
-                    gsap.set(".slider__inner", {
+                    gsap.to(".slider__inner", {
                         y : 0
-                    })  
+                    }, 0)  
                 }, 700);
                 currentIndex = 0;
             };
@@ -145,18 +145,14 @@
         function sliderEffect(){
             currentIndex++;
 
-            $(".slider__inner").css({
-                "transition" : "all 0.6s",
-                "transform" : "translateY(-"+ sliderHeight * currentIndex + "px)"
-            });
+            $(".slider__inner").css("position", "relative");
+            $(".slider__inner").animate({top : -sliderHeight * currentIndex});
 
             // 마지막 이미지에 위치 했을 때
             if(currentIndex == sliderCount){
                 setTimeout(() => {
-                    $(".slider__inner").css({
-                        "transition" : "0s",
-                        "transform" : "translateY(0px)"
-                    });
+                    $(".slider__inner").css("position", "relative");
+                    $(".slider__inner").animate({top : 0}, 0);
                 }, 700);
                 currentIndex = 0;
             }
