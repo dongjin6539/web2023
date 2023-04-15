@@ -46,8 +46,8 @@
     </div>
 </body>
 <script>
-    function nextQutoe(){
-        fetch("http://dummyjson.com/quotes")
+    function nextQuote(){
+        fetch("json/dummy01.json")
         .then(res => res.json())
         .then(items => {
             console.log(items); // 문제의 데이터 불러오기
@@ -63,7 +63,7 @@
         })
         .catch((err) => console.log(err));
     };
-    nextQutoe();
+    nextQuote();
 
     setInterval(nextQutoe, 10000);
 </script>
