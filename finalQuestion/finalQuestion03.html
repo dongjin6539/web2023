@@ -44,27 +44,27 @@
         <div class="quote"></div>
         <div class="author"></div>
     </div>
+    <script>
+        function nextQuote(){
+            fetch("json/dummy01.json")
+            .then(res => res.json())
+            .then(items => {
+                console.log(items); // 문제의 데이터 불러오기
+                const result = document.querySelector("#result");
+                const random = Math.floor(Math.random()*30); // 1~29까지의 수 구하기
+                console.log(random);
+    
+                const quote = result.querySelector(".quote");
+                const author = result.querySelector(".author");
+    
+                quote.innerHTML = items.quotes[random].quote;
+                author.innerHTML = `-${items.quotes[random].author}`;
+            })
+            .catch((err) => console.log(err));
+        };
+        nextQuote();
+    
+        setInterval(nextQuote, 10000);
+    </script>
 </body>
-<script>
-    function nextQuote(){
-        fetch("json/dummy01.json")
-        .then(res => res.json())
-        .then(items => {
-            console.log(items); // 문제의 데이터 불러오기
-            const result = document.querySelector("#result");
-            const random = Math.floor(Math.random()*30); // 1~29까지의 수 구하기
-            console.log(random);
-
-            const quote = result.querySelector(".quote");
-            const author = result.querySelector(".author");
-
-            quote.innerHTML = items.quotes[random].quote;
-            author.innerHTML = `-${items.quotes[random].author}`;
-        })
-        .catch((err) => console.log(err));
-    };
-    nextQuote();
-
-    setInterval(nextQuote, 10000);
-</script>
 </html>
