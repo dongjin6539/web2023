@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>명언 모음</title>
+
+    <link href="https://webfontworld.github.io/NexonLv1Gothic/NexonLv1Gothic.css" rel="stylesheet">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-style: "NexonLv1Gothic";
+        }
+        img {
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0.6;
+        }
+        #result {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+        .quote {
+            font-size: 50px;
+            margin-bottom: 25px;
+        }
+        .author {
+            font-size: 35px;
+            color: rgba(0, 0, 0, 0.5);
+        }
+    </style>
+</head>
+<body>
+    <img src="img/finalQuestion03_01.jpg" alt="배경">
+    <div id="result">
+        <div class="quote"></div>
+        <div class="author"></div>
+    </div>
+</body>
+<script>
+    function nextQutoe(){
+        fetch("http://dummyjson.com/quotes")
+        .then(res => res.json())
+        .then(items => {
+            console.log(items); // 문제의 데이터 불러오기
+            const result = document.querySelector("#result");
+            const random = Math.floor(Math.random()*30); // 1~29까지의 수 구하기
+            console.log(random);
+
+            const quote = result.querySelector(".quote");
+            const author = result.querySelector(".author");
+
+            quote.innerHTML = items.quotes[random].quote;
+            author.innerHTML = `-${items.quotes[random].author}`;
+        })
+        .catch((err) => console.log(err));
+    };
+    nextQutoe();
+
+    setInterval(nextQutoe, 10000);
+</script>
+</html>
