@@ -59,8 +59,8 @@
         const result = document.querySelector(".result");
 
         const rottoNumber = {
-            numCounter : 6,
-            maxNumber : 45
+            numCounter : 6, // 최대 숫자 갯수
+            maxNumber : 45  // 최대 숫자
         };
 
         button.addEventListener("click", () => {
@@ -72,9 +72,8 @@
             while(myNumber.size < numCounter){
                 myNumber.add(Math.floor(Math.random() * maxNumber) + 1);
             }
-            result.innerText= `${[...myNumber].join(' ')}`;
+            result.innerText= `${[...myNumber].join(' ')}`; // 배열에 있는 값만 나오게 함
         });
-        
     </script>
 </body>
 </html>
