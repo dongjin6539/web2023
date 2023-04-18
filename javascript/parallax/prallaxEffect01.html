@@ -38,6 +38,7 @@
             <li><a href="#section9">메뉴9</a></li>
         </ul> 
     </nav>
+     <!-- //nav -->
 
     <main class="main">
         <div class="parallax__wrap">
@@ -204,17 +205,19 @@
 
             // for in 문
             // const spans = document.querySelectorAll(".info li span");
-            // for (let i in spans) {
-            // const e = spans[i];
-            // e.innerHTML = document.getElementById(`section${parseInt(i)+1}`).offsetTop;
+            // for(let i in spans){
+            //     if(spans.hasOwnProperty(i)){
+            //         const e = spans[i];
+            //         e.innerText = document.getElementById(`section${parseInt(i)+1}`).offsetTop;
+            //     }
             // }
 
             // for of 문
             const spans = document.querySelectorAll(".info li span");
             let i = 1;
-            for (const e of spans) {
-            e.innerHTML = document.getElementById(`section${i}`).offsetTop;
-            i++;
+            for(let e of spans){
+                e.innerHTML = document.getElementById(`section${i}`).offsetTop;
+                i++;
             }
         });        
     </script>
