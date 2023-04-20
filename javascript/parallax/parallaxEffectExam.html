@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>패럴랙스</title>
+    <link href="https://webfontworld.github.io/cookierun/CookieRun.css" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'cookierun';
+        }
+        body {
+            height: 20000px;
+            background-color: #E0E4dd;
+        }
+        .scrollTop {
+            position: fixed;
+            font: 10px;
+            top: 10px;
+            z-index: 1000;
+            width: 40px;
+            height: 40px;
+            color: #fff;
+            text-align: center;
+            font-size: 14px;
+            line-height: 40px;
+            background-color: rgba(0, 0, 0, 0.6);
+        }
+        .fixed {
+            position: fixed;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 1;
+        }
+        .s1-text1 {
+            font-size: 30vw;
+            line-height: 1;
+        }
+        .s1-text2 {
+            font-size: 0vw;
+            line-height: 1;
+            padding-top: 8vw;
+        }
+        .s1-text3 {
+            font-size: 0vw;
+            line-height: 1.4;
+            text-align: center;
+            color: #fff;
+            border: 1px solid linear-gradient(to right, #2c3e50, #4ca1af);
+            background: linear-gradient(to right, #2c3e50, #4ca1af);
+            border-radius: 20px;
+            padding: 5vw;
+            word-break: keep-all;
+        }
+        .s1-text4 {
+            font-size: 0vw;
+            line-height: 1.4;
+            text-align: center;
+            word-break: keep-all;
+        }
+        .s1-text4 span {
+            color: red;
+        }
+        .s1-text5 {
+            font-size: 0vw;
+            line-height: 1;
+            text-align: center;
+            word-break: keep-all;
+            background: linear-gradient(to right, #f7ff00, #db36a4);
+            color: transparent;
+            -webkit-background-clip: text;
+        }
+
+        .s1-img1 {
+            width: 200vw;
+            height: 100vh;
+        }
+        .s1-img1 > div {
+            height: 20vh;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 19vh;
+            height: 19vh;
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            border: 5px solid #000;
+            border-radius: 20px;
+        }
+        .s1-img1 > div:nth-child(1) {background-image: url(https://webstoryboy.github.io/web2023/assets/ico/icon8.jpg);}
+        .s1-img1 > div:nth-child(2) {background-image: url(https://siyoenkim.github.io/web2023/assets/ico/icon.jpg);}        
+        .s1-img1 > div:nth-child(3) {background-image: url(https://seolhee313.github.io/web2023/assets/ico/icon.jpg);}
+        .s1-img1 > div:nth-child(4) {background-image: url(https://kebab000.github.io/web2023/assets/ico/icon01.jpg);}
+        .s1-img1 > div:nth-child(5) {background-image: url(https://dkseho9121.github.io/web2023/assets/ico/icon01.jpg);}
+        .s1-img1 > div:nth-child(6) {background-image: url(https://jinyongjang.github.io/web2023/assets/ico/icon01.jpg);}
+        .s1-img1 > div:nth-child(7) {background-image: url(https://chohena.github.io/web2023/assets/ico/icon01.jpg);}
+        .s1-img1 > div:nth-child(8) {background-image: url(https://kimdohyun2002.github.io/web2023/assets/ico/icon.jpg);}
+        .s1-img1 > div:nth-child(9) {background-image: url(https://jhwangwoo.github.io/web2023/assets/ico/icon.jpg);}
+        .s1-img1 > div:nth-child(10) {background-image: url(https://yeodaseul4355.github.io/web2023/assets/ico/icon01.jpg);}
+        .s1-img1 > div:nth-child(11) {background-image: url(https://hyejeong3283.github.io/web2023/assets/ico/icon%2001.jpg);}
+        .s1-img1 > div:nth-child(12) {background-image: url(https://dkdlelw.github.io/web2023/assets/ico/icon.jpg);}        
+        .s1-img1 > div:nth-child(13) {background-image: url(https://lee3ll.github.io/web2023/assets/ico/icon01.jpg);}
+        .s1-img1 > div:nth-child(14) {background-image: url(https://jo0132.github.io/web2023/assets/ico/icon.jpg);}
+        .s1-img1 > div:nth-child(15) {background-image: url(https://dlgnsrb227.github.io/web2023/assets/ico/icon.jpg);}
+        .s1-img1 > div:nth-child(16) {background-image: url(https://dongjin6539.github.io/web2023/assets/ico/icon.jpg);}
+        .s1-img1 > div:nth-child(17) {background-image: url(https://hyeonbeen97.github.io/web2023/assets/ico/icon.jpg);}
+        .s1-img1 > div:nth-child(18) {background-image: url(https://younajeong.github.io/web2023/assets/ico/icon.jpg);}
+        .s1-img1 > div:nth-child(19) {background-image: url(https://ehcjswo.github.io/web2023/assets/ico/icon.jpg);}
+        .s1-img1 > div:nth-child(20) {background-image: url(https://fitalux.github.io/web2023/assets/ico/icon01.jpg);}
+        .s1-img1 > div:nth-child(21) {background-image: url(https://xlsak5.github.io/testAnGyonam/assets/ico/icon.jpg);}
+        .s1-img1 > div:nth-child(22) {background-image: url(https://hyunmijin.github.io/web2023/assets/ico/icon.jpg);}        
+        .s1-img1 > div:nth-child(23) {background-image: url(https://daanbi1345.github.io/web2023/assets/ico/icon11.jpg);}
+        .s1-img1 > div:nth-child(24) {background-image: url(https://ture403.github.io/web2023/assets/ico/icon.jpg);}
+        .s1-img1 > div:nth-child(25) {background-image: url(https://leeyanggoo.github.io/web2023/assets/ico/icon1.jpg);}
+        .s1-img1 > div:nth-child(26) {background-image: url(https://aimeekwon.github.io/web2023/assets/ico/icon.jpg);}
+        .s1-img1 > div:nth-child(27) {background-image: url(https://getgrovy.github.io/web2023/assets/ico/icon01.jpg);}
+        .s1-img1 > div:nth-child(28) {background-image: url(https://leeyouna21.github.io/web2023/assets/ico/icon01.jpg);}
+
+        .s1-img2 {
+            width: 200vw;
+            height: 100vh;
+        }
+        .s1-img2 > div:nth-child(1) {
+            width: 20vw;
+            height: 20vw;
+            background-color: red;
+            border: 1px solid red;
+            border-radius: 50%;
+        }
+        .s1-img2 > div:nth-child(2) {
+            width: 10vw;
+            height: 10vw;
+            background-color: yellow;
+            border: 1px solid yellow;
+            border-radius: 50%;
+        }
+        .s1-img2 > div:nth-child(3) {
+            width: 15vw;
+            height: 15vw;
+            background-color: blue;
+            border: 1px solid blue;
+            border-radius: 50%;
+        }
+        .s1-img2 > div:nth-child(4) {
+            width: 12vw;
+            height: 12vw;
+            background-color: green;
+            border: 1px solid green;
+            border-radius: 50%;
+        }
+        .s1-img2 > div:nth-child(5) {
+            width: 22vw;
+            height: 22vw;
+            background-color: skyblue;
+            border: 1px solid skyblue;
+            border-radius: 50%;
+        }
+        .s1-img2 > div:nth-child(6) {
+            width: 13vw;
+            height: 13vw;
+            background-color: purple;
+            border: 1px solid purple;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+<body>
+    <div class="scrollTop"></div>
+
+    <section id="section1">
+        <div class="s1-text1 fixed"
+            data-0="font-size: 0vw; opacity: 1"
+            data-1000="font-size: 20vw; opacity: 1"
+            data-2000="font-size: 20vw; opacity: 1"
+            data-3000="font-size: 0vw; opacity: 0"
+        >webs<br> 2023</div>
+        <div class="s1-text2 fixed"
+            data-2500="font-size: 0vw; transform: translate(-50%, -50%) rotate(0deg); opacity: 1"
+            data-8000="font-size: 40vw; transform: translate(-50%, -50%) rotate(720deg); opacity: 1"
+            data-10000="font-size: 0vw; transform: translate(-50%, -50%) rotate(1540deg); opacity: 0"
+        >hello</div>
+        <div class="s1-text3 fixed"
+            data-10000="font-size: 7vw; transform: translate(-50%, -50%) scale(0); opacity: 0"
+            data-12000="font-size: 7vw; transform: translate(-50%, -50%) scale(1); opacity: 1"
+            data-14000="font-size: 7vw; transform: translate(-50%, -50%) scale(0); opacity: 0"
+        >모두 다함께 시작한 코딩!!</div>
+        <div class="s1-text4 fixed"
+            data-14000="font-size: 7vw; transform: translate(-50%, -50%) scale(0); opacity: 0"
+            data-16000="font-size: 7vw; transform: translate(-50%, -50%) scale(1); opacity: 1"
+            data-18000="font-size: 7vw; transform: translate(-200%, -50%) scale(1); opacity: 1"
+        >힘들겠지만 끝까지 <span>화이팅</span>입니다!!</div>
+        <div class="s1-text5 fixed"
+            data-16000="font-size: 7vw; transform: translate(200%, -50%) scale(0); opacity: 0"
+            data-18000="font-size: 7vw; transform: translate(-50%, -50%) scale(2); opacity: 1"
+            data-19000="font-size: 7vw; transform: translate(-50%, -50%) scale(2); opacity: 1"
+        >FIGHTING!!!</div>
+        <div class="s1-img1 fixed"
+            data-3000="width: 70vw"
+            data-10000="width: 70vw"
+        >
+            <div
+                data-3500="transform: translate(0%, 600%) rotate(0deg)"
+                data-5000="transform: translate(0%, 60%) rotate(0deg)"
+                data-8000="transform: translate(0%, 60%) rotate(0deg)"
+                data-10000="transform: translate(0%, -100%) rotate(720deg)"
+            >
+            </div>
+            <div
+                data-3500="transform: translate(120%, 600%) rotate(0deg)"
+                data-5100="transform: translate(120%, -40%) rotate(0deg)"
+                data-8000="transform: translate(120%, -40%) rotate(0deg)"
+                data-10000="transform: translate(120%, -240%) rotate(720deg)"
+            >
+            </div>
+            <div
+                data-3500="transform: translate(240%, 600%) rotate(0deg)"
+                data-5200="transform: translate(240%, -140%) rotate(0deg)"
+                data-8000="transform: translate(240%, -140%) rotate(0deg)"
+                data-10000="transform: translate(240%, -340%) rotate(720deg)"
+            >
+            </div>
+            <div
+                data-3500="transform: translate(360%, 600%) rotate(0deg)"
+                data-5300="transform: translate(360%, -240%) rotate(0deg)"
+                data-8000="transform: translate(360%, -240%) rotate(0deg)"
+                data-10000="transform: translate(360%, -440%) rotate(720deg)"
+            >
+            </div>
+            <div
+                data-3900="transform: translate(480%, 600%) rotate(0deg)"
+                data-5400="transform: translate(480%, -340%) rotate(0deg)"
+                data-8000="transform: translate(480%, -340%) rotate(0deg)"
+                data-10000="transform: translate(480%, -540%) rotate(720deg)"
+            >
+            </div>
+            <div
+                data-4000="transform: translate(600%, 600%) rotate(0deg)"
+                data-5500="transform: translate(600%, -440%) rotate(0deg)"
+                data-8000="transform: translate(600%, -440%) rotate(0deg)"
+                data-10000="transform: translate(600%, -640%) rotate(720deg)"
+            >
+            </div>
+            <div
+                data-4100="transform: translate(720%, 600%) rotate(0deg)"
+                data-5600="transform: translate(720%, -540%) rotate(0deg)"
+                data-8000="transform: translate(720%, -540%) rotate(0deg)"
+                data-10000="transform: translate(720%, -740%) rotate(720deg)"
+            >
+            </div>
+            <div
+                data-4200="transform: translate(0%, 600%) rotate(0deg)"
+                data-5700="transform: translate(0%, -530%) rotate(0deg)"
+                data-8000="transform: translate(0%, -530%) rotate(0deg)"
+                data-10000="transform: translate(0%, -830%) rotate(720deg)"
+            >
+            </div>
+            <div
+                data-4300="transform: translate(120%, 600%) rotate(0deg)"
+                data-5800="transform: translate(120%, -630%) rotate(0deg)"
+                data-8000="transform: translate(120%, -630%) rotate(0deg)"
+                data-10000="transform: translate(120%, -930%) rotate(720deg)"
+            >
+            </div>
+            <div
+                data-4400="transform: translate(240%, 600%) rotate(0deg)"
+                data-5900="transform: translate(240%, -730%) rotate(0deg)"
+                data-8000="transform: translate(240%, -730%) rotate(0deg)"
+                data-10000="transform: translate(240%, -1030%) rotate(720deg)"
+            >
+            </div>
+            <div
+                data-4500="transform: translate(360%, 600%) rotate(0deg)"
+                data-6000="transform: translate(360%, -830%) rotate(0deg)"
+                data-8000="transform: translate(360%, -830%) rotate(0deg)"
+                data-10000="transform: translate(360%, -1130%) rotate(720deg)"
+            >
+            </div>
+            <div
+                data-4600="transform: translate(480%, 600%) rotate(0deg)"
+                data-6100="transform: translate(480%, -930%) rotate(0deg)"
+                data-8000="transform: translate(480%, -930%) rotate(0deg)"
+                data-10000="transform: translate(480%, -1230%) rotate(720deg)"
+            >
+            </div>
+            <div
+                data-4700="transform: translate(600%, 600%) rotate(0deg)"
+                data-6200="transform: translate(600%, -1030%) rotate(0deg)"
+                data-8000="transform: translate(600%, -1030%) rotate(0deg)"
+                data-10000="transform: translate(600%, -1330%) rotate(720deg)"
+            >
+            </div>
+            <div
+                data-4800="transform: translate(720%, 600%) rotate(0deg)"
+                data-6300="transform: translate(720%, -1130%) rotate(0deg)"
+                data-8000="transform: translate(720%, -1130%) rotate(0deg)"
+                data-10000="transform: translate(720%, -1430%) rotate(720deg)"
+            >
+            </div>
+            <div
+                data-4900="transform: translate(0%, 600%) rotate(0deg)"
+                data-6400="transform: translate(0%, -1120%) rotate(0deg)"
+                data-8000="transform: translate(0%, -1120%) rotate(0deg)"
+                data-10000="transform: translate(0%, -1520%) rotate(720deg)"
+            >
+            </div>
+            <div
+                data-5000="transform: translate(120%, 600%) rotate(0deg)"
+                data-6500="transform: translate(120%, -1220%) rotate(0deg)"
+                data-8000="transform: translate(120%, -1220%) rotate(0deg)"
+                data-10000="transform: translate(120%, -1620%) rotate(720deg)"
+            >
+            </div>
+            <div
+                data-5100="transform: translate(240%, 600%) rotate(0deg)"
+                data-6600="transform: translate(240%, -1320%) rotate(0deg)"
+                data-8000="transform: translate(240%, -1320%) rotate(0deg)"
+                data-10000="transform: translate(240%, -1720%) rotate(720deg)"
+            >
+            </div>
+            <div
+                data-5200="transform: translate(360%, 600%) rotate(0deg)"
+                data-6700="transform: translate(360%, -1420%) rotate(0deg)"
+                data-8000="transform: translate(360%, -1420%) rotate(0deg)"
+                data-10000="transform: translate(360%, -1820%) rotate(720deg)"
+            >
+            </div>
+            <div
+                data-5300="transform: translate(480%, 600%) rotate(0deg)"
+                data-6800="transform: translate(480%, -1520%) rotate(0deg)"
+                data-8000="transform: translate(480%, -1520%) rotate(0deg)"
+                data-10000="transform: translate(480%, -1920%) rotate(720deg)"
+            >
+            </div>
+            <div
+                data-5400="transform: translate(600%, 600%) rotate(0deg)"
+                data-6900="transform: translate(600%, -1620%) rotate(0deg)"
+                data-8000="transform: translate(600%, -1620%) rotate(0deg)"
+                data-10000="transform: translate(600%, -2020%) rotate(720deg)"
+            >
+            </div>
+            <div
+                data-5500="transform: translate(720%, 600%) rotate(0deg)"
+                data-7000="transform: translate(720%, -1720%) rotate(0deg)"
+                data-8000="transform: translate(720%, -1720%) rotate(0deg)"
+                data-10000="transform: translate(720%, -2120%) rotate(720deg)"
+            >
+            </div>
+            <div
+                data-5600="transform: translate(0%, 600%) rotate(0deg)"
+                data-7100="transform: translate(0%, -1710%) rotate(0deg)"
+                data-8000="transform: translate(0%, -1710%) rotate(0deg)"
+                data-10000="transform: translate(0%, -2220%) rotate(720deg)"
+            >
+            </div>
+            <div
+                data-5700="transform: translate(120%, 600%) rotate(0deg)"
+                data-7200="transform: translate(120%, -1810%) rotate(0deg)"
+                data-8000="transform: translate(120%, -1810%) rotate(0deg)"
+                data-10000="transform: translate(120%, -2320%) rotate(720deg)"
+            >
+            </div>
+            <div
+                data-5800="transform: translate(240%, 600%) rotate(0deg)"
+                data-7300="transform: translate(240%, -1910%) rotate(0deg)"
+                data-8000="transform: translate(240%, -1910%) rotate(0deg)"
+                data-10000="transform: translate(240%, -2420%) rotate(720deg)"
+            >
+            </div>
+            <div
+                data-5900="transform: translate(360%, 600%) rotate(0deg)"
+                data-7400="transform: translate(360%, -2010%) rotate(0deg)"
+                data-8000="transform: translate(360%, -2010%) rotate(0deg)"
+                data-10000="transform: translate(360%, -2520%) rotate(720deg)"
+            >
+            </div>
+            <div
+                data-6000="transform: translate(480%, 600%) rotate(0deg)"
+                data-7500="transform: translate(480%, -2110%) rotate(0deg)"
+                data-8000="transform: translate(480%, -2110%) rotate(0deg)"
+                data-10000="transform: translate(480%, -2620%) rotate(720deg)"
+            >
+            </div>
+            <div
+                data-6100="transform: translate(600%, 600%) rotate(0deg)"
+                data-7600="transform: translate(600%, -2210%) rotate(0deg)"
+                data-8000="transform: translate(600%, -2210%) rotate(0deg)"
+                data-10000="transform: translate(600%, -2720%) rotate(720deg)"
+            >
+            </div>
+            <div
+                data-6200="transform: translate(720%, 600%) rotate(0deg)"
+                data-7700="transform: translate(720%, -2310%) rotate(0deg)"
+                data-8000="transform: translate(720%, -2310%) rotate(0deg)"
+                data-10000="transform: translate(720%, -2820%) rotate(720deg)"
+            >
+            </div>
+        </div>
+        <div class="s1-img2 fixed"
+            data-10000="width: 70vw"
+            data-14000="width: 70vw"    
+        >
+            <div
+                data-10000="transform: translate(20%, 100%) scale(0); opacity: 0"
+                data-12000="transform: translate(20%, 100%) scale(1); opacity: 0.6"
+                data-14000="transform: translate(20%, 100%) scale(0); opacity: 0"
+            ></div>
+            <div
+                data-10000="transform: translate(-180%, 200%) scale(0); opacity: 0"
+                data-12000="transform: translate(-180%, 200%) scale(1); opacity: 0.6"
+                data-14000="transform: translate(-180%, 200%) scale(0); opacity: 0"    
+            ></div>
+            <div
+                data-10000="transform: translate(300%, 10%) scale(0); opacity: 0"
+                data-12000="transform: translate(300%, 10%) scale(1); opacity: 0.6"
+                data-14000="transform: translate(300%, 10%) scale(0); opacity: 0" 
+            ></div>
+            <div
+                data-10000="transform: translate(280%, -350%) scale(0); opacity: 0"
+                data-12000="transform: translate(280%, -350%) scale(1); opacity: 0.6"
+                data-14000="transform: translate(280%, -350%) scale(0); opacity: 0" 
+            ></div>
+            <div
+                data-10000="transform: translate(300%, -200%) scale(0); opacity: 0"
+                data-12000="transform: translate(300%, -200%) scale(1); opacity: 0.6"
+                data-14000="transform: translate(300%, -200%) scale(0); opacity: 0" 
+            ></div>
+            <div
+                data-10000="transform: translate(0%, -600%) scale(0); opacity: 0"
+                data-12000="transform: translate(0%, -600%) scale(1); opacity: 0.6"
+                data-14000="transform: translate(0%, -600%) scale(0); opacity: 0" 
+            ></div>
+        </div>
+    </section>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/skrollr/0.6.30/skrollr.min.js"></script>
+    <script type="text/javascript">
+        let s = skrollr.init();
+
+         window.addEventListener("scroll", () => {
+            let scrollTop = window.pageYOffset || window.scrollY;
+
+            document.querySelector(".scrollTop").innerText = parseInt(scrollTop);
+         });
+    </script>
+</body>
+</html>

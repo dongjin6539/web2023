@@ -70,3 +70,17 @@ em {
 body {
     background-color: #222;
 }
+
+body::-webkit-scrollbar {
+    width: 8px;  /* 스크롤바의 너비 */
+}
+
+body::-webkit-scrollbar-thumb {
+    height: 10%; /* 스크롤바의 길이 */
+    background: #000000; /* 스크롤바의 색상 */
+    border-radius: 10px;
+}
+
+body::-webkit-scrollbar-track {
+    background: rgba(88, 88, 88, 0);  /*스크롤바 뒷 배경 색상*/
+}
