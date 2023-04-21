@@ -317,15 +317,15 @@ Query OK, 0 rows affected (0.07 sec)
 
 <div class="bs-callout bs-callout-info"><code>INSERT</code> <code>INTO</code> 테이블명(필드명) <code>VALUES</code>;</div>
 <pre><code class="language-js">INSERT INTO reviews(memberID, youText, regTime) VALUES("23", "정말 감사합니다. 잘 봤어요.", "1234567");
-    INSERT INTO reviews(memberID, youText, regTime) VALUES("11", "많은 도움이 됐습니다.", "1234567");
-    INSERT INTO reviews(memberID, youText, regTime) VALUES("4", "다음에 또 올게요!!", "1234567");
-    INSERT INTO reviews(memberID, youText, regTime) VALUES("10", "매번 알찬 정보 감사합니다.", "1234567");
-    INSERT INTO reviews(memberID, youText, regTime) VALUES("14", "매일 오고 있습니다.", "1234567");
-    INSERT INTO reviews(memberID, youText, regTime) VALUES("7", "덕분에 잘 해결했어요.", "1234567");
-    INSERT INTO reviews(memberID, youText, regTime) VALUES("22", "평가 감사합니다.", "1234567");
-    INSERT INTO reviews(memberID, youText, regTime) VALUES("15", "이 내용은 별로네요...ㅠㅠ", "1234567");
-    INSERT INTO reviews(memberID, youText, regTime) VALUES("9", "잘 쓰고 있습니다.", "1234567");
-    INSERT INTO reviews(memberID, youText, regTime) VALUES("1", "다시 또 오고 싶네요!!!", "1234567");
+INSERT INTO reviews(memberID, youText, regTime) VALUES("11", "많은 도움이 됐습니다.", "1234567");
+INSERT INTO reviews(memberID, youText, regTime) VALUES("4", "다음에 또 올게요!!", "1234567");
+INSERT INTO reviews(memberID, youText, regTime) VALUES("10", "매번 알찬 정보 감사합니다.", "1234567");
+INSERT INTO reviews(memberID, youText, regTime) VALUES("14", "매일 오고 있습니다.", "1234567");
+INSERT INTO reviews(memberID, youText, regTime) VALUES("7", "덕분에 잘 해결했어요.", "1234567");
+INSERT INTO reviews(memberID, youText, regTime) VALUES("22", "평가 감사합니다.", "1234567");
+INSERT INTO reviews(memberID, youText, regTime) VALUES("15", "이 내용은 별로네요...ㅠㅠ", "1234567");
+INSERT INTO reviews(memberID, youText, regTime) VALUES("9", "잘 쓰고 있습니다.", "1234567");
+INSERT INTO reviews(memberID, youText, regTime) VALUES("1", "다시 또 오고 싶네요!!!", "1234567");
 </code></pre>
 
                     <h4 id="intro6-2" class="page-header">데이터 불러오기</h4>
@@ -374,7 +374,7 @@ Query OK, 0 rows affected (0.07 sec)
                     <h4>▶️ 나이가 25살 이상이면서 김씨 성을 갖고 있는 사람 불러오기</h4>
 <pre><code class="language-js">SELECT youName FROM members WHERE youAge >= 25 AND youName LIKE '김%';</code></pre> 
                     <h4>▶️ 나이가 25살 이상이고 또는 김씨 성을 갖고 있는 사람 불러오기</h4>
-<pre><code class="language-js">SELECT youName FROM members WHERE youAge >= 25 AND youName LIKE '김%';</code></pre>  
+<pre><code class="language-js">SELECT youName FROM members WHERE youAge >= 25 OR youName LIKE '김%';</code></pre>  
                     <h4>▶️ 나이가 25살 이상이고 아이디가 2 또는 아이디가 9인 멤버 불러오기</h4>
 <pre><code class="language-js">SELECT * FROM members WHERE (memberID = 2 OR memberID = 9) AND youAge >= 25;</code></pre> 
 <pre><code class="language-js">SELECT * FROM members WHERE youAge >=25 AND memberID IN(2,9);</code></pre>      
@@ -391,7 +391,7 @@ Query OK, 0 rows affected (0.07 sec)
                     <div class="bs-callout bs-callout-info"><code>SELECT</code> <code>count</code>필드명 <code>FROM</code> 테이블명</div>
                     <h4>▶️ 멤버 테이블에 핸드폰 번호 있는 회원 갯수 구하기</h4>
 <pre><code class="language-js">SELECT count(youPhone) FROM members;</code></pre>
-                    <h4>▶️ 멤버 테이블에 이메일 있는회원 갯수 구하기</h4>
+                    <h4>▶️ 멤버 테이블에 이메일 있는 회원 갯수 구하기</h4>
 <pre><code class="language-js">SELECT count(youEmail) FROM members;</code></pre>
 
                     <h4 id="intro6-3" class="page-header">데이터 수정하기</h4>

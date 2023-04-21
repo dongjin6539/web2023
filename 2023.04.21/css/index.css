@@ -1,0 +1,212 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+ul, li, ol {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+}
+a:hover {
+    color: blue;
+}
+#wrap {
+    width: 1200px;
+    margin: 0 auto;
+}
+#wrap2 {
+    width: 1200px;
+    margin: 0 auto;
+    display: flex;
+}
+#header {
+    width: 30%;
+    padding: 20px;
+}
+#header img {
+    width: 200px;
+    height: 100px;
+}
+#nav {
+    width: 30%;
+    padding: 20px;  
+}
+.menu > li {
+    padding: 15px 0;
+}
+.sub_menu li a{
+    display: inline-block;
+    width: 120%;
+    padding: 15px 15px;
+    font-size: 14px;
+}
+.sub_menu li {
+    position: relative;
+}
+.sub_menu li::before {
+    content: '';
+    border-bottom: 1px solid #cacaca;
+    position: absolute;
+    width: 250%;
+    left: 10px;
+    top: 40px;
+}
+#main {
+    width: 70%;
+    padding: 20px;
+}
+.banner__wrap {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+.banner__image { 
+    width: 100%;
+    height: 300px;
+    transform: translateY(-600px);
+}
+.banner__inner { 
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%; 
+    height: 900px;
+}
+#main .banner {
+    position: relative;
+    width: 100%;
+    height: 300px;
+}
+#section {
+    width: 100%;
+    margin: 80px 0;
+}
+#section .text {
+    text-align: center;
+    margin: 20px 0 80px;
+    font-size: 24px;
+}
+#section .text span {
+    color: #cacaca;
+}
+.img__inner {
+    width: 100%;
+    text-align: center;
+    display: flex;
+}
+.img__inner div {
+    margin: 0 20px;
+}
+.img__inner img {
+    width: 100%;
+}
+.img__inner div p {
+    margin: 0 10px;
+    text-align: center;
+    font-size: 10px;
+}
+#article {
+    width: 100%;
+    height: 30%;
+    border: 1px solid #cacaca;
+    background-color: #cacaca;
+    display: flex;
+}
+.article1, .article2, .article3{
+    width: 33%;
+    border: 1px solid #fff;
+    background-color: #fff;
+    margin: 20px;
+    text-align: center;
+    position: relative;
+}
+.article1::before, .article2::before, .article3::before {
+    content: '';
+    border: 2px solid blue;
+    border-radius: 5px;
+    position: absolute;
+    height: 18px;
+    right: 24px;
+    top: 16px;
+}
+.article1::after, .article2::after, .article3::after {
+    content: '';
+    border: 2px solid blue;
+    border-radius: 5px;
+    position: absolute;
+    width: 18px;
+    right: 15px;
+    top: 25px;
+}
+.article1 div, .article2 div, .article3 div {
+    text-align: center;
+    font-size: 20px;
+    margin: 20px;
+}
+.article1 span, .article2 span, .article3 span {
+    border: 1px solid #cacaca;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+}
+.article1 img, .article2 img, .article3 img {
+    width: 100px;
+}
+.article1 li, .article2 li, .article3 li {
+    font-size: 11px;
+    padding: 10px 0 8px 20px;
+    text-align: left;
+    position: relative;
+}
+.article1 li::before, .article2 li::before, .article3 li::before {
+    content: '';
+    border: 1px solid #000;
+    border-radius: 50%;
+    background-color: #000;
+    position: absolute;
+    left: 12px;
+    top: 17px;
+}
+#footer {
+    width: 100%;
+    height: 100px;
+    background-color: #EBF2FA;
+    display: flex;
+    margin: 40px 0;
+    position: relative;
+}
+#footer .footer__logo {
+    padding: 0 10px;
+    height: 100%;
+}
+#footer p {
+    padding: 20px;
+    line-height: 1.4;
+    font-size: 14px;
+}
+#footer .img1, #footer .img2, #footer .img3 {
+    width: 5%;
+    height: 50%;
+}
+#footer .img1 {
+    position: absolute;
+    right: 130px;
+    top: 25px;
+}
+#footer .img2 {
+    position: absolute;
+    right: 70px;
+    top: 25px;
+}
+#footer .img3 {
+    position: absolute;
+    right: 10px;
+    top: 25px;
+}
