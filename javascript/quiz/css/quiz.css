@@ -393,7 +393,7 @@
     justify-content: space-between;
 }
 .cbt__quiz .cbt {
-    width: 48%;
+    width: 32.333%;
     border: 8px ridge #cacaca;
     margin-bottom: 10px;
     padding: 10px;
@@ -445,7 +445,7 @@
     overflow: hidden;
     border: 8px ridge #cacaca;
     overflow-y: auto;
-    height: 400px;
+    height: calc(100vh - 320px);
     background-color: #fff;
 }
 .cbt__omr .omr {
@@ -1149,7 +1149,7 @@
 /* 미디어쿼리 */
 @media (max-width: 1400px){
     .cbt__quiz .cbt {
-        width: 32.3333%;
+        width: 48%;
     }
 }
 @media (max-width: 960px){
