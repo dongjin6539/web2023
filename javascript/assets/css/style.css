@@ -185,6 +185,8 @@ body {
     border-left: 5px solid #0243f1;
     padding: 13px 10px 10px 15px;
     background-color: #f3f3f3;
+    margin: 10px 0;
+    word-break: keep-all;
 }
 .main__sample .notice h4 {
     margin-bottom: 5px;
