@@ -1,0 +1,82 @@
+* {
+    cursor: none;
+}
+body {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+.cursor {
+    width: 20px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 1000;
+    pointer-events: none;
+    user-select: none;
+    cursor: none;
+}
+#header {
+    position: fixed;
+    left: 0;
+    top: 0;
+    background-color: #f08e33;
+    width: 100%;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 14px;
+}
+#header h1 {
+    font-size: 16px;
+    line-height: 1;
+    padding-top: 4px;
+}
+.icon__box {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    padding: 60px 10px 10px 20px;
+}
+.icon__box > div {
+    width: 50px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+.icon__box > div img {
+    margin-bottom: 10px;
+    padding: 5px;
+}
+.icon__box > div span {
+    background-color: #f08e33;
+    display: inline-block;
+    padding: 5px 2px 3px 2px;
+    border-radius: 5px;
+}
+.music__box {
+    border: 1px solid #000;
+    border-radius: 10px;
+    position: fixed;
+    left: 50%;
+    top: 85%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 50px;
+}
+.music__box p {
+    color: #000;
+}
+
+/* footer */
+.info {
+    position: fixed;
+    left: 50%;
+    bottom: 10px;
+    font-size: 14px;
+    color: #fff;
+    transform: translateX(-50%);
+    text-align: center;
+}
