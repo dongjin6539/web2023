@@ -6,13 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GAME Effect</title>
 
+    <a href='https://kr.123rf.com/profile_virtosmedia'>virtosmedia</a>
+    <a href='https://www.123rf.com/free-images/'>123RF Free Images</a>
+
     <link rel="stylesheet" href="css/bg.css">
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/game.css">
 </head>
 <body>
     <div class="cursor">
-        <img src="img/game_mouse01.png" alt>
+        <img src="img/game_mouse06.png" alt>
     </div>
     <header id="header">
         <h1 class="header__title">WEBS GAME WORLD</h1>
@@ -27,19 +30,19 @@
             </div>
             <div class="icon2">
                 <img src="img/game_icon02.png" alt="뮤직">
-                <span>뮤직</span>
+                <span>기타</span>
             </div>
             <div class="icon3">
                 <img src="img/game_icon03.png" alt="뮤직">
-                <span>뮤직</span>
+                <span>기타</span>
             </div>
             <div class="icon4">
                 <img src="img/game_icon04.png" alt="뮤직">
-                <span>뮤직</span>
+                <span>기타</span>
             </div>
         </div> 
         <div class="music__box hide">
-            <p>현재 뮤직듣기를 클릭했습니다.</p>
+            <p>현재 뮤직을 클릭했습니다.</p>
         </div>
     </main>
 
@@ -56,25 +59,15 @@
             
             start: function(){
                 $(".cursor img").attr("src", "img/game_mouse01.png")
-                $('#header').animate({backgroundColor: "red"})             
+                $("#header").animate({backgroundColor: "red"})             
             },
             drag: function(){
-                $(".info").html("드래그 중입니다.") 
+                $(".info").html("뮤직을 드래그 중입니다.") 
             },
             stop: function(){
-                $(".info").html("드래그가 끝났습니다.");
-                $('#header').animate({backgroundColor: "#f08e33"});
-                setInterval(() => {
-                    if(screenInfo.indexOf('Windows')>=0){
-                        info.innerHTML = `현재 윈도우를 사용하고 있으며, 화면 크기는 ${screenWidth} X ${screegHeight} 입니다.`
-                    } else if(screenInfo.indexOf('Macintosh')>=0){
-                        info.innerHTML = `현재 맥을 사용하고 있으며, 화면 크기는 ${screenWidth} X ${screegHeight} 입니다.`
-                    } else if(screenInfo.indexOf('Android')>=0){
-                        info.innerHTML = `현재 안드로이드 폰을 사용하고 있으며, 화면 크기는 ${screenWidth} X ${screegHeight} 입니다.`
-                    } else if(screenInfo.indexOf('iPhone')>=0){
-                        info.innerHTML = `현재 아이폰을 사용하고 있으며, 화면 크기는 ${screenWidth} X ${screegHeight} 입니다.`
-                    }
-                }, 5000)
+                $(".info").html("뮤직 드래그가 끝났습니다.");
+                $("#header").animate({backgroundColor: "#f08e33"});
+                setInterval(printAgent, 5000);
             }
         });
         $(".icon2").draggable({
@@ -82,25 +75,15 @@
             
             start: function(){
                 $(".cursor img").attr("src", "img/game_mouse02.png")
-                $('#header').animate({backgroundColor: "blue"})
+                $("#header").animate({backgroundColor: "blue"})
             },
             drag: function(){
-                $(".info").html("드래그 중입니다.") 
+                $(".info").html("파란 폴더를 드래그 중입니다.") 
             },
             stop: function(){
-                $(".info").html("드래그가 끝났습니다.");
-                $('#header').animate({backgroundColor: "#f08e33"});
-                setInterval(() => {
-                    if(screenInfo.indexOf('Windows')>=0){
-                        info.innerHTML = `현재 윈도우를 사용하고 있으며, 화면 크기는 ${screenWidth} X ${screegHeight} 입니다.`
-                    } else if(screenInfo.indexOf('Macintosh')>=0){
-                        info.innerHTML = `현재 맥을 사용하고 있으며, 화면 크기는 ${screenWidth} X ${screegHeight} 입니다.`
-                    } else if(screenInfo.indexOf('Android')>=0){
-                        info.innerHTML = `현재 안드로이드 폰을 사용하고 있으며, 화면 크기는 ${screenWidth} X ${screegHeight} 입니다.`
-                    } else if(screenInfo.indexOf('iPhone')>=0){
-                        info.innerHTML = `현재 아이폰을 사용하고 있으며, 화면 크기는 ${screenWidth} X ${screegHeight} 입니다.`
-                    }
-                }, 5000)
+                $(".info").html("파란 폴더 드래그가 끝났습니다.");
+                $("#header").animate({backgroundColor: "#f08e33"});
+                setInterval(printAgent, 5000);
             }
         });
         $(".icon3").draggable({
@@ -108,25 +91,15 @@
             
             start: function(){
                 $(".cursor img").attr("src", "img/game_mouse03.png")
-                $('#header').animate({backgroundColor: "green"})
+                $("#header").animate({backgroundColor: "green"})
             },
             drag: function(){
-                $(".info").html("드래그 중입니다.") 
+                $(".info").html("초록 폴더를 드래그 중입니다.") 
             },
             stop: function(){
-                $(".info").html("드래그가 끝났습니다.");
-                $('#header').animate({backgroundColor: "#f08e33"});
-                setInterval(() => {
-                    if(screenInfo.indexOf('Windows')>=0){
-                        info.innerHTML = `현재 윈도우를 사용하고 있으며, 화면 크기는 ${screenWidth} X ${screegHeight} 입니다.`
-                    } else if(screenInfo.indexOf('Macintosh')>=0){
-                        info.innerHTML = `현재 맥을 사용하고 있으며, 화면 크기는 ${screenWidth} X ${screegHeight} 입니다.`
-                    } else if(screenInfo.indexOf('Android')>=0){
-                        info.innerHTML = `현재 안드로이드 폰을 사용하고 있으며, 화면 크기는 ${screenWidth} X ${screegHeight} 입니다.`
-                    } else if(screenInfo.indexOf('iPhone')>=0){
-                        info.innerHTML = `현재 아이폰을 사용하고 있으며, 화면 크기는 ${screenWidth} X ${screegHeight} 입니다.`
-                    }
-                }, 5000)
+                $(".info").html("초록 폴더 드래그가 끝났습니다.");
+                $("#header").animate({backgroundColor: "#f08e33"});
+                setInterval(printAgent, 5000);
             }
         });
         $(".icon4").draggable({
@@ -134,52 +107,38 @@
             
             start: function(){
                 $(".cursor img").attr("src", "img/game_mouse04.png")
-                $('#header').animate({backgroundColor: "#aeae00"})
+                $("#header").animate({backgroundColor: "#aeae00"})
             },
             drag: function(){
-                $(".info").html("드래그 중입니다.") 
+                $(".info").html("노란 폴더를 드래그 중입니다.") 
             },
             stop: function(){
-                $(".info").html("드래그가 끝났습니다.");
-                $('#header').animate({backgroundColor: "#f08e33"});
-                setInterval(() => {
-                    if(screenInfo.indexOf('Windows')>=0){
-                        info.innerHTML = `현재 윈도우를 사용하고 있으며, 화면 크기는 ${screenWidth} X ${screegHeight} 입니다.`
-                    } else if(screenInfo.indexOf('Macintosh')>=0){
-                        info.innerHTML = `현재 맥을 사용하고 있으며, 화면 크기는 ${screenWidth} X ${screegHeight} 입니다.`
-                    } else if(screenInfo.indexOf('Android')>=0){
-                        info.innerHTML = `현재 안드로이드 폰을 사용하고 있으며, 화면 크기는 ${screenWidth} X ${screegHeight} 입니다.`
-                    } else if(screenInfo.indexOf('iPhone')>=0){
-                        info.innerHTML = `현재 아이폰을 사용하고 있으며, 화면 크기는 ${screenWidth} X ${screegHeight} 입니다.`
-                    }
-                }, 5000)
+                $(".info").html("노란 폴더 드래그가 끝났습니다.");
+                $("#header").animate({backgroundColor: "#f08e33"});
+                setInterval(printAgent, 5000);
             }
         });
 
         $(".icon1").on("click", function(){
-            $('#header').animate({backgroundColor: "red"});
-            $('.music__box').removeClass("hide");
+            $("#header").animate({backgroundColor: "red"});
+            $(".music__box").removeClass("hide");
             $(".cursor img").attr("src", "img/game_mouse01.png");
         });
         $(".icon2").on("click", function(){
-            $('#header').animate({backgroundColor: "blue"});
-            $('.music__box').addClass("hide");
+            $("#header").animate({backgroundColor: "blue"});
+            $(".music__box").addClass("hide");
             $(".cursor img").attr("src", "img/game_mouse02.png");
         });
         $(".icon3").on("click", function(){
-            $('#header').animate({backgroundColor: "green"});
-            $('.music__box').addClass("hide");
+            $("#header").animate({backgroundColor: "green"});
+            $(".music__box").addClass("hide");
             $(".cursor img").attr("src", "img/game_mouse03.png");
         });
         $(".icon4").on("click", function(){
-            $('#header').animate({backgroundColor: "#aeae00"});
-            $('.music__box').addClass("hide");
+            $("#header").animate({backgroundColor: "#aeae00"});
+            $(".music__box").addClass("hide");
             $(".cursor img").attr("src", "img/game_mouse04.png");
         }); 
-        $("#header").on("click", function(){
-            $('#header').animate({backgroundColor: "#f08e33"});
-            $('.music__box').addClass("hide");
-        });
 
         window.onload = function(){
             window.addEventListener("mousemove", e => {
@@ -190,32 +149,36 @@
                 })
             });
 
-            printTime();    // 오른쪽 상단 시간
-            printAgent();  // 하단 중앙 모니터 정보
+            // 시간 표현
+            printTime = () => {
+                const time = document.querySelector(".time");
+                time.innerHTML = new Date().toLocaleTimeString();
+            };
+            setInterval(printTime, 1000);
+
+            // 운영체제 정보
+            printAgent = () => {
+                const info = document.querySelector(".info");
+                const screenInfo = navigator.appVersion.toString();
+                const screenWidth = window.screen.width;
+                const screegHeight = window.screen.height;
+
+                if(screenInfo.indexOf('Windows')>=0){
+                    info.innerHTML = `현재 윈도우를 사용하고 있으며, 화면 크기는 ${screenWidth} X ${screegHeight} 입니다.`
+                } else if(screenInfo.indexOf('Macintosh')>=0){
+                    info.innerHTML = `현재 맥을 사용하고 있으며, 화면 크기는 ${screenWidth} X ${screegHeight} 입니다.`
+                } else if(screenInfo.indexOf('Android')>=0){
+                    info.innerHTML = `현재 안드로이드 폰을 사용하고 있으며, 화면 크기는 ${screenWidth} X ${screegHeight} 입니다.`
+                } else if(screenInfo.indexOf('iPhone')>=0){
+                    info.innerHTML = `현재 아이폰을 사용하고 있으며, 화면 크기는 ${screenWidth} X ${screegHeight} 입니다.`
+                }
+            };
+
+            printAgent();
         }
 
-        // 시간 표현
-        const time = document.querySelector(".time");
-
-        setInterval(function () {
-            time.innerHTML = new Date().toLocaleTimeString();
-        }, 1000);
-
-        // 운영체제 정보
-        const info = document.querySelector(".info");
-        const screenInfo = navigator.appVersion.toString();
-        const screenWidth = window.screen.width;
-        const screegHeight = window.screen.height;
-
-        if(screenInfo.indexOf('Windows')>=0){
-            info.innerHTML = `현재 윈도우를 사용하고 있으며, 화면 크기는 ${screenWidth} X ${screegHeight} 입니다.`
-        } else if(screenInfo.indexOf('Macintosh')>=0){
-            info.innerHTML = `현재 맥을 사용하고 있으며, 화면 크기는 ${screenWidth} X ${screegHeight} 입니다.`
-        } else if(screenInfo.indexOf('Android')>=0){
-            info.innerHTML = `현재 안드로이드 폰을 사용하고 있으며, 화면 크기는 ${screenWidth} X ${screegHeight} 입니다.`
-        } else if(screenInfo.indexOf('iPhone')>=0){
-            info.innerHTML = `현재 아이폰을 사용하고 있으며, 화면 크기는 ${screenWidth} X ${screegHeight} 입니다.`
-        }
+        
+        
     </script>
 </body>
 </html>

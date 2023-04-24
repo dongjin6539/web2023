@@ -57,12 +57,12 @@ body {
     border-radius: 5px;
 }
 .music__box {
-    border: 1px solid #000;
-    border-radius: 10px;
     position: fixed;
     left: 50%;
     top: 85%;
     transform: translate(-50%, -50%);
+    border: 1px solid #000;
+    border-radius: 10px;
     background-color: #fff;
     padding: 50px;
 }
