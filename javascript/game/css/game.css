@@ -56,19 +56,6 @@ body {
     padding: 5px 2px 3px 2px;
     border-radius: 5px;
 }
-.music__box {
-    position: fixed;
-    left: 50%;
-    top: 85%;
-    transform: translate(-50%, -50%);
-    border: 1px solid #000;
-    border-radius: 10px;
-    background-color: #fff;
-    padding: 50px;
-}
-.music__box p {
-    color: #000;
-}
 
 /* footer */
 .info {

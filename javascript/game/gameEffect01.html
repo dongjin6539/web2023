@@ -12,6 +12,9 @@
     <link rel="stylesheet" href="css/bg.css">
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/game.css">
+    <link rel="stylesheet" href="css/music.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="cursor">
@@ -41,9 +44,51 @@
                 <span>기타</span>
             </div>
         </div> 
-        <div class="music__box hide">
-            <p>현재 뮤직을 클릭했습니다.</p>
+
+        <!-- 뮤직 플레이어 -->
+        <div class="music__wrap">
+            <div class="music__inner">
+                <div class="music__header">
+                    <span class="left"></span>
+                    <h2>Music Player</h2>
+                    <span class="right"></span>
+                </div>
+                <div class="music__contents">
+                    <div class="music__view">
+                        <div class="image">
+                            <img src="img/music_view01.png" alt="음악">
+                        </div>
+                    </div>
+                    <div class="music__control">
+                        <div class="title">
+                            <h3>노래 제목</h3>
+                            <p>노래 작가 이름</p>
+                        </div>
+                        <div class="progress">
+                            <div class="bar">
+                                <audio src="audio/music_audio01.mp3"></audio>
+                            </div>
+                            <div class="timer">
+                                <span class="current">0:00</span>
+                                <span class="duration">3:55</span>
+                            </div>
+                            <div class="control">
+                                <span>전체 반복</span>
+                                <span>이전곡 재생</span>
+                                <span>재생</span>
+                                <span>다음곡 재생</span>
+                                <span>재생 목록</span>
+                                <!-- <span>한곡 반복</span>
+                                <span>랜덤 반복</span>
+                                <span>정지 반복</span> -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="music__footer"></div>
+            </div>
         </div>
+        <!-- // 뮤직 플레이어 -->
     </main>
 
     <footer id="footer">
@@ -53,6 +98,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+    <script src="js/music.js"></script>
     <script>
         $(".icon1").draggable({
             containment: ".icon__box", scroll: false,
@@ -121,22 +167,18 @@
 
         $(".icon1").on("click", function(){
             $("#header").animate({backgroundColor: "red"});
-            $(".music__box").removeClass("hide");
             $(".cursor img").attr("src", "img/game_mouse01.png");
         });
         $(".icon2").on("click", function(){
             $("#header").animate({backgroundColor: "blue"});
-            $(".music__box").addClass("hide");
             $(".cursor img").attr("src", "img/game_mouse02.png");
         });
         $(".icon3").on("click", function(){
             $("#header").animate({backgroundColor: "green"});
-            $(".music__box").addClass("hide");
             $(".cursor img").attr("src", "img/game_mouse03.png");
         });
         $(".icon4").on("click", function(){
             $("#header").animate({backgroundColor: "#aeae00"});
-            $(".music__box").addClass("hide");
             $(".cursor img").attr("src", "img/game_mouse04.png");
         }); 
 
@@ -150,33 +192,42 @@
             });
 
             // 시간 표현
-            printTime = () => {
-                const time = document.querySelector(".time");
-                time.innerHTML = new Date().toLocaleTimeString();
-            };
-            setInterval(printTime, 1000);
+            printTime();
 
             // 운영체제 정보
-            printAgent = () => {
-                const info = document.querySelector(".info");
-                const screenInfo = navigator.appVersion.toString();
-                const screenWidth = window.screen.width;
-                const screegHeight = window.screen.height;
-
-                if(screenInfo.indexOf('Windows')>=0){
-                    info.innerHTML = `현재 윈도우를 사용하고 있으며, 화면 크기는 ${screenWidth} X ${screegHeight} 입니다.`
-                } else if(screenInfo.indexOf('Macintosh')>=0){
-                    info.innerHTML = `현재 맥을 사용하고 있으며, 화면 크기는 ${screenWidth} X ${screegHeight} 입니다.`
-                } else if(screenInfo.indexOf('Android')>=0){
-                    info.innerHTML = `현재 안드로이드 폰을 사용하고 있으며, 화면 크기는 ${screenWidth} X ${screegHeight} 입니다.`
-                } else if(screenInfo.indexOf('iPhone')>=0){
-                    info.innerHTML = `현재 아이폰을 사용하고 있으며, 화면 크기는 ${screenWidth} X ${screegHeight} 입니다.`
-                }
-            };
-
             printAgent();
         }
 
+         // 시간 표현
+        function printTime() {
+                let currentTime = new Date();
+                let year = currentTime.getFullYear();
+                let month = currentTime.getMonth()+1;
+                let date = currentTime.getDate();
+                let hours = currentTime.getHours().toString().padStart(2, '0');
+                let minutes = currentTime.getMinutes().toString().padStart(2, '0');
+                let seconds = currentTime.getSeconds().toString().padStart(2, '0');
+                $(".time").html(`${year}년 ${month}월 ${date}일 ${hours}시 ${minutes}분 ${seconds}초`)
+            }
+        setInterval(printTime, 1000);
+
+        // 운영체제 정보
+        function printAgent(){
+            const info = document.querySelector(".info");
+            const screenInfo = navigator.userAgent.toString();
+            const screenWidth = window.screen.width;
+            const screegHeight = window.screen.height;
+
+            if(screenInfo.indexOf('Windows')>=0){
+                info.innerHTML = `현재 윈도우를 사용하고 있으며, 화면 크기는 ${screenWidth} X ${screegHeight} 입니다.`
+            } else if(screenInfo.indexOf('Macintosh')>=0){
+                info.innerHTML = `현재 맥을 사용하고 있으며, 화면 크기는 ${screenWidth} X ${screegHeight} 입니다.`
+            } else if(screenInfo.indexOf('Android')>=0){
+                info.innerHTML = `현재 안드로이드 폰을 사용하고 있으며, 화면 크기는 ${screenWidth} X ${screegHeight} 입니다.`
+            } else if(screenInfo.indexOf('iPhone')>=0){
+                info.innerHTML = `현재 아이폰을 사용하고 있으며, 화면 크기는 ${screenWidth} X ${screegHeight} 입니다.`
+            }
+        };
         
         
     </script>
