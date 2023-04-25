@@ -136,7 +136,6 @@ body {
 }
 .main__desc li a:hover {
     color: #0243f1;
-    font-size: 20px;
 }
 .main__desc .link {
     display: block;
