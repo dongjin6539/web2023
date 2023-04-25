@@ -198,7 +198,7 @@ pre {
     font-size: 20px;
 }
 
-.bgs1{background-image: linear-gradient(45deg, #a5d5fa 0%, #77befa 52%, #4da9fa 100%);} 
+.bgs1{background-image: linear-gradient(to right, #76b852, #8dc26f);} 
 .bgs2{background-image: linear-gradient(120deg, #f6d365 0%, #fda085 100%);}
 .bgs3{background-image: linear-gradient(to top, #fbc2eb 0%, #a6c1ee 100%);}
 .bgs4{background-image: linear-gradient(120deg, #f093fb 0%, #f5576c 100%);}
