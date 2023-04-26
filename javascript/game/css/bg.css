@@ -127,5 +127,5 @@ html::before {
         background-size: cover;
         box-sizing: border-box;
         background-repeat: no-repeat;
-        background-position: center center;
+        background-position: center;
     }

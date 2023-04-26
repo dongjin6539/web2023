@@ -74,7 +74,10 @@
   border-bottom: 3px solid #00ff00;
   background-color: #acffac;
 }
-.color-shape:first-child:hover {
+.color-shape:hover {
+    border-bottom: 3px solid #008cff;
+}
+/* .color-shape:first-child:hover {
     border-bottom: 3px solid #a92c76;
 }
 .color-shape:nth-child(2):hover {
@@ -133,7 +136,7 @@
 }
 .color-shape:nth-child(20):hover {
     border-bottom: 3px solid #824b3d;
-}
+} */
 
 
 
