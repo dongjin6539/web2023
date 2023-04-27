@@ -116,7 +116,7 @@ const nextMusic = () => {
     // 무한반복 삼항연산자
     musicIndex == allMusic.length ? musicIndex = 1 : musicIndex++;
 
-    loadMusic(musicIndex);
+    loadMusic(musicIndex); 
     playMusic();
 };
 

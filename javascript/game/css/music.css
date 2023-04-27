@@ -36,7 +36,7 @@
     transform: translate(-50%);
     top: 50px;
     padding: 0 20px 20px 20px;
-    width: 90%;
+    width: 80%;
 }
 .music__view .image {}
 .music__view .image img {
@@ -45,14 +45,14 @@
 }
 .music__control {
     background-color: #fff;
-    height: 400px;
+    height: 350px;
     border-radius: 20px;
-    margin-top: 200px;  
+    margin-top: 160px;  
     padding: 20px;
 }
 .music__control .title {
     text-align: center;
-    padding-top: 120px;
+    padding-top: 100px;
 }
 .music__control .title h3 {
     margin-bottom: 5px;
@@ -87,7 +87,7 @@
 }
 .music__control .control {
     width: 100%;
-    margin-top: 40px;
+    margin-top: 30px;
     color: #000;
     display: flex;
     justify-content: space-between;
