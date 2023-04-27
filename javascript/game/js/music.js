@@ -158,7 +158,7 @@ musicProgress.addEventListener("click", (e) => {
 musicPlay.addEventListener("click", () => {
     const isMUsicPaused = musicWrap.classList.contains("paused");   // 음악 재생 중
     isMUsicPaused ? pauseMusic() : playMusic();
-});
+}); 
 
 // 이전곡 버튼 클릭
 musicPrevBtn.addEventListener("click", () => {
