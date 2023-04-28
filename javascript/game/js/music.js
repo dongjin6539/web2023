@@ -148,12 +148,13 @@ musicAudio.addEventListener("timeupdate", e => {
 // 진행 바 클릭
 musicProgress.addEventListener("click", (e) => {
     let progressWidth = musicProgress.clientWidth;  // 진행바 전체 길이
-    let clickddOffsetX = e.offsetX;                   // 진행바를 기준으로 측정되는 X좌표 값
+    let clickedOffsetX = e.offsetX;                   // 진행바를 기준으로 측정되는 X좌표 값
     let songDuration = musicAudio.duration;         // 오디오 전체 길이
 
     // 백분위로 나눈 숫자에 다시 전체 길이를 곱해서 현재 재생값으로 바꿈
-    musicAudio.currentTime = (clickddOffsetX/progressWidth) * songDuration;
-});
+    musicAudio.currentTime = (clickedOffsetX/progressWidth) * songDuration;
+}); 
+
 // 플레이 버튼 클릭
 musicPlay.addEventListener("click", () => {
     const isMUsicPaused = musicWrap.classList.contains("paused");   // 음악 재생 중

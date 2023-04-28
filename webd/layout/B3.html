@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>웹디자인 레이아웃 실기 B유형 3번 레이아웃</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        #wrap {
+            width: 100%;
+            height: 700px;
+        }
+        #header {
+            width: 100%;
+            height: 100px;
+            background-color: #aaa;
+        }
+        #header .container {
+            display: flex;
+        }
+        #header h1 {
+            width: 20%;
+            background-color: #222;
+        }
+        #header nav {
+            width: 80%;
+            background-color: #444;
+        }
+        #slider {
+            width: 100%;
+            height: 300px;
+        }
+        #contents {
+            width: 100%;
+            height: 200px;
+        }
+        #contents .container {
+            display: flex;
+        }
+        #contents .content1 {
+            width: 33.3333%;
+            background-color: #555;
+        }
+        #contents .content2 {
+            width: 33.3333%;
+            background-color: #666;
+        }
+        #contents .content3 {
+            width: 33.3333%;
+            background-color: #777;
+        }
+        #footer {
+            width: 100%;
+            height: 100px;
+            background-color: #ddd;
+        }
+        #footer .container {
+            display: flex;
+        }
+        #footer .footer1 {
+            width: 20%;
+            background-color: #444;
+        }
+        #footer .footer2 {
+            width: 60%;
+            background-color: #111;
+        }
+        #footer .footer3 {
+            width: 20%;
+            background-color: #222;
+        }
+        .container {
+            width: 1200px;
+            height: inherit;
+            margin: 0 auto;
+            background-color: #c0c0c0;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <div id="header">
+            <div class="container">
+                <h1></h1>
+                <nav></nav>
+            </div>
+        </div>
+        <div id="slider">
+            <div class="container"></div>
+        </div>
+        <div id="contents">
+            <div class="container">
+                <div class="content1"></div>
+                <div class="content2"></div>
+                <div class="content3"></div>
+            </div>
+        </div>
+        <div id="footer">
+            <div class="container">
+                <div class="footer1"></div>
+                <div class="footer2"></div>
+                <div class="footer3"></div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
