@@ -71,8 +71,8 @@
   height: 350px;
   margin-bottom: 1%;
   float: left;
-  border-bottom: 3px solid #00ff00;
-  background-color: #acffac;
+  border-bottom: 3px solid #000;
+  background-color: #ededed;
 }
 .color-shape:hover {
     border-bottom: 3px solid #008cff;

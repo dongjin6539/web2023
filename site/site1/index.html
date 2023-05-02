@@ -21,6 +21,7 @@
     <link rel="stylesheet" href="assets/css/font.css">
     <link rel="stylesheet" href="assets/css/reset.css">
     <link rel="stylesheet" href="assets/css/common.css">
+    <link rel="stylesheet" href="assets/css/swiper.css">
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
@@ -36,7 +37,7 @@
     </div>
     <!-- //skip --> 
 
-    <header id="headerType" class="hide">
+    <header id="headerType">
         <h1 class="blind">사이트 로고</h1>
         <div class="header__inner">
             <h1 class="header__logo">Need of Exercise</h1>
@@ -58,10 +59,91 @@
     <!-- //headerType -->
 
     <main id="mainType">
-        <section id="sliderType" class="nexon hide">
+        <section id="sliderType" class="nexon">
             <h2 class="blind">슬라이드 영역</h2>
             <div class="slider__inner">
-                <div class="slider">
+                <div class="swiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="slider img1">
+                                <div class="slider__info container">
+                                    <span class="small">event</span>
+                                    <h3 class="title">운동에 대한 모든 것</h3>
+                                    <p class="desc">운동 소개, 운동하는 이유, 운동의 종류, 운동의 필수품, 운동 시 주의할점 운동과 관련된 모든 정보를 공유합니다.</p>
+                                    <div class="btn">
+                                        <a href="#">자세히 보기</a>
+                                        <a href="#">문의 사항</a>
+                                    </div>
+                                </div>
+                            </div>                            
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="slider img2">
+                                <div class="slider__info container">
+                                    <span class="small">event</span>
+                                    <h3 class="title">운동을 하는 이유</h3>
+                                    <p class="desc">운동을 하는 이유는 조기 사망 감소, 당뇨병 및 대사 질환 예방, 근골격 건강 증진, 건강한 체중 조절, 
+                                        암 발생 감소, 정신 건강 증진 등 다양한 이유가 있습니다.</p>
+                                    <div class="btn">
+                                        <a href="#">자세히 보기</a>
+                                        <a href="#">문의 사항</a>
+                                    </div>
+                                </div>
+                            </div>                            
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="slider img3">
+                                <div class="slider__info container">
+                                    <span class="small">event</span>
+                                    <h3 class="title">운동의 종류</h3>
+                                    <p class="desc">운동의 종류에는 무산소 운동, 유산소 운동, 스트레칭이 있습니다.
+                                        자세하게는 더 많은 운동의 종류가 있습니다.</p>
+                                    <div class="btn">
+                                        <a href="#">자세히 보기</a>
+                                        <a href="#">문의 사항</a>
+                                    </div>
+                                </div>
+                            </div>                            
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="slider img4">
+                                <div class="slider__info container">
+                                    <span class="small">event</span>
+                                    <h3 class="title">운동의 필수품</h3>
+                                    <p class="desc">운동의 필수품에는 의지력, 운동 장비, 올바른 운동 기술, 충분한 휴식과 수면, 
+                                        적절한 식습관, 올바른 목표 설정이 있습니다.</p>
+                                    <div class="btn">
+                                        <a href="#">자세히 보기</a>
+                                        <a href="#">문의 사항</a>
+                                    </div>
+                                </div>
+                            </div>                            
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="slider img5">
+                                <div class="slider__info container">
+                                    <span class="small">event</span>
+                                    <h3 class="title">운동 시 주의할 점</h3>
+                                    <p class="desc">운동을 할 때 주의할 점도 있습니다. 과도한 운동은 부상을 유발할 수 있으므로, 
+                                        적당한 운동량과 무리하지 않는 것이 중요합니다.</p>
+                                    <div class="btn">
+                                        <a href="#">자세히 보기</a>
+                                        <a href="#">문의 사항</a>
+                                    </div>
+                                </div>
+                            </div>                            
+                        </div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                    <div class="swiper-button">
+                        <div class="swiper-button-play"><span class="ir">play</span></div>
+                        <div class="swiper-button-stop"><span class="ir">stop</span></div>
+                    </div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+                </div>
+
+                <!-- <div class="slider">
                     <div class="slider__info container">
                         <span class="small">event</span>
                         <h3 class="title">운동에 대한 모든 것</h3>
@@ -84,11 +166,7 @@
                         <a href="#" class="play"><span class="blind">플레이</span></a>
                         <a href="#" class="stop"><span class="blind">정지</span></a>
                     </div>
-                </div>
-                <!-- <div class="slider"></div>
-                <div class="slider"></div>
-                <div class="slider"></div>
-                <div class="slider"></div> -->
+                </div> -->
             </div>
         </section>
         <!-- //sliderType -->
@@ -318,5 +396,44 @@
         </div>
     </footer>
     <!-- //footerType -->
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script>
+        const swiper = new Swiper('.swiper', {
+            direction: 'horizontal',
+            loop: true,
+
+            autoplay: {
+                delay: 1000,
+                disableOnInteraction: false,
+            },
+
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+        });
+
+        const btnStop = document.querySelector(".swiper-button-stop");
+        const btnStart = document.querySelector(".swiper-button-play");
+
+        btnStart.style.display = "none";
+
+        btnStop.addEventListener("click", () => {
+            swiper.autoplay.stop();
+            btnStart.style.display = "block";
+            btnStop.style.display = "none";
+        });
+        btnStart.addEventListener("click", () => {
+            swiper.autoplay.start();
+            btnStart.style.display = "none";
+            btnStop.style.display = "block";
+        });
+    </script>
 </body>
 </html>

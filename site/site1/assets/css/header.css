@@ -31,3 +31,32 @@
     border-radius: 50px;
     font-size: 16px;
 }
+
+/* 미디어쿼리 */
+@media (max-width: 1200px){
+    .header__menu li a {
+        padding: 5px 20px;
+    }
+    .header__member a {
+        padding: 5px 20px;
+        font-size: 14px;
+    }
+}
+@media (max-width: 960px){
+    .header__menu li a {
+        padding: 0 5px;
+        font-size: 14px;
+    }
+}
+@media (max-width: 600px){
+    .header__logo {
+        font-size: 14px;
+    }
+    .header__menu li a {
+        display: none;
+    }
+    .header__member a {
+        padding: 5px 10px;
+        font-size: 12px;
+    }
+}

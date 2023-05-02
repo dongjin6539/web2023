@@ -223,7 +223,7 @@
 	font-family: 'Gaegu', cursive; font-size: 40px;
 }
 #contents_tit p a {
-	color: rgb(97, 205, 106); 
+	color: #5c5c5c; 
 }
 
 
@@ -280,9 +280,9 @@
 }
 
 .gridly .webstandard a {
-	color: rgb(97, 205, 106);
+	color: #000;
 	display: block;
-	border-bottom: 3px solid #acffac;
+	border-bottom: 3px solid #5c5c5c;
 	margin-right: 20px;
 } 
 .gridly .html5 a {
