@@ -35,30 +35,30 @@ body {
 #header {
     text-align: center;
     padding-bottom: 40px;
-    border-bottom: 1px dashed #c8c808;
+    border-bottom: 1px dashed #006600;
 }
 #header h1 a {
     font-size: 80px;
     font-weight: 800;
-    color: #ecec8c;
+    color: #02a102;
 }
 #header nav ul li {
     display: inline;
 }
 #header nav ul li a {
-    border: 1px dashed #c8c808;
-    color: #919156;
+    border: 1px dashed #006600;
+    color: #02a102;
     padding: 10px 20px;
     display: inline-block;
     margin: 6px 3px;
     transition: background-color 0.3s, color 0.3s;
 }
 #header nav ul li a:hover {
-    background-color: #c8c808;
+    background-color: #006600;
     color: #fff;
 }
 #header nav ul li.active a {
-    background-color: #c8c808;
+    background-color: #006600;
     color: #fff;
 }
 
@@ -82,11 +82,11 @@ body {
 /* 메인 영역 */
 #main {
     padding: 40px 0;
-    border-bottom: 1px dashed #c8c808;
+    border-bottom: 1px dashed #006600;
 }
 .main__menu {
     padding-bottom: 40px;
-    border-bottom: 1px dashed #c8c808;
+    border-bottom: 1px dashed #006600;
 }
 .main__menu li {
     line-height: 2;
@@ -96,7 +96,7 @@ body {
 }
 .main__menu li strong::before {
     content: '';
-    background: #c8c808;
+    background: #02a102;
     position: absolute;
     left: 0;
     bottom: 0;
@@ -110,7 +110,7 @@ body {
     height: 100%;
 }
 .main__menu span {
-    color: #919156;
+    color: #02a102;
     font-weight: bold;
 }
 .main__desc h3 {
@@ -119,26 +119,36 @@ body {
 }
 .main__desc p {
     margin-bottom: 15px;
-    border-left: 5px solid #919156;
+    border-left: 5px solid #006600;
     padding: 12px 10px 10px 20px;
-    background-color: #c8c808;
+    background-color: #02a102;
 }
 .main__desc ul {
     padding-left: 15px;
     margin-bottom: 15px;
 }
 .main__desc li{
-    list-style: square;
+    position: relative;
+}
+.main__desc li::before {
+    content: '';
+    width: 5px;
+    height: 5px;
+    background-color: #006600;
+    position: absolute;
+    left: 0;
+    top: 9px;
+    margin-left: -13px;
 }
 .main__desc li a {
     transition: all 0.2s;
 }
 .main__desc li a:hover {
-    color: #919156;
+    color: #02a102;
 }
 .main__desc .link {
     display: block;
-    border: 1px dotted #919156;
+    border: 1px dotted #006600;
     margin: 10px 0;
     text-align: center;
     padding: 10px;
@@ -146,7 +156,7 @@ body {
     transition: all 0.2s;
 }
 .main__desc .link:hover {
-    background-color: #919156;
+    background-color: #006600;
     color: #fff;
 }
 .main__sample {
@@ -160,7 +170,7 @@ body {
 }
 .main__sample .sample h3 {
     font-size: 20px;
-    border: 1px solid #919156;
+    border: 1px solid #006600;
     border-width: 0 0 1px 14px;
     padding: 6px 6px 6px 10px;
     margin-bottom: 10px;
@@ -180,7 +190,7 @@ body {
     margin-bottom: 10px;
 }
 .main__sample .notice {
-    border-left: 5px solid #919156;
+    border-left: 5px solid #006600;
     padding: 13px 10px 10px 15px;
     background-color: #f3f3f3;
     margin: 10px 0;
@@ -203,7 +213,7 @@ body {
     content: '';
     width: 5px;
     height: 5px;
-    background-color: #919156;
+    background-color: #006600;
     position: absolute;
     left: 0;
     top: 9px;
@@ -212,7 +222,7 @@ body {
     width: 100%;
 }
 .main__sample .table th {
-    background-color: #919156;
+    background-color: #006600;
     color: #fff;
     padding: 2px;
 }
@@ -230,12 +240,22 @@ body {
     padding-left: 15px;
 }
 .main__text li {
-    list-style: square;
+    position: relative;
+}
+.main__text li::before {
+    content: '';
+    width: 5px;
+    height: 5px;
+    background-color: #006600;
+    position: absolute;
+    left: 0;
+    top: 9px;
+    margin-left: -13px;
 }
 .main__text span {
     font-weight: bold;
     font-size: 24px;
-    color: #919156;
+    color: #006600;
     display: flex;
     margin-bottom: 5px;
 }
@@ -243,15 +263,15 @@ body {
     position: fixed;
     right: 25px;
     bottom: 25px;
-    background-color: #919156;
+    background-color: #006600;
     border-radius: 50%;
-    border: 1px solid #919156;
+    border: 1px solid #006600;
     width: 50px;
     height: 50px;
 }
 .btn:hover {
-    background-color: #c8c808;
-    border: 1px solid #c8c808;
+    background-color: #02a102;
+    border: 1px solid #02a102;
 }
 .btn a {
     color: #fff;

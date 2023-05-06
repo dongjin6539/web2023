@@ -225,6 +225,9 @@
 #contents_tit p a {
 	color: #5c5c5c; 
 }
+#contents_tit p a span {
+	color: #006600;
+}
 
 
 
@@ -280,7 +283,7 @@
 }
 
 .gridly .webstandard a {
-	color: #000;
+	color: #006600;
 	display: block;
 	border-bottom: 3px solid #5c5c5c;
 	margin-right: 20px;
