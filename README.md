@@ -13,6 +13,9 @@
 퀴즈 게임02 : https://dongjin6539.github.io/web2023/javascript/quiz/quizEffect02.html  
 퀴즈 게임03 : https://dongjin6539.github.io/web2023/javascript/quiz/quizEffect03.html  
 퀴즈 게임04 : https://dongjin6539.github.io/web2023/javascript/quiz/quizEffect04.html  
+퀴즈 게임05 : https://dongjin6539.github.io/web2023/javascript/quiz/quizEffect05.html  
+퀴즈 게임06 : https://dongjin6539.github.io/web2023/javascript/quiz/quizEffect06.html  
+퀴즈 게임07 : https://dongjin6539.github.io/web2023/javascript/quiz/quizEffect07.html  
    
    
 # 사이트   
@@ -22,5 +25,7 @@
 카드 유형01 : https://dongjin6539.github.io/web2023/site/cardType/cardType01.html   
 텍스트 유형01 : https://dongjin6539.github.io/web2023/site/textType/textType01.html   
 이미지/텍스트 유형01 : https://dongjin6539.github.io/web2023/site/img-textType/img-textType01.html
+배너 유형01 : https://dongjin6539.github.io/web2023/site/bannerType/bannerType01.html
+푸터 유형01 : https://dongjin6539.github.io/web2023/site/footerType/footerType01.html
  
 
