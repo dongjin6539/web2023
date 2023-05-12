@@ -82,7 +82,6 @@ img {
     padding-top: 10px;
     display: none;
 }
-#header .container .nav > ul > li > ul > li {}
 #header .container .nav > ul > li > ul > li > a {
     color: #fff;
     padding: 10px;
@@ -191,8 +190,6 @@ img {
     display: flex;
     justify-content: space-between;
 } 
-#main .container .gallery li {}
-#main .container .gallery li a {}
 #main .container .banner {
     width: 20%;
     background-image: url(../images/banner02.jpg);
