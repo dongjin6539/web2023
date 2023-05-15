@@ -77,7 +77,7 @@ body::-webkit-scrollbar {
 
 body::-webkit-scrollbar-thumb {
     height: 10%; /* 스크롤바의 길이 */
-    background: #000000; /* 스크롤바의 색상 */
+    background: #626262; /* 스크롤바의 색상 */
     border-radius: 10px;
 }
 

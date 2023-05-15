@@ -263,22 +263,23 @@ body {
     position: fixed;
     right: 25px;
     bottom: 25px;
-    background-color: #006600;
-    border-radius: 50%;
-    border: 1px solid #006600;
-    width: 50px;
-    height: 50px;
-}
-.btn:hover {
-    background-color: #02a102;
-    border: 1px solid #02a102;
+    
 }
 .btn a {
+    display: block;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
     color: #fff;
-    font-weight: bold;
+    background-color: #006600;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 14px;
+    
 }
 .btn a:hover {
     color: #000;
+    background-color: #02a102;
 }
 
 
