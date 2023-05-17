@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>패럴랙스 이팩트06</title>
+    <title>패럴랙스 이팩트07</title>
 
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/parallax.css">
@@ -235,9 +235,6 @@
             text.innerHTML = `<span>${text.innerHTML}</span>`;
         });
 
-
-
-
         function scroll(){
             let scrollTop = window.scrollY || window.pageYOffset;
 
@@ -246,7 +243,6 @@
             reveals.forEach(reveal => {
                 let revealOffset = reveal.offsetTop + reveal.parentElement.offsetTop;
                 let revealDelay = reveal.dataset.delay;
-                console.log(revealDelay);
                 
                 // if(scrollTop >= revealOffset - window.innerHeight){
                 //     reveal.classList.add("show");
