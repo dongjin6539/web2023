@@ -70,7 +70,7 @@ const musicList = musicWrap.querySelector(".music__list");
 const musicListUl = musicWrap.querySelector(".music__list ul");
 const musicListClose = musicWrap.querySelector(".music__list h3 .close");
 
-let musicIndex = 3; // 현재 음악 인덱스
+let musicIndex = 1; // 현재 음악 인덱스
 
 // 음악 재생
 const loadMusic = (num) => {

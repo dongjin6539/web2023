@@ -105,6 +105,67 @@
       margin-right: 20px;
       margin-top: 40px;
     }
+
+    @import url('https://fonts.googleapis.com/css?family=DM+Sans:500,700&display=swap');
+
+    .nav {
+      display: inline-flex;
+      position: relative;
+      overflow: hidden;
+      max-width: 100%;
+      background-color: #fff;
+      padding: 0 20px;
+      border-radius: 40px;
+      margin: 30px;
+      box-shadow: 10px 10px 5px rgba(159, 162, 177, .8);
+    }
+
+    .nav-item {
+      color: #83818c;
+      padding: 20px;
+      text-decoration: none;
+      transition: .3s;
+      margin: 0 6px;
+      z-index: 1;
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 500;
+      position: relative;
+      
+      &:before {
+        content: "";
+        position: absolute;
+        bottom: -6px;
+        left: 0;
+        width: 100%;
+        height: 5px;
+        background-color: #dfe2ea;
+        border-radius: 8px 8px 0 0;
+        opacity: 0;
+        transition: .3s;
+      }
+    }
+
+    .nav-item:not(.is-active):hover:before {
+      opacity: 1;
+      bottom: 0;
+    }
+
+    .nav-item:not(.is-active):hover { color: #333; }
+
+    .nav-indicator {
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      height: 4px;
+      transition: .4s;
+      height: 5px;
+      z-index: 1;
+      border-radius: 8px 8px 0 0;
+    }
+
+    @media (max-width: 580px) {
+      .nav { overflow: auto; }
+    }
   </style>
 </head>
 
@@ -174,15 +235,14 @@
     <div class="container">
 
       <div class="row">
-        <div id="options" class="gridly">
-          <ul class="filter option-set" data-filter-group="color">
-            <li><a href="#filter-color-any" data-filter-value="" class="selected">ALL</a></li>
-            <li class="webstandard"><a href="#filter-color-webstandard" data-filter-value=".class">CLASS</a></li>
-            <li class="webstandard"><a href="#filter-color-webstandard" data-filter-value=".javascript">JAVASCRIPT</a></li>
-            <li class="webstandard"><a href="#filter-color-webstandard" data-filter-value=".site">SITE</a></li>
-            <li class="webstandard"><a href="#filter-color-webstandard" data-filter-value=".html">HTML</a></li>
-          </ul>
-        </div>
+        <nav class="nav filter option-set" data-filter-group="color">
+          <a href="#filter-color-any" class="nav-item is-active" active-color="orange">ALL</a>
+          <a href="#filter-color-webstandard" class="nav-item webstandard" active-color="green" data-filter-value=".class">CLASS</a>
+          <a href="#filter-color-webstandard" class="nav-item webstandard" active-color="blue" data-filter-value=".javascript">JAVASCRIPT</a>
+          <a href="#filter-color-webstandard" class="nav-item webstandard" active-color="red" data-filter-value=".site">SITE</a>
+          <a href="#filter-color-webstandard" class="nav-item webstandard" active-color="rebeccapurple" data-filter-value=".html">HTML</a>
+          <span class="nav-indicator"></span>
+        </nav>
       </div>
 
       <div class="row" id="middle" style="margin-left:16px;">
@@ -287,6 +347,27 @@
                   <h5>REACT</h5>
                   <p>REACT</p>
                   <span>REACT</span>
+                </div>
+              </div>
+            </a>
+          </section>
+          <!-- //box -->
+
+          <!-- box -->
+          <section class="color-shape site">
+            <a href="react/webpack.html" target="_blank">
+              <div class="image-wrap">
+                <div class="hover-wrap">
+                  <span class="overlay-img-donut">WEBPACK</span>
+                  <span class="overlay-text-thumb-donut">WEBPACK</span>
+                  <span class="overlay-text-thumb1-donut">WEBPACK</span>
+                  <span class="overlay-text-thumb2-donut">WEBPACK</span>
+                </div>
+                <img src="assets/img/webpack.svg" alt="portfolio">
+                <div class="img-text donutImg">
+                  <h5>WEBPACK</h5>
+                  <p>WEBPACK</p>
+                  <span>WEBPACK</span>
                 </div>
               </div>
             </a>
@@ -653,6 +734,29 @@
         $(".view").fadeToggle();
       });
 
+    });
+
+    const indicator = document.querySelector('.nav-indicator');
+    const items = document.querySelectorAll('.nav-item');
+
+    function handleIndicator(el) {
+      items.forEach(item => {
+        item.classList.remove('is-active');
+        item.removeAttribute('style');
+      });
+      
+      indicator.style.width = `${el.offsetWidth}px`;
+      indicator.style.left = `${el.offsetLeft}px`;
+      indicator.style.backgroundColor = el.getAttribute('active-color');
+
+      el.classList.add('is-active');
+      el.style.color = el.getAttribute('active-color');
+    }
+
+
+    items.forEach((item, index) => {
+      item.addEventListener('click', (e) => { handleIndicator(e.target)});
+      item.classList.contains('is-active') && handleIndicator(item);
     });
   </script>
 </body>
