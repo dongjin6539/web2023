@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/game.css">
     <link rel="stylesheet" href="css/music.css">
+    <link rel="stylesheet" href="css/tetris.css">
 
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200&display=swap" rel="stylesheet">
 </head>
@@ -113,6 +114,25 @@
             </div>
         </div>
         <!-- // 뮤직 플레이어 -->
+
+        <!-- 테트리스 -->
+        <div class="tetris__wrap">
+            <div class="tetris__header">
+                <h1>TETRIS GAME</h1>
+            </div>
+            <div class="tetris__start"></div>
+            <div class="tetris__text">
+                <div class="tit">TIME : <em class="tetris__time"><span>0</span> 초</em></div>
+                <div class="tit">SCORE : <em class="tetris__line"><span>0</span> 줄</em></div>
+            </div>
+            <div class="tetris__score"></div>
+            <div class="tetris__play">
+                <div class="view">
+                    <ul></ul>
+                </div>
+            </div>
+        </div>
+        <!-- // 테트리스 -->
     </main>
 
     <footer id="footer">
@@ -123,6 +143,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
     <script src="js/music.js"></script>
+    <script src="js/tetris.js"></script>
     <script>
         $(".icon1").draggable({
             containment: ".icon__box", scroll: false,
@@ -189,22 +210,54 @@
             }
         });
 
+        $(".music__wrap").draggable({
+            scroll: false
+        });
+
         $(".icon1").on("click", function(){
             $("#header").animate({backgroundColor: "red"});
             $(".cursor img").attr("src", "img/game_mouse01.png");
+            $(".music__wrap").css("display", "block");
+            $(".tetris__wrap").css("display", "none");
+            $(".body").css("background-image", "url('img/gamebg01.jpg')");
+            $(".icon1 span").animate({backgroundColor: "red"});
+            $(".icon2 span").animate({backgroundColor: "#f08e33"});
+            $(".icon3 span").animate({backgroundColor: "#f08e33"});
+            $(".icon4 span").animate({backgroundColor: "#f08e33"});
         });
         $(".icon2").on("click", function(){
             $("#header").animate({backgroundColor: "blue"});
             $(".cursor img").attr("src", "img/game_mouse02.png");
+            $(".music__wrap").css("display", "none");
+            $(".tetris__wrap").css("display", "block");
+            $(".body").css("background-image", "url('img/gamebg02.jpg')");
+            $(".icon1 span").animate({backgroundColor: "#f08e33"});
+            $(".icon2 span").animate({backgroundColor: "blue"});
+            $(".icon3 span").animate({backgroundColor: "#f08e33"});
+            $(".icon4 span").animate({backgroundColor: "#f08e33"});
         });
         $(".icon3").on("click", function(){
             $("#header").animate({backgroundColor: "green"});
             $(".cursor img").attr("src", "img/game_mouse03.png");
+            $(".music__wrap").css("display", "none");
+            $(".tetris__wrap").css("display", "none");
+            $(".body").css("background-image", "url('img/gamebg03.jpg')");
+            $(".icon1 span").animate({backgroundColor: "#f08e33"});
+            $(".icon2 span").animate({backgroundColor: "#f08e33"});
+            $(".icon3 span").animate({backgroundColor: "green"});
+            $(".icon4 span").animate({backgroundColor: "#f08e33"});
         });
         $(".icon4").on("click", function(){
             $("#header").animate({backgroundColor: "#aeae00"});
             $(".cursor img").attr("src", "img/game_mouse04.png");
-        }); 
+            $(".music__wrap").css("display", "none");
+            $(".tetris__wrap").css("display", "none");
+            $(".body").css("background-image", "url('img/gamebg01.jpg')");
+            $(".icon1 span").animate({backgroundColor: "#f08e33"});
+            $(".icon2 span").animate({backgroundColor: "#f08e33"});
+            $(".icon3 span").animate({backgroundColor: "#f08e33"});
+            $(".icon4 span").animate({backgroundColor: "#aeae00"});
+        });  
 
         window.onload = function(){
             window.addEventListener("mousemove", e => {

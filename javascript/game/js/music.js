@@ -269,7 +269,9 @@ function palyListMusic(){
     for(let i=0; i<musicListAll.length; i++){
         let audioTag = musicListAll[i].querySelector(".audio-duration");
 
-        musicListAll[i].setAttribute("onclick", "clicked(this)");
+        musicListAll[i].addEventListener("click", function() {
+            clicked(this);
+        });
 
         if(musicListAll[i].classList.contains("playing")){
             musicListAll[i].classList.remove("playing");
