@@ -58,6 +58,7 @@
     top: 50px;
     padding: 20px;
     font-size: 24px;
+    white-space: nowrap;
     display: none;
 }
 .tetris__text div {
@@ -146,7 +147,7 @@
 .tetris__play .view > ul > li > ul > li {
     width: 25px;
     height: 25px;
-    border: 1px solid #3d74c5;
+    outline: 0.25px solid #3d74c5;
 }
 .Tmino {
     border: 5px #a042a2 outset !important;
