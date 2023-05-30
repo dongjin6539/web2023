@@ -1,4 +1,16 @@
 const tetrisView = document.querySelector(".tetris__play .view ul");
+const scoreDisplay = document.querySelector(".tetris__score span");
+const tetrisStart = document.querySelector(".tetris__start");
+const tetrisTitle = document.querySelector(".tetris__header h1");
+const tetrisPlay = document.querySelector(".tetris__play");
+const tetrisText = document.querySelector(".tetris__text");
+const tetrisMethod = document.querySelector(".tetris__method");
+const tetrisTime = document.querySelector(".tetris__time span");
+const tetrisResult = document.querySelector(".tetris__result");
+const resultTime = document.querySelector(".tetris__result .tetris__time span");
+const resultScore = document.querySelector(".tetris__result .tetris__score span");
+
+
 const line_rows = 20; //가로
 const line_cols = 12; //세로
 const blocks = {
@@ -46,9 +58,11 @@ const blocks = {
     ],
 };
 let score = 0;
+let time = 0;
 let duration = 500;
 let downInterval;
 let tempMovingItem;
+let stopGame = false;
 //블록의 정보 변수
 const movingItem = {
     type: '',
@@ -64,9 +78,10 @@ function init() {
         newLine(); //라인만들기
     }
     
-    generateNewBlock(); //다음 블럭 생성
-    renderBlocks(); //블록 만들기
-}
+    // generateNewBlock(); //다음 블럭 생성
+    // renderBlocks(); //블록 만들기
+};
+
 // 라인만들기
 function newLine() {
     const li = document.createElement("li");
@@ -81,41 +96,43 @@ function newLine() {
 
 // 블록 만들기
 function renderBlocks(moveType){
-    // console.log(movingItem.type);
-    // console.log(movingItem.direction);
-    // console.log(movingItem.top);
-    // console.log(movingItem.left);
-    // const type = movingItem.type;
-    // const direction = movingItem.direction;
-    // const top = movingItem.top;
-    // const left = movingItem.left;
-    const {type,direction,top,left} = tempMovingItem;
-    // console.log(type,direction,top,left)
-    const movingBlocks = document.querySelectorAll(".moving");
-    movingBlocks.forEach(moving => {
-        moving.classList.remove(type, "moving")
-    })
-    blocks[type][direction].some(block => {
-        const x = block[0]+left;
-        const y = block[1]+top;
-        const target = tetrisView.childNodes[y] ? tetrisView.childNodes[y].childNodes[0].childNodes[x] : null;
-        const isAvailable = checkEmpty(target);
-        if(isAvailable){
-            target.classList.add(type, "moving");
-        } else {
-            tempMovingItem = {...movingItem};
-            setTimeout(() => {
-                renderBlocks();
-                if(moveType === "top"){
-                    seizeBlock();
-                }
-            },1);
-            return true;
-        }
-    });
-    movingItem.left = left;
-    movingItem.top = top;
-    movingItem.direction = direction;
+    if(!stopGame){
+        // console.log(movingItem.type);
+        // console.log(movingItem.direction);
+        // console.log(movingItem.top);
+        // console.log(movingItem.left);
+        // const type = movingItem.type;
+        // const direction = movingItem.direction;
+        // const top = movingItem.top;
+        // const left = movingItem.left;
+        const {type,direction,top,left} = tempMovingItem;
+        // console.log(type,direction,top,left)
+        const movingBlocks = document.querySelectorAll(".moving");
+        movingBlocks.forEach(moving => {
+            moving.classList.remove(type, "moving")
+        })
+        blocks[type][direction].some(block => {
+            const x = block[0]+left;
+            const y = block[1]+top;
+            const target = tetrisView.childNodes[y] ? tetrisView.childNodes[y].childNodes[0].childNodes[x] : null;
+            const isAvailable = checkEmpty(target);
+            if(isAvailable){
+                target.classList.add(type, "moving");
+            } else {
+                tempMovingItem = {...movingItem};
+                setTimeout(() => {
+                    renderBlocks();
+                    if(moveType === "top"){
+                        seizeBlock();
+                    }
+                },1);
+                return true;
+            }
+        });
+        movingItem.left = left;
+        movingItem.top = top;
+        movingItem.direction = direction;
+    }
 }
 
 function seizeBlock(){
@@ -131,6 +148,13 @@ function seizeBlock(){
 function checkMatch(){
     const childNodes = tetrisView.childNodes;
 
+    childNodes[0].children[0].childNodes.forEach((li) => {
+        if(li.classList.contains("seized")){
+            stopGame = true;
+            tetrisGameover();
+        }
+    });
+
     childNodes.forEach(child => {
         let matched = true;
         child.children[0].childNodes.forEach(li => {
@@ -142,7 +166,7 @@ function checkMatch(){
         if(matched){
             child.remove();
             newLine();
-            score++;
+            score += 10;
             scoreDisplay.innerText = score;
         }
     })
@@ -213,6 +237,62 @@ document.addEventListener("keydown", e => {
         default:
             break;
     }
+});
+
+// 시간 설정
+function setTime(){
+    setGameTime = setInterval(() => {
+        time++;
+        tetrisTime.innerText = time;
+    }, 1000);
+}
+
+// 게임 오버
+function tetrisGameover(){
+    tetrisTitle.style.display = "none";
+    tetrisPlay.style.display = "none";
+    tetrisText.style.display = "none";
+    tetrisMethod.style.display = "none";
+    tetrisResult.style.display = "block";
+    clearInterval(setTime);
+    resultTime.innerText = time;
+    resultScore.innerText = score;
+}
+
+// 게임 스타트
+function gameStart(){
+    tetrisStart.style.display = "none";
+    tetrisTitle.style.display = "block";
+    tetrisPlay.style.display = "block";
+    tetrisText.style.display = "block";
+    tetrisMethod.style.display = "block";
+    generateNewBlock();
+    // renderBlocks();
+    setTime();
+};
+
+function gameReset(){
+    clearInterval(setTime);
+    score = 0;
+    time = 0;
+    stopGame = true;
+    tetrisTime.innerText = time;
+    scoreDisplay.innerText = score;
+
+    const tetrisMinos = document.querySelectorAll(".tetris__play .view ul li ul li");
+        tetrisMinos.forEach((minos) => {
+        minos.className = "";
+    });
+};
+
+document.querySelector(".tetris__result button").addEventListener("click", () => {
+    tetrisStart.style.display = "block";
+    tetrisResult.style.display = "none";
+    gameReset();
+});
+
+document.querySelector(".tetris__start button").addEventListener("click", () => {
+    gameStart();
 });
 
 window.addEventListener("DOMContentLoaded", () => {
