@@ -50,7 +50,7 @@
     border: 5px solid rgb(28, 70, 184);
 }
 .tetris__text {
-    background-color: rgba(158, 181, 243, 0.473);
+    background-color: rgb(28, 70, 184);
     border-radius: 0 10px 10px 0;
     width: 220px;
     position: absolute;

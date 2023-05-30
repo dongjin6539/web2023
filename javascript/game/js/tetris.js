@@ -261,18 +261,19 @@ function tetrisGameover(){
 
 // 게임 스타트
 function gameStart(){
+    stopGame = false;
     tetrisStart.style.display = "none";
     tetrisTitle.style.display = "block";
     tetrisPlay.style.display = "block";
     tetrisText.style.display = "block";
     tetrisMethod.style.display = "block";
     generateNewBlock();
-    // renderBlocks();
+    renderBlocks();
     setTime();
 };
 
 function gameReset(){
-    clearInterval(setTime);
+    clearInterval(setGameTime);
     score = 0;
     time = 0;
     stopGame = true;
