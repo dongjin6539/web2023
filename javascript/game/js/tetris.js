@@ -14,6 +14,15 @@ const resultScore = document.querySelector(".tetris__result .tetris__score span"
 let tetrisMusic = new Audio(
     "https://dongjin6539.github.io/web2023/javascript/game/audio/tetrisMusic.mp3"
 );
+let tetrisRemove = new Audio(
+    "https://dongjin6539.github.io/web2023/javascript/game/audio/tetrisRemove.mp3"
+);
+let tetrisDrop = new Audio(
+    "https://dongjin6539.github.io/web2023/javascript/game/audio/tetrisDrop.mp3"
+);
+let tetrisGameOver = new Audio(
+    "https://dongjin6539.github.io/web2023/javascript/game/audio/tetrisGameOver.mp3"
+);
 
 
 const line_rows = 20; //가로
@@ -146,6 +155,7 @@ function seizeBlock(){
         moving.classList.remove("moving");
         moving.classList.add("seized");
     });
+    tetrisDrop.play();
     checkMatch();
 }
 
@@ -156,6 +166,7 @@ function checkMatch(){
     childNodes[0].children[0].childNodes.forEach((li) => {
         if(li.classList.contains("seized")){
             stopGame = true;
+            tetrisGameOver.play();
             tetrisGameover();
         }
     });
@@ -169,6 +180,7 @@ function checkMatch(){
         });
 
         if(matched){
+            tetrisRemove.play();
             child.remove();
             newLine();
             score += 10;
