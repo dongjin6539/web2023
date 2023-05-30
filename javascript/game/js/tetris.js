@@ -10,6 +10,11 @@ const tetrisResult = document.querySelector(".tetris__result");
 const resultTime = document.querySelector(".tetris__result .tetris__time span");
 const resultScore = document.querySelector(".tetris__result .tetris__score span");
 
+// 음악
+let tetrisMusic = new Audio(
+    "https://dongjin6539.github.io/web2023/javascript/game/audio/tetrisMusic.mp3"
+);
+
 
 const line_rows = 20; //가로
 const line_cols = 12; //세로
@@ -249,6 +254,8 @@ function setTime(){
 
 // 게임 오버
 function tetrisGameover(){
+    tetrisMusic.pause();
+    tetrisMusic.currentTime = 0;
     tetrisTitle.style.display = "none";
     tetrisPlay.style.display = "none";
     tetrisText.style.display = "none";
@@ -270,9 +277,13 @@ function gameStart(){
     generateNewBlock();
     renderBlocks();
     setTime();
+    tetrisMusic.play();
+    tetrisMusic.loop = true;
 };
 
 function gameReset(){
+    tetrisMusic.pause();
+    tetrisMusic.currentTime = 0;
     clearInterval(setGameTime);
     score = 0;
     time = 0;
