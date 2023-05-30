@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>웹표준 사이트 만들기</title>
+
+    <link rel="icon" type="image/svg+xml" href="images/favicon.svg" />
+
+    <meta name="author" content="신동진">
+    <meta name="description" content="신동진 함께 만드는 사이트 튜토리얼입니다.">
+    <meta name="keyword" content="신동진, 사이트, 사이트 만들기, 튜토리얼">
+    <meta name="robots" content="all">
+</head>
+<body class="gmarket5">
+    <div id="skip">
+        <a href="#">슬라이드 영역 바로가기</a>
+        <a href="#introSection">소개 영역 바로가기</a>
+        <a href="#memberSection">멤버 소개 영역 바로가기</a>
+        <a href="#portSection">포트폴리오 영역 바로가기</a>
+        <a href="#youtubeSection">youtube 영역 바로가기</a>
+        <a href="#unsplashSection">unsplash 영역 바로가기</a>
+        <a href="#movieSection">movies 영역 바로가기</a>
+        <a href="#">리뷰 영역 바로가기</a>
+    </div>
+    <!-- //skip -->
+
+    <div id="header" class="header__wrap bg-blue" role="heading">
+        <div class="header__inner container">
+            <h1 class="header__logo">
+                <a href="#">web <em>site</em></a>
+            </h1>
+            <nav class="header__nav" role="navigation"> 
+                <ul>
+                    <li><a href="#introSection">소개</a></li>
+                    <li><a href="#memberSection">멤버 소개</a></li>
+                    <li><a href="#portSection">포트폴리오</a></li>
+                    <li><a href="#youtubeSection">유튜브</a></li>
+                    <li><a href="#unsplashSection">이미지</a></li>
+                    <li><a href="#movieSection">영화</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+    <!-- //hader -->
+
+    <div id="main" role="main">
+        <section id="sliderSection" class="slider__wrap section">
+            <div class="slider__inner">
+                <h2 class="blind">배너 슬라이드</h2>
+                <div class="slider__img">
+                    <div class="slider s1 container">
+                        <div class="text">
+                            <h3>New<br>portfolio</h3>
+                            <p>재능은! 노력 끝에서 발견된다.<br>어떤 일이라도 노력하고 즐기면 그 결과는 빛을 바란다고 생각합니다.</p>
+                            <a href="#" class="more button-blue">더 알아보기</a>
+                        </div>
+                        <div class="img" aria-label="hidden">
+                            <img src="images/icon9.png" alt="이미지1">
+                            <img src="images/icon2.png" alt="이미지1">
+                            <img src="images/icon3.png" alt="이미지1">
+                        </div>
+                        <div class="circle" aria-label="hidden">
+                            <span class="circle c1"></span>
+                            <span class="circle c2"></span>
+                            <span class="circle c3"></span>
+                            <span class="circle c4"></span>
+                            <span class="circle c5"></span>
+                        </div>
+                    </div>     
+                    <!-- <div class="slider s2">
+                        <div class="text">
+                            <h3>New<br>portfolio</h3>
+                            <p>재능은! 노력 끝에서 발견된다.<br>어떤 일이라도 노력하고 즐기면 그 결과는 빛을 바란다고 생각합니다.</p>
+                            <a href="#">더 알아보기</a>
+                        </div>
+                        <div class="img"></div>
+                    </div> 
+                    <div class="slider s3">
+                        <div class="text">
+                            <h3>New<br>portfolio</h3>
+                            <p>재능은! 노력 끝에서 발견된다.<br>어떤 일이라도 노력하고 즐기면 그 결과는 빛을 바란다고 생각합니다.</p>
+                            <a href="#">더 알아보기</a>
+                        </div>
+                        <div class="img"></div>
+                    </div>                 -->
+                </div>
+                <div class="slider__btn">
+                    <a href="#" class="left"><span class="ir">이전이미지</span></a>
+                    <a href="#" class="right"><span class="ir">다음이미지</span></a>
+                </div>
+                <div class="slider__dot">
+                    <a href="#" class="dot active"><span class="ir">1번 이미지</span></a>
+                    <a href="#" class="dot"><span class="ir">2번 이미지</span></a>
+                    <a href="#" class="dot"><span class="ir">3번 이미지</span></a>
+                </div>
+            </div>
+        </section>
+        <!-- //slider__wrap -->
+
+        <section id="introSection" class="intro__wrap section bg-blue">
+            <h3 class="blind">프론트앤드 커리큘럼 과정 소개</h3>
+            <div class="intro__inner container">
+                <div class="intro__title">
+                    <span>frontend</span>
+                    <h3>프론트앤드<br>전문과정</h3>
+                    <p>프론트앤드 개발자로 취업하기 위한<br>전문 과정입니다.<br>여러분들도 도전해보세요!</p>
+                </div>
+                <div class="intro__desc">
+                    <div>
+                        <h4 class="icon-bg1">React.js</h4>
+                        <p>React는 Facebook에서 개발한 오픈 소스 자바스크립트 라이브러리입니다. React는 사용자 인터페이스를 만들기 위한 도구로 사용됩니다. React는 컴포넌트라고 하는 재사용 가능한 UI 요소를 만드는 데 중점을 둡니다. 각 컴포넌트는 자체적으로 상태를 관리하며, 필요에 따라 데이터를 받아와서 화면에 렌더링합니다.</p>
+                    </div>
+                    <div>
+                        <h4 class="icon-bg2">Node.js</h4>
+                        <p>Node.js는 JavaScript 런타임 환경으로서, 웹 브라우저 외부에서 JavaScript 코드를 실행할 수 있게 해줍니다. 기본적으로 JavaScript는 웹 브라우저에서 실행되는 클라이언트 측 스크립트 언어로 알려져 있지만, Node.js를 사용하면 서버 측에서 JavaScript를 실행할 수 있습니다.</p>
+                    </div>
+                    <div>
+                        <h4 class="icon-bg3">Vue.js</h4>
+                        <p>Vue.js는 사용자 인터페이스(UI)를 구축하기 위한 진보적인 JavaScript 프레임워크입니다. MVVM(Model-View-ViewModel) 패턴을 기반으로 하며, 컴포넌트 기반 아키텍처를 갖추고 있어 재사용성과 유지보수성이 뛰어납니다.</p>
+                    </div>
+                    <div>
+                        <h4 class="icon-bg4">Next.js</h4>
+                        <p>Next.js는 React 기반의 프레임워크로서, 서버 사이드 렌더링(SSR), 정적 사이트 생성(SSG) 및 클라이언트 사이드 라우팅 등을 제공하여 웹 애플리케이션의 개발을 간편하게 도와주는 도구입니다. Next.js는 React의 기능을 확장하고 보완하여 개발자들이 더욱 효율적으로 웹 애플리케이션을 구축할 수 있도록 지원합니다.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- //intro__wrap -->
+
+        <section id="memberSection" class="member__wrap">
+            <div class="member__inner container">
+                <h3>멤버 소개</h3>
+            </div>
+        </section>
+        <!-- //member__wrap -->
+
+        <section id="portSection" class="port__wrap">
+            <div class="port__inner container">
+                <h3>포트폴리오 소개</h3>
+            </div>
+        </section>
+        <!-- //port__wrap -->
+
+        <section id="youtubeSection" class="youtube__wrap">
+            <div class="youtube__inner container">
+                <h3>개발자 추천 유튜브 영상</h3>
+            </div>
+        </section>
+        <!-- //youtube__wrap -->
+
+        <section id="unsplashSection" class="unsplash__wrap">
+            <div class="unsplash__inner container">
+                <h3>이미지 다운로드 추천</h3>
+            </div>
+        </section>
+        <!-- //unsplash__wrap -->
+        
+        <section id="movieSection" class="movie__wrap">
+            <div class="movie__inner container">
+                <h3>개발자 추천 영화</h3>
+            </div>
+        </section>
+        <!-- //movie__wrap -->
+
+        <section id="reviewSection" class="review__wrap">
+            <div class="review__inner container">
+                <h3>리뷰 소개</h3>
+            </div>
+        </section>
+        <!-- //review__wrap -->
+    </div>
+    <!-- //main -->
+
+    <div id="footer" class="footer__wrap" role="contentinfo">
+
+    </div>
+    <!-- //footer -->
+
+    <script type="module" src="main.js"></script>
+</body>
+</html>

@@ -122,8 +122,8 @@ html::before {
         linear-gradient(var(--c5) 60%, var(--c3) 60%, var(--c2) 150%);
     } */
 
-    html {
-        background: url(../img/gamebg01.jpg);
+    body {
+        background-image: url(../img/gamebg01.jpg);
         background-size: cover;
         box-sizing: border-box;
         background-repeat: no-repeat;
