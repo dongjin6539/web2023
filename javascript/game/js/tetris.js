@@ -71,6 +71,7 @@ const blocks = {
         [[1,0], [0,0], [1,1], [1,2]],
     ],
 };
+
 let score = 0;
 let time = 0;
 let duration = 500;
@@ -84,6 +85,7 @@ const movingItem = {
     top: 0,
     left: 4,
 };
+
 /**  시작하기 */
 function init() {
     tempMovingItem = {...movingItem};
@@ -186,12 +188,17 @@ function checkMatch(){
             score += 10;
             scoreDisplay.innerText = score;
 
-            if (score >= 200) {
-                duration = 300; // duration 변경
-                clearInterval(downInterval);
-                downInterval = setInterval(() => {
-                    moveBlock("top", 1)
-                }, duration);
+            // 속도 조절
+            switch (score) {
+                case 50:
+                    duration = 250;
+                    break;
+                case 100:
+                    duration = 150;
+                    break;
+                case 150:
+                    duration = 50;
+                    break;
             }
         }
     })
@@ -212,6 +219,8 @@ function generateNewBlock(){
     movingItem.direction = 0;
     tempMovingItem = {...movingItem};
     renderBlocks();
+
+    
 }
 
 function checkEmpty(target){
@@ -307,6 +316,7 @@ function gameReset(){
     clearInterval(setGameTime);
     score = 0;
     time = 0;
+    duration = 500;
     stopGame = true;
     tetrisTime.innerText = time;
     scoreDisplay.innerText = score;
