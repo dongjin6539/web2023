@@ -185,6 +185,14 @@ function checkMatch(){
             newLine();
             score += 10;
             scoreDisplay.innerText = score;
+
+            if (score >= 200) {
+                duration = 300; // duration 변경
+                clearInterval(downInterval);
+                downInterval = setInterval(() => {
+                    moveBlock("top", 1)
+                }, duration);
+            }
         }
     })
     generateNewBlock();
