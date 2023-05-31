@@ -1,0 +1,29 @@
+// youtube__wrap
+.youtube__inner {
+    height: 600px;
+    h3 {
+        font-size: 50px;
+        margin-bottom: 40px;
+    }
+    p {
+        font-size: 24px;
+        font-weight: 300;
+        margin-bottom: 20px;
+    }
+    a {
+        border-radius: 50px;
+        margin-bottom: 60px;
+    }
+    .youtube__item {
+        @include flex-between;
+        margin-top: 50px;
+        position: absolute;
+        .youtube {
+            width: 400px;
+            margin-right: 20px;
+            img {
+                width: 100%;
+            }
+        }
+    }
+}
