@@ -327,6 +327,10 @@ document.querySelector(".tetris__start button").addEventListener("click", () => 
     gameStart();
 });
 
+document.querySelector(".tetris__close").addEventListener("click", () => {
+    document.querySelector(".tetris__wrap").style.display = "none";
+})
+
 window.addEventListener("DOMContentLoaded", () => {
     init();
 });
