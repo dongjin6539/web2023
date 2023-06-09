@@ -21,7 +21,7 @@ function PortSection(props){
                             </span>
                             <div>
                                 <h4>마이클 조던</h4>
-                                <p>Michael Jordan</p>
+                                <a href="/">Michael Jordan</a>
                             </div>
                         </div>
                     </div>
@@ -35,7 +35,7 @@ function PortSection(props){
                             </span>
                             <div>
                                 <h4>르브론 제임스</h4>
-                                <p>Lebron James</p>
+                                <a href="/">Lebron James</a>
                             </div>
                         </div>
                     </div>
@@ -49,7 +49,7 @@ function PortSection(props){
                             </span>
                             <div>
                                 <h4>코비 브라이언트</h4>
-                                <p>Kobe Bryant</p>
+                                <a href="/">Kobe Bryant</a>
                             </div>
                         </div>
                     </div>
@@ -63,7 +63,7 @@ function PortSection(props){
                             </span>
                             <div>
                                 <h4>케빈 듀란트</h4>
-                                <p>Kevin Durant</p>
+                                <a href="/">Kevin Durant</a>
                             </div>
                         </div>
                     </div>
@@ -77,7 +77,7 @@ function PortSection(props){
                             </span>
                             <div>
                                 <h4>스테판 커리</h4>
-                                <p>Stephen Curry</p>
+                                <a href="/">Stephen Curry</a>
                             </div>
                         </div>
                     </div>
@@ -90,8 +90,8 @@ function PortSection(props){
                                 <img src="./assets/images/port/portMember06.svg" alt="멤버9" />
                             </span>
                             <div>
-                                <h4>크피스 폴</h4>
-                                <p>Chris Paul</p>
+                                <h4>크리스 폴</h4>
+                                <a href="/">Chris Paul</a>
                             </div>
                         </div>
                     </div>
