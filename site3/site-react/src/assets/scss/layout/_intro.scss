@@ -48,3 +48,37 @@
         }
     }
 }
+
+@media (max-width: 960px){
+    .intro__title {
+        width: 30%;
+    }
+    .intro__title p {
+        font-size: 16px;
+    }
+    .intro__desc {
+        width: 65%;
+    }
+}
+@media (max-width: 600px){
+    .intro__inner {
+        text-align: center;
+        display: block;
+    }
+    .intro__title {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    .intro__title p {
+        display: none;
+    }
+    .intro__desc {
+        width: 100%;
+    }
+    .intro__desc div h4 {
+        font-size: 20px;
+    }
+    .intro__desc p {
+        display: none;
+    }
+}

@@ -138,3 +138,74 @@
         }
     }
 }
+
+@media (max-width: 1200px){
+    .slider__inner .slider__img .slider .text h3 {
+        font-size: 80px;
+        margin-left: 80px;
+    }
+    .slider__inner .slider__img .slider .text p {
+        font-size: 20px;
+        margin-left: 80px;
+    }
+    .slider__inner .slider__img .slider .text .more {
+        margin-left: 80px;
+    }
+    .slider__inner .slider__img .slider .img {
+        position: absolute;
+        right: 100px; 
+        top: -80px;
+        width: 500px;
+        height: 500px;
+    }
+    .slider__inner .slider__img .slider .img img:nth-child(1),
+    .slider__inner .slider__img .slider .img img:nth-child(2),
+    .slider__inner .slider__img .slider .img img:nth-child(3) {
+        width: 250px;
+    }
+    .slider__inner .slider__img .slider .circle span {
+        display: none;
+    }
+}
+@media (max-width: 960px){
+    .slider__inner .slider__img .slider .text h3 {
+        font-size: 60px;
+    }
+    .slider__inner .slider__img .slider .text p {
+        font-size: 16px;
+    }
+    .slider__inner .slider__img .slider .text .more {
+        font-size: 16px;
+    }
+    .slider__inner .slider__img .slider .img {
+        position: absolute;
+        right: 120px; 
+        top: -30px;
+        width: 300px;
+        height: 300px;
+    }
+    .slider__inner .slider__img .slider .img img:nth-child(1),
+    .slider__inner .slider__img .slider .img img:nth-child(2),
+    .slider__inner .slider__img .slider .img img:nth-child(3) {
+        width: 150px;
+    }
+}
+@media (max-width: 600px){
+    .slider__inner .slider__img .slider .text h3 {
+        font-size: 60px;
+    }
+    .slider__inner .slider__img .slider .text p {
+        font-size: 16px;
+    }
+    .slider__inner .slider__img .slider .text .more {
+        font-size: 16px;
+    }
+    .slider__inner .slider__img .slider .img {
+        display: none;
+    }
+    .slider__inner .slider__img .slider .img img:nth-child(1),
+    .slider__inner .slider__img .slider .img img:nth-child(2),
+    .slider__inner .slider__img .slider .img img:nth-child(3) {
+        display: none;
+    }
+}

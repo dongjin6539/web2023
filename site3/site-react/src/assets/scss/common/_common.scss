@@ -12,6 +12,7 @@
 }
 .section {
     padding: 120px 0;
+    overflow-x: hidden;
     > h3 {
         font-size: 50px;
     }
@@ -126,5 +127,32 @@ $interval: (
 @each $value, $size in $interval {
     .mr#{$value} {
         margin-right: $size !important;
+    }
+}
+
+@media (max-width: 1200px){
+    .container {
+        width: 98%;
+    }
+}
+@media (max-width: 600px){
+    .container {
+        width: 100%;
+    }
+    .section > p {
+        margin-bottom: 30px;
+    }
+    .icon-bg1,
+    .icon-bg2,
+    .icon-bg3,
+    .icon-bg4,
+    .icon-bg5,
+    .icon-bg6 {
+        padding-top: 15px;
+    }
+    .button-blue,
+    .button-red,
+    .button-green {
+        font-size: 24px;
     }
 }

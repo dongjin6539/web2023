@@ -78,3 +78,25 @@
         }
     }
 }
+
+@media (max-width: 960px){
+    .port__inner .port__btn button {
+        width: 20%;
+        padding: 10px;
+    }
+}
+@media (max-width: 600px){
+    .port__inner .port__cont .port {
+        width: 48%;
+    }
+    .port__inner .port__cont .port .port__body > div {
+        margin-left: 20px;
+    }
+    .port__inner .port__cont .port .port__body > div h4 {
+        font-size: 20px;
+        margin-bottom: 0;
+    }
+    .port__inner .port__cont .port .port__body > div a {
+        font-size: 14px;
+    }
+}

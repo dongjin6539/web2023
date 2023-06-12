@@ -28,3 +28,19 @@
         }
     }
 }
+
+@media (max-width: 600px){
+    .youtube__inner {
+        text-align: center;
+        height: 500px;
+    }
+    .youtube__inner p {
+        display: none;
+    }
+    .youtube__inner a {
+        margin-bottom: 20px;
+    }
+    .youtube__inner .youtube__item .youtube {
+        width: 300px;
+    }
+}

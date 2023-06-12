@@ -31,3 +31,17 @@
         &:nth-child(3) .member__body {background: #fffb0073;}
     }
 }
+
+@media (max-width: 960px){
+    .member__inner .member .member__header img {
+        height: 400px;
+    }
+}
+@media (max-width: 600px){
+    .member__inner .member .member__body {
+        margin-top: -85px;
+    }
+    .member__inner .member .member__body h4 {
+        font-size: 18px;
+    }
+}

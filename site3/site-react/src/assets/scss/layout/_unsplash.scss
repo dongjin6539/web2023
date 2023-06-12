@@ -27,3 +27,19 @@
         }
     }
 }
+
+@media (max-width: 600px){
+    .unsplash__inner {
+        text-align: center;
+        height: 500px;
+    }
+    .unsplash__inner p {
+        display: none;
+    }
+    .unsplash__inner a {
+        margin-bottom: 20px;
+    }
+    .unsplash__inner .unsplash__item .unsplash {
+        width: 300px;
+    }
+}

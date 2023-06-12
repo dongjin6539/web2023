@@ -48,3 +48,8 @@
     }
 }
 
+@media (max-width: 600px){
+    .header__nav {
+        display: none;
+    }
+}

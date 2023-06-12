@@ -27,3 +27,56 @@
         }
     }
 }
+
+// unsplash__page
+.unsplash__slider {
+    display: none;
+}
+.unsplash__search {
+    text-align: center;
+    margin-bottom: 50px;
+    input {
+        border: 1px solid #E8ECF2;
+        font-size: 16px;
+        padding: 10px 20px;
+        border-radius: 50px;
+        min-width: 300px;
+        margin-right: 10px;
+    }
+    button {
+        @include button(#4857ec, #fff);
+        border-radius: 50px;
+    }
+}
+.unsplash__tag {
+    ul {
+        display: flex;
+        justify-content: center;
+        margin-top: 100px;
+        margin-bottom: 50px;
+        li {
+            a {
+                border: 1px solid #4857ec;
+                padding: 10px 20px;
+                margin: 0 10px;
+                color: #4857ec;
+            }
+        }
+    }
+}
+.unsplash__cont {
+    ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin-bottom: 100px;
+        li {
+            width: 31.3333%;
+            margin-bottom: 4%;
+            span {
+                display: block;
+                margin: 4px 0;
+            }
+        }
+    }
+}

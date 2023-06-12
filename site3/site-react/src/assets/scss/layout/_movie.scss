@@ -27,3 +27,18 @@
         }
     }
 }
+
+@media (max-width: 600px){
+    .movie__inner {
+        text-align: center;
+    }
+    .movie__inner p {
+        display: none;
+    }
+    .movie__inner a {
+        margin-bottom: 20px;
+    }
+    .movie__inner .movie__item .movie {
+        width: 300px;
+    }
+}
