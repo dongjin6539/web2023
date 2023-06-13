@@ -1,0 +1,392 @@
+#section {
+    width: 100%;
+    background-color: #f4f7ff;
+    padding-bottom: 220px;
+}
+#section .container .sectionImg {
+    background: url(../images/section.png) right top no-repeat;
+    position: absolute;
+    width: 25%;
+    height: 30%;
+    right: 100px;
+    top: 960px; 
+    z-index: 3;
+    padding: 50px 100px 220px 0;
+    font-size: 0;
+}
+#section .container .quickTit {
+    width: 280px;
+    height: 220px;
+    margin-top: -140px;
+    padding: 28px 30px 30px;
+    border-radius: 50px 50px 0 50px;
+    background: #3d3d3d url(../images/quickTit.png) 0 100% no-repeat;
+    position: relative;
+    z-index: 2;
+}
+#section .container .quickTit span {
+    display: block;
+    color: #fff;
+    font-size: 26px;
+    font-weight: 300;
+    text-align: right;
+}
+#section .container .quickTit span b {
+    color: #fff;
+}
+#section .container .quicMenu {
+    width: 60%;
+    height: 240px;
+    margin-left: 120px;
+    margin-top: -240px;
+    padding: 40px 10% 40px 17.8%;
+    border-radius: 30px;
+    background: #2785e5;
+    position: relative;
+    z-index: 1;
+}
+#section .container .quicMenu ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+#section .container .quicMenu ul li {
+    text-align: center;
+}
+#section .container .quicMenu ul li a {
+    display: inline-block;
+}
+#section .container .quicMenu ul li a::before {
+    content: '';
+    display: inline-block;
+    width: 115px;
+    height: 115px;
+    border-radius: 40px 5px 40px 40px;
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: 0.2s;
+}
+#section .container .quicMenu ul li:hover a::before {
+    background-color: #1b2573;
+}
+#section .container .quicMenu ul .menu01 a:before {
+    background-image: url(../images/menu01.png);
+}
+#section .container .quicMenu ul .menu02 a:before {
+    background-image: url(../images/menu02.png);
+}
+#section .container .quicMenu ul .menu03 a:before {
+    background-image: url(../images/menu03.png);
+}
+#section .container .quicMenu ul .menu04 a:before {
+    background-image: url(../images/menu04.png);
+}
+#section .container .quicMenu ul .menu05 a:before {
+    background-image: url(../images/menu05.png);
+}
+#section .container .quicMenu ul .menu06 a:before {
+    background-image: url(../images/menu06.png);
+}
+#section .container .quicMenu ul li:hover a span {
+    border-bottom: 1px dashed #1b2573;
+} 
+#section .container .quicMenu ul li a span {
+    display: block;
+    padding: 3px 0 5px;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 1.2;
+    text-align: center;
+    word-break: keep-all;
+}
+#section .container .applyTop {
+    padding-top: 100px;
+    margin-bottom: 46px;
+    display: flex;
+}
+#section .container .applyTop .topTit {
+    display: inline-block;
+    margin-right: 40px;
+    color: #000;
+    font-size: 34px;
+    font-weight: 300;
+    vertical-align: middle;
+}
+#section .container .applyTop .topTit b {
+    color: #000;
+    font-weight: 700;
+}
+#section .container .applyTop .topInfo {
+    display: flex;
+}
+#section .container .applyTop .topInfo .location select {
+    height: 53px;
+    border: 2px solid #1a2473;
+    border-radius: 26px;
+    background: #fff url(../images/select.png) calc(100% - 23px) center no-repeat;
+    color: #1a2473;
+    font-size: 18px;
+    font-weight: 500;
+    box-shadow: 4px 6px 8.73px 0.27px rgba(122, 154, 205, 0.05);
+    padding: 0 30px 0 20px;
+}
+#section .container .applyTop .topInfo .location select.option1 {
+    width: 137px;
+}
+#section .container .applyTop .topInfo .location select.option2 {
+    width: 175px;
+    margin-left: 14px;
+}
+#section .container .applyTop .topInfo .call {
+    display: inline-block;
+    margin-top: 10px;
+    margin-left: 22px;
+    padding-left: 40px;
+    background: url(../images/call.png) 0 0 no-repeat;
+    color: #000;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 31px;
+    vertical-align: middle;
+}
+#section .container .applyCont {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    z-index: 5;
+}
+#section .container .applyCont .applyState {
+    width: 42%;
+    padding: 40px 44px 30px;
+    border-radius: 20px;
+    background: #fff;
+    box-shadow: 2px 6px 30px 2.24px rgba(38,71,119,0.11);
+}
+#section .container .applyCont .applyState .stateTop {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+#section .container .applyCont .applyState .stateTop .mainTit {
+    width: 100%;
+    margin-bottom: 2px;
+    font-size: 26px;
+    font-weight: 500;
+}
+#section .container .applyCont .applyState .stateTop .mainTit b {
+    color: #030303;
+    font-size: 29px;
+    font-weight: 700;
+}
+#section .container .applyCont .applyState .stateTop .subTit {
+    margin-right: 10px;
+    padding: 7px 20px;
+    border-radius: 4px;
+    background: #424960;
+    color: #fff;
+    font-weight: 500;
+    text-align: center;
+    word-break: keep-all;
+}
+#section .container .applyCont .applyState .stateTop .subTit.long {
+    max-width: calc(100% - 207px);
+}
+#section .container .applyCont .applyState .stateTop .subTit .loc {
+    color: #ffd96e;
+}
+#section .container .applyCont .applyState .stateTop .btnRes {
+    width: 197px;
+    height: 50px;
+    border-radius: 24.5px;
+    background: #2785e5;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 500;
+}
+#section .container .applyCont .applyState .stateTop .btnRes::before {
+    content: '';
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    margin-right: 15px;
+    background: url(../images/icon01.png) center no-repeat;
+    vertical-align: top;
+}
+#section .container .applyCont .applyState .stateTop .btnApply {
+    width: 135px;
+    height: 50px;
+    border-radius: 24.5px;
+    background: #1B2573;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 500;
+}
+#section .container .applyCont .applyState .stateTop .btnApply::before {
+    content: '';
+    display: inline-block;
+    width: 26px;
+    height: 26px;
+    margin-right: 10px;
+    background: url(../images/btnApply.png) center no-repeat;
+    vertical-align: top;
+}
+#section .container .applyCont .applyState .stateTbl {
+    overflow: hidden;
+    margin-top: 18px;
+    border: 1px solid #c7cde0;
+    border-radius: 20px 20px 0 0;
+    isolation: isolate;
+}
+#section .container .applyCont .applyState .stateTbl .tblWrap {
+    overflow: auto;
+    height: 278px;
+}
+#section .container .applyCont .applyState .stateTbl table {
+    table-layout: fixed;
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+#section .container .applyCont .applyState .stateTbl table th {
+    height: 56px;
+    border-right: 1px solid #c7cde0;
+    border-bottom: 1px solid #c7cde0;
+    background: #f3f6fe;
+    font-size: 15px;
+    vertical-align: middle;
+}
+#section .container .applyCont .applyState .stateTbl table th .iconTime {
+    display: inline-block;
+    width: 22px;
+    height: 22px;
+    background: url(../images/iconTime.png) center no-repeat;
+    font-size: 0;
+    vertical-align: top;
+}
+#section .container .applyCont .applyState .stateTbl table th:last-child {
+    border-right: 0;
+}
+#section .container .applyCont .applyState .stateTbl table tr:first-child td {
+    border-top: 0;
+    border-bottom: 0;
+}
+#section .container .applyCont .applyState .stateTbl tbody td {
+    height: 45px;
+    padding: 10px 0;
+    border-right: 1px solid #c7cde0;
+    border-bottom: 1px solid #c7cde0;
+    font-size: 14px;
+    text-align: center;
+}
+#section .container .applyCont .applyState .stateTbl tbody td:last-child {
+    border-right: 0;
+}
+#section .container .applyCont .applyState .stateNote {
+    margin-top: 30px;
+}
+#section .container .applyCont .applyState .stateNote li {
+    position: relative;
+    font-size: 14px;
+    font-weight: 500;
+    padding-left: 28px;
+}
+#section .container .applyCont .applyState .stateNote li::before {
+    content: '';
+    position: absolute;
+    left: 17px;
+    top: 8px;
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background: #000;
+}
+#section .container .applyCont .applyState .stateNote li span {
+    color: #ff3b3b;
+}
+#section .container .applyCont .applyState .stateNote.divLine {
+    margin-top: 23px;
+    padding-top: 18px;
+    border-top: 1px solid #ccc;
+}
+#section .container .applyCont .applyState .stateNote.divLine ul li {
+    position: relative;
+    font-size: 14px;
+    font-weight: 500;
+    padding-left: 34px;
+    line-height: 1.6;
+}
+#section .container .applyCont .applyState .stateNote.divLine ul li::before {
+    content: '';
+    position: absolute;
+    left: 5px;
+    top: 0;
+    width: 22px;
+    height: 22px;
+    background: url(../images/icon02.png) center no-repeat;
+}
+#section .container .applyCont .applyState .stateList {
+    margin-top: 18px;
+    padding-top: 6px;
+}
+#section .container .applyCont .applyState .stateList ul {
+    overflow: auto;
+    height: 286px;
+}
+#section .container .applyCont .applyState .stateList ul li {
+    position: relative;
+    margin-bottom: 18px;
+    padding-left: 33px;
+}
+#section .container .applyCont .applyState .stateList ul li:last-child {
+    margin-bottom: 0;
+}
+#section .container .applyCont .applyState .stateList ul li::before {
+    content: '';
+    position: absolute;
+    left: 12px;
+    top: calc(50% - 3.5px);
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: #000;
+}
+#section .container .applyCont .applyState .stateList ul li i {
+    display: inline-block;
+    width: 50px;
+    height: 24px;
+    margin-right: 10px;
+    border: 1px solid #3366ff;
+    border-radius: 12px;
+    background: #fff;
+    color: #3366ff;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 22px;
+    text-align: center;
+    vertical-align: middle;
+}
+#section .container .applyCont .applyState .stateList ul li p {
+    display: inline-block;
+    width: calc(100% - 205px);
+    vertical-align: middle;
+}
+#section .container .applyCont .applyState .stateList ul li p a {
+    overflow: hidden;
+    display: block;
+    color: #000;
+    font-size: 14px;
+    font-weight: 500;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+#section .container .applyCont .applyState .stateList ul li span {
+    display: inline-block;
+    color: #666;
+    font-size: 14px;
+    font-weight: 500;
+    vertical-align: middle;
+}
