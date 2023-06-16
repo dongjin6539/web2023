@@ -1,0 +1,99 @@
+.footer_wrap {
+    padding: 38px 0 56px;
+    background-color: #ebebeb;
+}
+.footer_left {
+    float: left;
+    width: 212px;
+    margin-right: 38px;
+}
+.footer_left > h2 {
+    margin: 20px 0;
+}
+.footer_right {
+    position: relative;
+    float: right;
+    width: calc(100% - 250px);
+    color: #444;
+}
+.footer_right .family_site, .footer_right .footer_link {
+    display: inline-block;
+}
+.footer_info {
+    margin-bottom: 20px;
+}
+.footer_right .footer_link {
+    margin-top: 7px;
+}
+.footer_right .footer_link li {
+    float: left;
+    margin-right: 28px;
+}
+.footer_right .footer_link li > a {
+    color: #444;
+    font-size: 18px;
+}
+.footer_right .family_site {
+    width: 150px;
+    height: 32px;
+    padding-left: 10px;
+    font-size: 16px;
+    background: #fff url(../images/footer_arrow.png) no-repeat right 10px center;
+    border: 1px solid #999;
+    border-radius: 5px;
+    vertical-align: top;
+}
+option {
+    padding-left: 30px;
+}
+.footer_right .mark_link {
+    position: absolute;
+    top: 1px;
+    right: 80px;
+}
+.footer_right .mark_link a {
+    display: block;
+    width: 50px;
+    height: 30px;
+    border-radius: 5px;
+    background: #777777;
+    color: #fff;
+    text-align: center;
+    line-height: 30px;
+    font-size: 14px;
+}
+.footer_right .mark_link02 {
+    position: absolute;
+    top: 50px;
+    right: 100px;
+}
+.footer_right .footer_adress {
+    line-height: 1.5;
+    font-size: 18px;
+}
+.footer_info {
+    margin-bottom: 20px;
+}
+.footer_right .footer_adress .footer_info > span {
+    display: inline-block;
+    position: relative;
+    margin-left: 16px;
+    padding-right: 20px;
+}
+.footer_right .footer_adress .footer_info > span:first-child {
+    margin-left: 0;
+}
+.footer_right .footer_adress .footer_info > span:after {
+    display: block;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    width: 1px;
+    height: 16px;
+    margin-top: -10px;
+    background-color: #888;
+    content: '';
+}
+.footer_right .footer_adress .footer_info > span:last-child:after {
+    display: none;
+}

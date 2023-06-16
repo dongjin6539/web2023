@@ -1,5 +1,6 @@
 .main_slide {
     height: 370px;
+    overflow: hidden;
 }
 .main_slide .main_slide_txt {
     position: absolute;
@@ -135,6 +136,11 @@
     margin-top: -138px;
     color: #0b7ce1;
     text-decoration: none;
+    transition-delay: 0s;
+}
+.main_link .linkbox [class*="linkbox_"] .box a:hover .link_tit strong {
+    color: #0b7ce1;
+    text-decoration: underline;
     transition-delay: 0s;
 }
 .main_link .link_tit {

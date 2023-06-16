@@ -1,0 +1,88 @@
+.side_menu {
+    /* display: none; */
+    position: fixed;
+    top: 50%;
+    right: 45px;
+    margin-top: -178px;
+    text-align: right;
+    z-index: 10;
+}
+.side_menu ol {
+    position: relative;
+}
+.side_menu ol:after {
+    display: block;
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    width: 1px;
+    height: 208px;
+    background-color: #e6e6e6;
+    content: '';
+    z-index: 0;
+}
+.side_menu ol > li {
+    position: relative;
+    margin-top: 28px;
+    z-index: 1;
+}
+.side_menu ol > li:first-child {
+    margin-top: 0;
+}
+.side_menu button {
+    line-height: 25px;
+    color: #555;
+    background-color: transparent;
+}
+.side_menu button .scroll_circle {
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    margin-left: 6px;
+    box-sizing: border-box;
+    vertical-align: top;
+}
+.side_menu button .scroll_circle > span {
+    display: block;
+    width: 10px;
+    height: 10px;
+    margin: 7.5px auto;
+    background-color: #999;
+    border-radius: 50%;
+}
+.side_menu ol > li.on button .scroll_circle {
+    padding: 5px;
+    border: 1px solid #0a84e2;
+    border-radius: 50%;
+}
+.side_menu ol > li.on button .scroll_circle > span {
+    margin: 1px auto;
+    background-color: #0a84e2;
+}
+.side_menu .scroll_img {
+    display: inline-block;
+    width: 50px;
+    margin-top: 32px;
+    padding-top: 57px;
+    text-align: center;
+    background-image: url(../images/scroll_mouse.png);
+    background-repeat: no-repeat;
+    background-position: center top;
+}
+.scroll_top {
+    /* display: none; */
+    position: fixed;
+    bottom: 85px;
+    right: 37px;
+    width: 65px;
+    height: 65px;
+    line-height: 86px;
+    color: #fff;
+    font-size: 20px;
+    background-color: #0b7ce1;
+    background-image: url(../images/bg_top.png);
+    background-repeat: no-repeat;
+    background-position: center 14px;
+    border-radius: 50%;
+    z-index: 1000;
+}
