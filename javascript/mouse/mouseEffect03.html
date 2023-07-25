@@ -1,122 +1,126 @@
 <!DOCTYPE html>
 <html lang="ko">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>마우스 이펙트</title>
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>마우스 이펙트</title>
 
-    <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/mouse.css">
+        <link rel="stylesheet" href="css/reset.css" />
+        <link rel="stylesheet" href="css/mouse.css" />
 
-    <!-- 파비콘 -->
-    <link rel="shortcut icon" type="image/x-icon" href="ico/favicon.png"/> 
-    <link rel="apple-touch-icon" sizes="114x114" href="ico/favicon.png"/>
-    <link rel="apple-touch-icon" href="ico/favicon.png"/>
-    <style>
-        #header {
-            z-index: 100;
-        }
-        .mouse__wrap {
-            cursor: none;
-        }
-        .mouse__text {
-            width: 100%;
-            height: 100vh;
-            overflow: hidden;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-direction: column;
-            position: relative;
-            z-index: 10;
-        }
-        .mouse__text p {
-            font-size: 2vw;
-            line-height: 1.6;
-        }
-        .mouse__text p:last-child {
-            font-size: 2.5vw;
-        }
-        .mouse__cursor {
-            position: absolute;
-            left: 0;
-            top: 0;
-            width: 200px;
-            height: 200px;
-            border-radius: 50%;
-            border: 5px solid #fff;
-            background-color: rgba(255, 255, 255, 0.5);
-            background-image: url(img/mouseEffect09-min.jpg);
-            background-size: cover;
-            background-position: center center;
-            background-attachment: fixed;
-        }
-        #footer {
-            z-index: 10;
-        }
-    </style>
-</head>
-<body class="img09 bg03 font03">
-    <header id="header">
-        <h1>Javascript Mouse Effect03</h1>
-        <p>마우스 이펙트 - 마우스 조명 효과</p>
-        <ul>
-            <li><a href="mouseEffect01.html">1</a></li>
-            <li><a href="mouseEffect02.html">2</a></li>
-            <li class="active"><a href="mouseEffect03.html">3</a></li>
-            <li><a href="mouseEffect04.html">4</a></li>
-            <li><a href="mouseEffect05.html">5</a></li>
-            <li><a href="mouseEffect06.html">6</a></li>
-        </ul>
-    </header>
-    <!-- //header -->
+        <!-- 파비콘 -->
+        <link rel="shortcut icon" type="image/x-icon" href="ico/favicon.png" />
+        <link rel="apple-touch-icon" sizes="114x114" href="ico/favicon.png" />
+        <link rel="apple-touch-icon" href="ico/favicon.png" />
+        <style>
+            #header {
+                z-index: 100;
+            }
+            .mouse__wrap {
+                cursor: none;
+            }
+            .mouse__text {
+                width: 100%;
+                height: 100vh;
+                overflow: hidden;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+                position: relative;
+                z-index: 10;
+            }
+            .mouse__text p {
+                font-size: 2vw;
+                line-height: 1.6;
+            }
+            .mouse__text p:last-child {
+                font-size: 2.5vw;
+            }
+            .mouse__cursor {
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 200px;
+                height: 200px;
+                border-radius: 50%;
+                border: 5px solid #fff;
+                background-color: rgba(255, 255, 255, 0.5);
+                background-image: url(img/mouseEffect09-min.jpg);
+                background-size: cover;
+                background-position: center center;
+                background-attachment: fixed;
+            }
+            #footer {
+                z-index: 10;
+            }
+        </style>
+    </head>
+    <body class="img09 bg03 font03">
+        <header id="header">
+            <h1>Javascript Mouse Effect03</h1>
+            <p>마우스 이펙트 - 마우스 조명 효과</p>
+            <ul>
+                <li><a href="mouseEffect01.html">1</a></li>
+                <li><a href="mouseEffect02.html">2</a></li>
+                <li class="active"><a href="mouseEffect03.html">3</a></li>
+                <li><a href="mouseEffect04.html">4</a></li>
+            </ul>
+        </header>
+        <!-- //header -->
 
-    <main id="main">
-        <div class="mouse__wrap">
-            <div class="mouse__cursor"></div>
-            <div class="mouse__text">
-                <p>To truly smile, you must endure the pain, and you must also learn to enjoy the pain</p>
-                <p>진정으로 웃으려면 고통을 참아야하며 , 나아가 고통을 즐길 줄 알아야 해</p>
+        <main id="main">
+            <div class="mouse__wrap">
+                <div class="mouse__cursor"></div>
+                <div class="mouse__text">
+                    <p>
+                        To truly smile, you must endure the pain, and you must
+                        also learn to enjoy the pain
+                    </p>
+                    <p>
+                        진정으로 웃으려면 고통을 참아야하며 , 나아가 고통을 즐길
+                        줄 알아야 해
+                    </p>
+                </div>
             </div>
-        </div>
-    </main>
-    <!-- //main -->
+        </main>
+        <!-- //main -->
 
-    <footer id="footer">
-        <a href="mailto:dongjin6539@naver.com">dongjin6539@naver.com</a>
-    </footer>
-    <!-- //footer -->
+        <footer id="footer">
+            <a href="mailto:dongjin6539@naver.com">dongjin6539@naver.com</a>
+        </footer>
+        <!-- //footer -->
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
-    <script>
-        // 선택자
-        const cursor = document.querySelector(".mouse__cursor");
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+        <script>
+            // 선택자
+            const cursor = document.querySelector(".mouse__cursor");
 
-        // console.log(cursor.clientWidth);    // 190 border 값 미포함
-        // console.log(cursor.clientHeight);   // 190 border 값 미포함
-        // console.log(cursor.offsetWidth);    // 200 border 값 포함
-        // console.log(cursor.offsetHeight);   // 200 border 값 포함
+            // console.log(cursor.clientWidth);    // 190 border 값 미포함
+            // console.log(cursor.clientHeight);   // 190 border 값 미포함
+            // console.log(cursor.offsetWidth);    // 200 border 값 포함
+            // console.log(cursor.offsetHeight);   // 200 border 값 포함
 
-        const circle = cursor.getBoundingClientRect();
-        // const DOMRect = {
-        //     bottom : 200, 
-        //     height : 200, 
-        //     left : 0, 
-        //     right : 200, 
-        //     top : 0, 
-        //     width : 200, 
-        //     x : 0, 
-        //     y : 0 
-        // };
+            const circle = cursor.getBoundingClientRect();
+            // const DOMRect = {
+            //     bottom : 200,
+            //     height : 200,
+            //     left : 0,
+            //     right : 200,
+            //     top : 0,
+            //     width : 200,
+            //     x : 0,
+            //     y : 0
+            // };
 
-        window.addEventListener("mousemove", e => {
-            gsap.to(cursor, {
-                duration: 0.5, 
-                left: e.pageX - circle.width/2, 
-                top: e.pageY - circle.height/2,
+            window.addEventListener("mousemove", (e) => {
+                gsap.to(cursor, {
+                    duration: 0.5,
+                    left: e.pageX - circle.width / 2,
+                    top: e.pageY - circle.height / 2,
+                });
             });
-        });
-    </script>
-</body>
+        </script>
+    </body>
 </html>

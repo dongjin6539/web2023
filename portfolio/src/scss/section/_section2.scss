@@ -1,0 +1,55 @@
+#section2 {
+    width: 100%;
+}
+#section2 .intro__end {
+    display: flex;
+}
+#section2 .intro__end .intro_bg {
+    position: relative;
+    // flex-shrink: 0;
+    opacity: 0;
+}
+#section2 .intro__end .intro_bg img {
+    padding: 14px 0 20px 20px;
+}
+#section2 .intro__end .intro_bg p {
+    position: absolute;
+    right: 20px;
+    bottom: 40px;
+    color: #fff;
+    text-align: right;
+    font-family: "ChosunNm";
+    line-height: 1.6;
+    font-size: 20px;
+}
+
+// @media (max-width: 1200px){
+//     #section2 .intro__end .intro_bg img {
+//         width: 1000px;
+//     }
+//     #section2 .intro__end .intro_bg p {
+//         position: relative;
+//         padding-top: 60px;
+//         color: #000;
+//         font-size: 24px;
+//         margin-right: -20px;
+//     }
+// }
+// @media (max-width: 960px){
+//     #section2 .intro__end .intro_bg img {
+//         width: 900px;
+//     }
+//     #section2 .intro__end .intro_bg p {
+//         padding-top: 60px;
+//         font-size: 28px;
+//     }
+// }
+// @media (max-width: 600px){
+//     #section2 .intro__end .intro_bg img {
+//         width: 900px;
+//     }
+//     #section2 .intro__end .intro_bg p {
+//         padding-top: 60px;
+//         font-size: 28px;
+//     }
+// }

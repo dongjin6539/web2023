@@ -1,0 +1,23 @@
+#section3 {
+    width: 100%;
+}
+#section3 .title {
+    padding: 20px 20px 0 20px;
+    flex-shrink: 0;
+}
+// #section3 .title h2 {
+//     font-size: 180px;
+//     font-weight: 700;
+//     color: #2b38bf;
+//     text-transform: uppercase;
+//     line-height: 120%;
+// }
+#section3 .title div {
+    font-size: 180px;
+    font-weight: 700;
+    color: #2b38bf;
+    text-transform: uppercase;
+    line-height: 120%;
+    // opacity: 0;
+    // transform: translateX(100%);
+}
