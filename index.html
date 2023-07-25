@@ -1,105 +1,200 @@
 <!DOCTYPE html>
 <html lang="ko">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="author" content="webstoryboy">
-  <meta name="description" content="웹 퍼블리셔를 위한 정보 공유 사이트입니다.">
-  <meta name="keywords" content="신동진, 웹 퍼블리셔, 웹 표준, 웹 접근성, 화려한 디자인, webstoryboy, publisher, css3, html, markup, design">
-  <title>신동진 | Shin dongjin</title>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="author" content="webstoryboy" />
+        <meta
+            name="description"
+            content="웹 퍼블리셔를 위한 정보 공유 사이트입니다."
+        />
+        <meta
+            name="keywords"
+            content="신동진, 웹 퍼블리셔, 웹 표준, 웹 접근성, 화려한 디자인, webstoryboy, publisher, css3, html, markup, design"
+        />
+        <title>신동진 | Shin dongjin</title>
 
-  <!-- css -->
-  <link href="assets/css/bootstrapTheme.css" rel="stylesheet">
-  <link href="assets/css/custom.css" rel="stylesheet">
-  <link href="assets/css/style.css" rel="stylesheet">    
-  <link href="assets/css/isotope.css" rel="stylesheet">
-  <link href="assets/css/font-awesome.css" rel="stylesheet">
+        <!-- css -->
+        <link href="assets/css/bootstrapTheme.css" rel="stylesheet" />
+        <link href="assets/css/custom.css" rel="stylesheet" />
+        <link href="assets/css/style.css" rel="stylesheet" />
+        <link href="assets/css/isotope.css" rel="stylesheet" />
+        <link href="assets/css/font-awesome.css" rel="stylesheet" />
 
-  <!-- 파비콘 -->
-  <link rel="shortcut icon" href="assets/ico/favicon.ico">
-  <link rel="apple-touch-icon" sizes="57x57" href="assets/ico/apple-icon-57x57.png">
-  <link rel="apple-touch-icon" sizes="60x60" href="assets/ico/apple-icon-60x60.png">
-  <link rel="apple-touch-icon" sizes="72x72" href="assets/ico/apple-icon-72x72.png">
-  <link rel="apple-touch-icon" sizes="76x76" href="assets/ico/apple-icon-76x76.png">
-  <link rel="apple-touch-icon" sizes="114x114" href="assets/ico/apple-icon-114x114.png">
-  <link rel="apple-touch-icon" sizes="120x120" href="assets/ico/apple-icon-120x120.png">
-  <link rel="apple-touch-icon" sizes="144x144" href="assets/ico/apple-icon-144x144.png">
-  <link rel="apple-touch-icon" sizes="152x152" href="assets/ico/apple-icon-152x152.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="assets/ico/apple-icon-180x180.png">
-  <link rel="icon" type="image/png" sizes="192x192"  href="assets/ico/android-icon-192x192.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="assets/ico/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="96x96" href="assets/ico/favicon-96x96.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="assets/ico/favicon-16x16.png">
-  <link rel="manifest" href="assets/ico/manifest.json">  
-  <meta name="msapplication-TileColor" content="#ffffff">
-  <meta name="msapplication-TileImage" content="assets/ico/ms-icon-144x144.png">
-  <meta name="theme-color" content="#ffffff">
+        <!-- 파비콘 -->
+        <link rel="shortcut icon" href="assets/ico/favicon.ico" />
+        <link
+            rel="apple-touch-icon"
+            sizes="57x57"
+            href="assets/ico/apple-icon-57x57.png"
+        />
+        <link
+            rel="apple-touch-icon"
+            sizes="60x60"
+            href="assets/ico/apple-icon-60x60.png"
+        />
+        <link
+            rel="apple-touch-icon"
+            sizes="72x72"
+            href="assets/ico/apple-icon-72x72.png"
+        />
+        <link
+            rel="apple-touch-icon"
+            sizes="76x76"
+            href="assets/ico/apple-icon-76x76.png"
+        />
+        <link
+            rel="apple-touch-icon"
+            sizes="114x114"
+            href="assets/ico/apple-icon-114x114.png"
+        />
+        <link
+            rel="apple-touch-icon"
+            sizes="120x120"
+            href="assets/ico/apple-icon-120x120.png"
+        />
+        <link
+            rel="apple-touch-icon"
+            sizes="144x144"
+            href="assets/ico/apple-icon-144x144.png"
+        />
+        <link
+            rel="apple-touch-icon"
+            sizes="152x152"
+            href="assets/ico/apple-icon-152x152.png"
+        />
+        <link
+            rel="apple-touch-icon"
+            sizes="180x180"
+            href="assets/ico/apple-icon-180x180.png"
+        />
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="192x192"
+            href="assets/ico/android-icon-192x192.png"
+        />
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="assets/ico/favicon-32x32.png"
+        />
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="96x96"
+            href="assets/ico/favicon-96x96.png"
+        />
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="16x16"
+            href="assets/ico/favicon-16x16.png"
+        />
+        <link rel="manifest" href="assets/ico/manifest.json" />
+        <meta name="msapplication-TileColor" content="#ffffff" />
+        <meta
+            name="msapplication-TileImage"
+            content="assets/ico/ms-icon-144x144.png"
+        />
+        <meta name="theme-color" content="#ffffff" />
 
-  <!-- Facebook meta tags -->
-  <meta property="og:type" content="article" />
-  <meta property="og:title" content="Shin dongjin" />
-  <meta property="og:url" content="https://dongjin6539.github.io/web2023/" />
-  <meta property="og:image" content="https://dongjin6539.github.io/web2023/assets/ico/icon.jpg" />
-  <meta property="og:site_name" content="웹스토리보이" />
-  <meta property="og:description" content="웹과 관련된 정보를 제공합니다." />
+        <!-- Facebook meta tags -->
+        <meta property="og:type" content="article" />
+        <meta property="og:title" content="Shin dongjin" />
+        <meta
+            property="og:url"
+            content="https://dongjin6539.github.io/web2023/"
+        />
+        <meta
+            property="og:image"
+            content="https://dongjin6539.github.io/web2023/assets/ico/icon.jpg"
+        />
+        <meta property="og:site_name" content="웹스토리보이" />
+        <meta
+            property="og:description"
+            content="웹과 관련된 정보를 제공합니다."
+        />
 
-  <!-- twitter meta tags -->
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:site" content="@Shin dongjin" />
-  <meta name="twitter:title" content="Shin dongjin" />
-  <meta name="twitter:description" content="웹과 관련된 정보를 제공합니다." />
-  <meta property="twitter:image" content="https://dongjin6539.github.io/web2023/assets/ico/icon.jpg" />
+        <!-- twitter meta tags -->
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@Shin dongjin" />
+        <meta name="twitter:title" content="Shin dongjin" />
+        <meta
+            name="twitter:description"
+            content="웹과 관련된 정보를 제공합니다."
+        />
+        <meta
+            property="twitter:image"
+            content="https://dongjin6539.github.io/web2023/assets/ico/icon.jpg"
+        />
 
-  <!-- 웹 폰트 -->
-  <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Nanum+Brush+Script" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Abel" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Gaegu&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Fredoka+One&display=swap" rel="stylesheet">
+        <!-- 웹 폰트 -->
+        <link
+            href="https://fonts.googleapis.com/css?family=Nanum+Gothic"
+            rel="stylesheet"
+        />
+        <link
+            href="https://fonts.googleapis.com/css?family=Nanum+Brush+Script"
+            rel="stylesheet"
+        />
+        <link
+            href="https://fonts.googleapis.com/css?family=Abel"
+            rel="stylesheet"
+        />
+        <link
+            href="https://fonts.googleapis.com/css?family=Gaegu&display=swap"
+            rel="stylesheet"
+        />
+        <link
+            href="https://fonts.googleapis.com/css?family=Fredoka+One&display=swap"
+            rel="stylesheet"
+        />
 
-  <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->   
-  <!--[if lt IE 9]>
-		<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-		<script src="https://oss.maxcdn.com/libs/respond.../assets2/js/1.4.2/respond.min.js"></script>
-  <![endif]-->
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.../assets2/js/1.4.2/respond.min.js"></script>
+        <![endif]-->
 
-  <style>   
-    #clock {
-      display: block;
-    }  
+        <style>
+            #clock {
+                display: block;
+            }
 
-    .link1 {
-      background: #fff;   
-      left: 50%;
-      transform: translatex(-50%);
-      color: #000;
-      display: inline-block;
-      border-radius: 5px;
-      font-weight: bold;
-      padding: 10px 30px !important;
-      height: auto !important;
-      box-sizing: border-box;
-      width: auto !important;
-      font-size: 20px !important;
-      margin-top: 36px !important;
-    }
+            .link1 {
+                background: #fff;
+                left: 50%;
+                transform: translatex(-50%);
+                color: #000;
+                display: inline-block;
+                border-radius: 5px;
+                font-weight: bold;
+                padding: 10px 30px !important;
+                height: auto !important;
+                box-sizing: border-box;
+                width: auto !important;
+                font-size: 20px !important;
+                margin-top: 36px !important;
+            }
 
-    .link2 {
-      background: #fff;
-      left: 50%;
-      transform: translatex(-50%);
-      color: #000;
-      display: inline-block;
-      border-radius: 5px;
-      font-weight: bold;
-      padding: 10px 30px !important;
-      height: auto !important;
-      box-sizing: border-box;
-      width: auto !important;
-      font-size: 20px !important;
-      margin-top: 86px !important;
-    }
-    /* .react img {
+            .link2 {
+                background: #fff;
+                left: 50%;
+                transform: translatex(-50%);
+                color: #000;
+                display: inline-block;
+                border-radius: 5px;
+                font-weight: bold;
+                padding: 10px 30px !important;
+                height: auto !important;
+                box-sizing: border-box;
+                width: auto !important;
+                font-size: 20px !important;
+                margin-top: 86px !important;
+            }
+            /* .react img {
         text-align: center;
         animation: App-logo-spin infinite 20s linear;
     }
@@ -113,706 +208,1086 @@
         }
     } */
 
-    .disqus {
-      margin-right: 20px;
-      margin-top: 40px;
-    }
+            .disqus {
+                margin-right: 20px;
+                margin-top: 40px;
+            }
 
-    @import url('https://fonts.googleapis.com/css?family=DM+Sans:500,700&display=swap');
+            @import url("https://fonts.googleapis.com/css?family=DM+Sans:500,700&display=swap");
 
-    .nav2 {
-      display: inline-flex;
-      position: relative;
-      overflow: hidden;
-      max-width: 100%;
-      background-color: #fff;
-      padding: 0 20px;
-      border-radius: 40px;
-      margin: 30px;
-      box-shadow: 10px 10px 5px rgba(159, 162, 177, .8);
-    }
+            .nav2 {
+                display: inline-flex;
+                position: relative;
+                overflow: hidden;
+                max-width: 100%;
+                background-color: #fff;
+                padding: 0 20px;
+                border-radius: 40px;
+                margin: 30px;
+                box-shadow: 10px 10px 5px rgba(159, 162, 177, 0.8);
+            }
 
-    .nav-item {
-      color: #83818c;
-      padding: 20px;
-      text-decoration: none;
-      transition: .3s;
-      margin: 0 6px;
-      z-index: 1;
-      font-family: 'DM Sans', sans-serif;
-      font-weight: 500;
-      position: relative;
-      
-      &:before {
-        content: "";
-        position: absolute;
-        bottom: -6px;
-        left: 0;
-        width: 100%;
-        height: 5px;
-        background-color: #dfe2ea;
-        border-radius: 8px 8px 0 0;
-        opacity: 0;
-        transition: .3s;
-      }
-    }
+            .nav-item {
+                color: #83818c;
+                padding: 20px;
+                text-decoration: none;
+                transition: 0.3s;
+                margin: 0 6px;
+                z-index: 1;
+                font-family: "DM Sans", sans-serif;
+                font-weight: 500;
+                position: relative;
 
-    .nav-item:not(.is-active):hover:before {
-      opacity: 1;
-      bottom: 0;
-    }
+                &:before {
+                    content: "";
+                    position: absolute;
+                    bottom: -6px;
+                    left: 0;
+                    width: 100%;
+                    height: 5px;
+                    background-color: #dfe2ea;
+                    border-radius: 8px 8px 0 0;
+                    opacity: 0;
+                    transition: 0.3s;
+                }
+            }
 
-    .nav-item:not(.is-active):hover { color: #333; }
+            .nav-item:not(.is-active):hover:before {
+                opacity: 1;
+                bottom: 0;
+            }
 
-    .nav-indicator {
-      position: absolute;
-      left: 0;
-      bottom: 0;
-      height: 4px;
-      transition: .4s;
-      height: 5px;
-      z-index: 1;
-      border-radius: 8px 8px 0 0;
-    }
+            .nav-item:not(.is-active):hover {
+                color: #333;
+            }
 
-    @media (max-width: 580px) {
-      .nav { overflow: auto; }
-    }
-  </style>
-</head>
+            .nav-indicator {
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                height: 4px;
+                transition: 0.4s;
+                height: 5px;
+                z-index: 1;
+                border-radius: 8px 8px 0 0;
+            }
 
-<body>
-  <!-- nav -->
-  <div id="top-nav" class="navbar navbar-fixed-top">
-    <div class="navbar-inner">
-      <div class="container-fluid">
-        <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-        <a class="brand" href="index.html">S.D.J</a>
-        <div class="nav-collapse collapse pull-right">
-          <ul class="nav">
-            <li><a href="https://dongjin6539.tistory.com/">Blog</a></li>
-            <li><a href="https://github.com/dongjin6539/web2023">Github</a></li>
-          </ul>
+            @media (max-width: 580px) {
+                .nav {
+                    overflow: auto;
+                }
+            }
+        </style>
+    </head>
+
+    <body>
+        <!-- nav -->
+        <div id="top-nav" class="navbar navbar-fixed-top">
+            <div class="navbar-inner">
+                <div class="container-fluid">
+                    <button
+                        type="button"
+                        class="btn btn-navbar"
+                        data-toggle="collapse"
+                        data-target=".nav-collapse"
+                    >
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="brand" href="index.html">S.D.J</a>
+                    <div class="nav-collapse collapse pull-right">
+                        <ul class="nav">
+                            <li>
+                                <a
+                                    href="https://dongjin6539.tistory.com/"
+                                    target="_blank"
+                                    >Blog</a
+                                >
+                            </li>
+                            <li>
+                                <a
+                                    href="https://github.com/dongjin6539/web2023"
+                                    target="_blank"
+                                    >Github</a
+                                >
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
-  </div>
-  <!-- //nav -->
+        <!-- //nav -->
 
-  <!-- header -->
-  <div id="header">
-    <div class="container">
-      <div class="row">
-        <div class="span12" style="text-align:center;">
-          <div class="header_tit">
-            <a href="https://dongjin6539.tistory.com/"><img src="assets/img/main4.svg" alt="main"></a>
-            <h1>Professional web publishers</h1>
-          </div>
-          <div class="header_icon">
-            <ul>
-              <li><a href="https://twitter.com/webstoryboy" target="_blank"><i class="fa fa-twitter"
-                    aria-hidden="true"></i><span>twitter</span></a></li>
-              <li><a href="https://codepen.io/webstoryboy/" target="_blank"><i class="fa fa-codepen"
-                    aria-hidden="true"></i><span>codepen</span></a></li>
-              <li><a href="https://github.com/webstoryboy" target="_blank"><i class="fa fa-github"
-                    aria-hidden="true"></i><span>github</span></a></li>
-              <li><a href="https://www.youtube.com/channel/UCsvQSv7EeCMHyYb9ENKAJZw" target="_blank"><i
-                    class="fa fa-youtube-play" aria-hidden="true"></i><span>youtube</span></a></li>
-              <li><a href="https://dribbble.com/webstoryboy" target="_blank"><i class="fa fa-dribbble"
-                    aria-hidden="true"></i><span>dribbble</span></a></li>
-              <li><a href="https://www.instagram.com/webstoryboy/" target="_blank"><i class="fa fa-instagram"
-                    aria-hidden="true"></i><span>instagram</span></a></li>
-            </ul>
-          </div>
+        <!-- header -->
+        <div id="header">
+            <div class="container">
+                <div class="row">
+                    <div class="span12" style="text-align: center">
+                        <div class="header_tit">
+                            <a href="https://dongjin6539.tistory.com/"
+                                ><img src="assets/img/main4.svg" alt="main"
+                            /></a>
+                            <h1>Professional web publishers</h1>
+                        </div>
+                        <div class="header_icon">
+                            <ul>
+                                <li>
+                                    <a
+                                        href="https://twitter.com/webstoryboy"
+                                        target="_blank"
+                                        ><i
+                                            class="fa fa-twitter"
+                                            aria-hidden="true"
+                                        ></i
+                                        ><span>twitter</span></a
+                                    >
+                                </li>
+                                <li>
+                                    <a
+                                        href="https://codepen.io/webstoryboy/"
+                                        target="_blank"
+                                        ><i
+                                            class="fa fa-codepen"
+                                            aria-hidden="true"
+                                        ></i
+                                        ><span>codepen</span></a
+                                    >
+                                </li>
+                                <li>
+                                    <a
+                                        href="https://github.com/webstoryboy"
+                                        target="_blank"
+                                        ><i
+                                            class="fa fa-github"
+                                            aria-hidden="true"
+                                        ></i
+                                        ><span>github</span></a
+                                    >
+                                </li>
+                                <li>
+                                    <a
+                                        href="https://www.youtube.com/channel/UCsvQSv7EeCMHyYb9ENKAJZw"
+                                        target="_blank"
+                                        ><i
+                                            class="fa fa-youtube-play"
+                                            aria-hidden="true"
+                                        ></i
+                                        ><span>youtube</span></a
+                                    >
+                                </li>
+                                <li>
+                                    <a
+                                        href="https://dribbble.com/webstoryboy"
+                                        target="_blank"
+                                        ><i
+                                            class="fa fa-dribbble"
+                                            aria-hidden="true"
+                                        ></i
+                                        ><span>dribbble</span></a
+                                    >
+                                </li>
+                                <li>
+                                    <a
+                                        href="https://www.instagram.com/webstoryboy/"
+                                        target="_blank"
+                                        ><i
+                                            class="fa fa-instagram"
+                                            aria-hidden="true"
+                                        ></i
+                                        ><span>instagram</span></a
+                                    >
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
-  </div>
-  <!-- //header -->
+        <!-- //header -->
 
-  <!-- contents_tit -->
-  <div id="contents_tit">
-    <div class="titt">
-      <p><a href="#" class="tit_btn">&quot;나는 <span>신동진</span> 입니다!&quot;</a></p>
-    </div>
-  </div>
-  <!-- //contents_tit -->
-
-  <!-- contents -->
-  <div id="customizing">
-    <div class="container">
-
-      <div class="row">
-        <nav class="nav2 filter option-set" data-filter-group="color">
-          <a href="#filter-color-any" class="nav-item is-active" active-color="orange">ALL</a>
-          <a href="#filter-color-webstandard" class="nav-item webstandard" active-color="green" data-filter-value=".class">CLASS</a>
-          <a href="#filter-color-webstandard" class="nav-item webstandard" active-color="blue" data-filter-value=".javascript">JAVASCRIPT</a>
-          <a href="#filter-color-webstandard" class="nav-item webstandard" active-color="red" data-filter-value=".site">SITE</a>
-          <a href="#filter-color-webstandard" class="nav-item webstandard" active-color="rebeccapurple" data-filter-value=".html">HTML</a>
-          <span class="nav-indicator"></span>
-        </nav>
-      </div>
-
-      <div class="row" id="middle" style="margin-left:16px;">
-        <div id="container" class="clearfix">
-
-          <!-- box -->
-          <section class="color-shape class">
-            <a href="class/index.html" target="_blank">
-              <div class="image-wrap">
-                <div class="hover-wrap">
-                  <span class="overlay-img-donut">CLASS</span>
-                  <span class="overlay-text-thumb-donut">클래스</span>
-                  <span class="overlay-text-thumb1-donut">클래스</span>
-                  <span class="overlay-text-thumb2-donut">CLASS</span>
-                </div>
-                <img src="assets/img/class.svg" alt="portfolio">
-                <div class="img-text donutImg">
-                  <h5>CLASS</h5>
-                  <p>클래스</p>
-                  <span>CLASS</span>
-                </div>
-              </div>
-            </a>
-          </section>
-          <!-- //box -->
-
-          <!-- box -->
-          <section class="color-shape javascript">
-            <a href="javascript/index.html" target="_blank">
-              <div class="image-wrap">
-                <div class="hover-wrap">
-                  <span class="overlay-img-donut">JAVASCRIPT</span>
-                  <span class="overlay-text-thumb-donut">자바스크립트</span>
-                  <span class="overlay-text-thumb1-donut">자바스크립트</span>
-                  <span class="overlay-text-thumb2-donut">JAVASCRIPT</span>
-                </div>
-                <img src="assets/img/javascript.svg" alt="portfolio">
-                <div class="img-text donutImg">
-                  <h5>JAVASCRIPT</h5>
-                  <p>자바스크립트</p>
-                  <span>JAVASCRIPT</span>
-                </div>
-              </div>
-            </a>
-          </section>
-          <!-- //box -->
-
-          <!-- box -->
-          <section class="color-shape html">
-            <a href="webd/index.html" target="_blank">
-              <div class="image-wrap">
-                <div class="hover-wrap">
-                  <span class="overlay-img-donut">HTML</span>
-                  <span class="overlay-text-thumb-donut">레이아웃 연습</span>
-                  <span class="overlay-text-thumb1-donut">레이아웃</span>
-                  <span class="overlay-text-thumb2-donut">HTML</span>
-                </div>
-                <img src="assets/img/layout.svg" alt="portfolio">
-                <div class="img-text donutImg">
-                  <h5>LAYOUT</h5>
-                  <p>레이아웃</p>
-                  <span>LAYOUT</span>
-                </div>
-              </div>
-            </a>
-          </section>
-          <!-- //box -->
-
-          <!-- box -->
-          <section class="color-shape site">
-            <a href="mysql/index.html" target="_blank">
-              <div class="image-wrap">
-                <div class="hover-wrap">
-                  <span class="overlay-img-donut">MYSQL</span>
-                  <span class="overlay-text-thumb-donut">MYSQL</span>
-                  <span class="overlay-text-thumb1-donut">MYSQL</span>
-                  <span class="overlay-text-thumb2-donut">MYSQL</span>
-                </div>
-                <img src="assets/img/mysql.svg" alt="portfolio">
-                <div class="img-text donutImg">
-                  <h5>MYSQL</h5>
-                  <p>MYSQL</p>
-                  <span>MYSQL</span>
-                </div>
-              </div>
-            </a>
-          </section>
-          <!-- //box -->
-
-          <!-- box -->
-          <section class="color-shape site react">
-            <a href="react/index.html" target="_blank">
-              <div class="image-wrap">
-                <div class="hover-wrap">
-                  <span class="overlay-img-donut">REACT</span>
-                  <span class="overlay-text-thumb-donut">REACT</span>
-                  <span class="overlay-text-thumb1-donut">REACT</span>
-                  <span class="overlay-text-thumb2-donut">REACT</span>
-                </div>
-                <img src="assets/img/react.svg" alt="portfolio">
-                <div class="img-text donutImg">
-                  <h5>REACT</h5>
-                  <p>REACT</p>
-                  <span>REACT</span>
-                </div>
-              </div>
-            </a>
-          </section>
-          <!-- //box -->
-
-          <!-- box -->
-          <section class="color-shape site">
-            <a href="react/webpack.html" target="_blank">
-              <div class="image-wrap">
-                <div class="hover-wrap">
-                  <span class="overlay-img-donut">WEBPACK</span>
-                  <span class="overlay-text-thumb-donut">WEBPACK</span>
-                  <span class="overlay-text-thumb1-donut">WEBPACK</span>
-                  <span class="overlay-text-thumb2-donut">WEBPACK</span>
-                </div>
-                <img src="assets/img/webpack.svg" alt="portfolio">
-                <div class="img-text donutImg">
-                  <h5>WEBPACK</h5>
-                  <p>WEBPACK</p>
-                  <span>WEBPACK</span>
-                </div>
-              </div>
-            </a>
-          </section>
-          <!-- //box -->
-
-          <!-- box -->
-          <section class="color-shape site">
-            <a href="react/vite.html" target="_blank">
-              <div class="image-wrap">
-                <div class="hover-wrap">
-                  <span class="overlay-img-donut">Vite</span>
-                  <span class="overlay-text-thumb-donut">Vite</span>
-                  <span class="overlay-text-thumb1-donut">Vite</span>
-                  <span class="overlay-text-thumb2-donut">Vite</span>
-                </div>
-                <img src="assets/img/vite.svg" alt="portfolio">
-                <div class="img-text donutImg">
-                  <h5>Vite</h5>
-                  <p>Vite</p>
-                  <span>Vite</span>
-                </div>
-              </div>
-            </a>
-          </section>
-          <!-- //box -->
-
-          <!-- box -->
-          <section class="color-shape site">
-            <a href="react/vue.html" target="_blank">
-              <div class="image-wrap">
-                <div class="hover-wrap">
-                  <span class="overlay-img-donut">Vue</span>
-                  <span class="overlay-text-thumb-donut">Vue</span>
-                  <span class="overlay-text-thumb1-donut">Vue</span>
-                  <span class="overlay-text-thumb2-donut">Vue</span>
-                </div>
-                <img src="assets/img/vue.svg" alt="portfolio">
-                <div class="img-text donutImg">
-                  <h5>Vue</h5>
-                  <p>Vue</p>
-                  <span>Vue</span>
-                </div>
-              </div>
-            </a>
-          </section>
-          <!-- //box -->
-
-          <!-- box -->
-          <section class="color-shape site">
-            <a href="site/index.html" target="_blank">
-              <div class="image-wrap">
-                <div class="hover-wrap">
-                  <span class="overlay-img-donut">SITE</span>
-                  <span class="overlay-text-thumb-donut">사이트 만들기</span>
-                  <span class="overlay-text-thumb1-donut">사이트 만들기</span>
-                  <span class="overlay-text-thumb2-donut">SITE</span>
-                </div>
-                <img src="assets/img/site.svg" alt="portfolio">
-                <div class="img-text donutImg">
-                  <h5>SITE</h5>
-                  <p>사이트 만들기</p>
-                  <span>SITE</span>
-                </div>
-              </div>
-            </a>
-          </section>
-          <!-- //box -->
-
-          <!-- box -->
-          <section class="color-shape site">
-            <a href="site/site1/index.html" target="_blank">
-              <div class="image-wrap">
-                <div class="hover-wrap">
-                  <span class="overlay-img-donut">SITE1</span>
-                  <span class="overlay-text-thumb-donut">SITE 유형 완성</span>
-                  <span class="overlay-text-thumb1-donut">SITE 유형 완성</span>
-                  <span class="overlay-text-thumb2-donut">SITE1</span>
-                </div>
-                <img src="assets/img/site.svg" alt="portfolio">
-                <div class="img-text donutImg">
-                  <h5>SITE1</h5>
-                  <p>SITE 유형 완성</p>
-                  <span>SITE1</span>
-                </div>
-              </div>
-            </a>
-          </section>
-          <!-- //box -->
-
-          <!-- box -->
-          <section class="color-shape site">
-            <a href="javascript/parallax/parallaxEffectExam.html" target="_blank">
-              <div class="image-wrap">
-                <div class="hover-wrap">
-                  <span class="overlay-img-donut">SITE2</span>
-                  <span class="overlay-text-thumb-donut">스크롤 이펙트 사이트</span>
-                  <span class="overlay-text-thumb1-donut">스크롤 이펙트 사이트</span>
-                  <span class="overlay-text-thumb2-donut">SITE2</span>
-                </div>
-                <img src="assets/img/site.svg" alt="portfolio">
-                <div class="img-text donutImg">
-                  <h5>SITE2</h5>
-                  <p>스크롤 이펙트 사이트</p>
-                  <span>SITE2</span>
-                </div>
-              </div>
-            </a>
-          </section>
-          <!-- //box -->
-
-          <!-- box -->
-          <section class="color-shape site">
-            <a href="http://dongjin6539.dothome.co.kr/php/index.html" target="_blank">
-              <div class="image-wrap">
-                <div class="hover-wrap">
-                  <span class="overlay-img-donut">SITE3</span>
-                  <span class="overlay-text-thumb-donut">PHP 블로그 사이트</span>
-                  <span class="overlay-text-thumb1-donut">PHP 블로그 사이트</span>
-                  <span class="overlay-text-thumb2-donut">SITE3</span>
-                </div>
-                <img src="assets/img/php.svg" alt="portfolio">
-                <div class="img-text donutImg">
-                  <h5>SITE3</h5>
-                  <p>PHP 블로그 사이트</p>
-                  <span>SITE3</span>
-                </div>
-              </div>
-            </a>
-          </section>
-          <!-- //box -->
-
-          <!-- box -->
-          <section class="color-shape site">
-            <a href="http://dongjin6539.dothome.co.kr/php2/index.html" target="_blank">
-              <div class="image-wrap">
-                <div class="hover-wrap">
-                  <span class="overlay-img-donut">SITE4</span>
-                  <span class="overlay-text-thumb-donut">PHP 조별 사이트</span>
-                  <span class="overlay-text-thumb1-donut">PHP 조별 사이트</span>
-                  <span class="overlay-text-thumb2-donut">SITE4</span>
-                </div>
-                <img src="assets/img/php.svg" alt="portfolio">
-                <div class="img-text donutImg">
-                  <h5>SITE4</h5>
-                  <p>PHP 조별 사이트</p>
-                  <span>SITE4</span>
-                </div>
-              </div>
-            </a>
-          </section>
-          <!-- //box -->
-
-          <!-- box -->
-          <section class="color-shape javascript">
-            <a href="javascript/game/gameEffect01.html" target="_blank">
-              <div class="image-wrap">
-                <div class="hover-wrap">
-                  <span class="overlay-img-donut">GAME</span>
-                  <span class="overlay-text-thumb-donut">GAME Effect</span>
-                  <span class="overlay-text-thumb1-donut">GAME Effect</span>
-                  <span class="overlay-text-thumb2-donut">GAME</span>
-                </div>
-                <img src="assets/img/effect01.svg" alt="portfolio">
-                <div class="img-text donutImg">
-                  <h5>GAME</h5>
-                  <p>GAME Effect</p>
-                  <span>GAME</span>
-                </div>
-              </div>
-            </a>
-          </section>
-          <!-- //box -->
-
-          <!-- box -->
-          <section class="color-shape javascript">
-            <a href="javascript/mouse/mouseEffect01.html" target="_blank">
-              <div class="image-wrap">
-                <div class="hover-wrap">
-                  <span class="overlay-img-donut">MOUSE</span>
-                  <span class="overlay-text-thumb-donut">MOUSE Effect</span>
-                  <span class="overlay-text-thumb1-donut">MOUSE Effect</span>
-                  <span class="overlay-text-thumb2-donut">MOUSE</span>
-                </div>
-                <img src="assets/img/effect02.svg" alt="portfolio">
-                <div class="img-text donutImg">
-                  <h5>MOUSE</h5>
-                  <p>MOUSE Effect</p>
-                  <span>MOUSE</span>
-                </div>
-              </div>
-            </a>
-          </section>
-          <!-- //box -->
-
-          <!-- box -->
-          <section class="color-shape javascript">
-            <a href="javascript/parallax/parallaxEffect01.html" target="_blank">
-              <div class="image-wrap">
-                <div class="hover-wrap">
-                  <span class="overlay-img-donut">PARALLAX</span>
-                  <span class="overlay-text-thumb-donut">PARALLAX Effect</span>
-                  <span class="overlay-text-thumb1-donut">PARALLAX Effect</span>
-                  <span class="overlay-text-thumb2-donut">PARALLAX</span>
-                </div>
-                <img src="assets/img/effect03.svg" alt="portfolio">
-                <div class="img-text donutImg">
-                  <h5>PARALLAX</h5>
-                  <p>PARALLAX Effect</p>
-                  <span>PARALLAX</span>
-                </div>
-              </div>
-            </a>
-          </section>
-          <!-- //box -->
-
-          <!-- box -->
-          <section class="color-shape javascript">
-            <a href="javascript/quiz/quizEffect01.html" target="_blank">
-              <div class="image-wrap">
-                <div class="hover-wrap">
-                  <span class="overlay-img-donut">QUIZ</span>
-                  <span class="overlay-text-thumb-donut">QUIZ Effect</span>
-                  <span class="overlay-text-thumb1-donut">QUIZ Effect</span>
-                  <span class="overlay-text-thumb2-donut">QUIZ</span>
-                </div>
-                <img src="assets/img/effect04.svg" alt="portfolio">
-                <div class="img-text donutImg">
-                  <h5>QUIZ</h5>
-                  <p>QUIZ Effect</p>
-                  <span>QUIZ</span>
-                </div>
-              </div>
-            </a>
-          </section>
-          <!-- //box -->
-
-          <!-- box -->
-          <section class="color-shape javascript">
-            <a href="javascript/search/searchEffect01.html" target="_blank">
-              <div class="image-wrap">
-                <div class="hover-wrap">
-                  <span class="overlay-img-donut">SEARCH</span>
-                  <span class="overlay-text-thumb-donut">SEARCH Effect</span>
-                  <span class="overlay-text-thumb1-donut">SEARCH Effect</span>
-                  <span class="overlay-text-thumb2-donut">SEARCH</span>
-                </div>
-                <img src="assets/img/effect05.svg" alt="portfolio">
-                <div class="img-text donutImg">
-                  <h5>SEARCH</h5>
-                  <p>SEARCH Effect</p>
-                  <span>SEARCH</span>
-                </div>
-              </div>
-            </a>
-          </section>
-          <!-- //box -->
-
-          <!-- box -->
-          <section class="color-shape javascript">
-            <a href="javascript/slider/sliderEffect01.html" target="_blank">
-              <div class="image-wrap">
-                <div class="hover-wrap">
-                  <span class="overlay-img-donut">SLIDER</span>
-                  <span class="overlay-text-thumb-donut">SLIDER Effect</span>
-                  <span class="overlay-text-thumb1-donut">SLIDER Effect</span>
-                  <span class="overlay-text-thumb2-donut">SLIDER</span>
-                </div>
-                <img src="assets/img/effect06.svg" alt="portfolio">
-                <div class="img-text donutImg">
-                  <h5>SLIDER</h5>
-                  <p>SLIDER Effect</p>
-                  <span>SLIDER</span>
-                </div>
-              </div>
-            </a>
-          </section>
-          <!-- //box -->
-
-          <!-- box -->
-          <section class="color-shape javascript">
-            <a href="https://sdj-site-5c4a0.web.app" target="_blank">
-              <div class="image-wrap">
-                <div class="hover-wrap">
-                  <span class="overlay-img-donut">PORTFOLIO</span>
-                  <span class="overlay-text-thumb-donut">PORTFOLIO</span>
-                  <span class="overlay-text-thumb1-donut">PORTFOLIO</span>
-                  <span class="overlay-text-thumb2-donut">PORTFOLIO</span>
-                </div>
-                <img src="assets/img/effect07.svg" alt="portfolio">
-                <div class="img-text donutImg">
-                  <h5>PORTFOLIO</h5>
-                  <p>PORTFOLIO</p>
-                  <span>PORTFOLIO</span>
-                </div>
-              </div>
-            </a>
-          </section>
-          <!-- //box -->
-
-
+        <!-- contents_tit -->
+        <div id="contents_tit">
+            <div class="titt">
+                <p>
+                    <a href="#" class="tit_btn"
+                        >&quot;나는 <span>신동진</span> 입니다!&quot;</a
+                    >
+                </p>
+            </div>
         </div>
-        <!-- //container-->
-      </div>
-      <!-- //row -->
-    </div>
-    <!-- //container-->
-  </div>
-  <!-- //contents -->
+        <!-- //contents_tit -->
 
+        <!-- contents -->
+        <div id="customizing">
+            <div class="container">
+                <div class="row">
+                    <nav
+                        class="nav2 filter option-set"
+                        data-filter-group="color"
+                    >
+                        <a
+                            href="#filter-color-any"
+                            class="nav-item is-active"
+                            active-color="orange"
+                            >ALL</a
+                        >
+                        <a
+                            href="#filter-color-webstandard"
+                            class="nav-item webstandard"
+                            active-color="green"
+                            data-filter-value=".class"
+                            >CLASS</a
+                        >
+                        <a
+                            href="#filter-color-webstandard"
+                            class="nav-item webstandard"
+                            active-color="blue"
+                            data-filter-value=".javascript"
+                            >JAVASCRIPT</a
+                        >
+                        <a
+                            href="#filter-color-webstandard"
+                            class="nav-item webstandard"
+                            active-color="red"
+                            data-filter-value=".site"
+                            >SITE</a
+                        >
+                        <a
+                            href="#filter-color-webstandard"
+                            class="nav-item webstandard"
+                            active-color="rebeccapurple"
+                            data-filter-value=".html"
+                            >HTML</a
+                        >
+                        <span class="nav-indicator"></span>
+                    </nav>
+                </div>
 
-  <!-- footer -->
-  <div id="footer">
-    <div class="container">
-      <div class="row">
-        <div class="span12">
-          <h5>
-            <a href="https://dongjin6539.github.io/web2023/" target="_blank">Shin dongjin</a>
-            <span id="clock"></span>
-            <span id="infor"></span>
-          </h5>
+                <div class="row" id="middle" style="margin-left: 16px">
+                    <div id="container" class="clearfix">
+                        <!-- box -->
+                        <section class="color-shape class">
+                            <a href="class/index.html" target="_blank">
+                                <div class="image-wrap">
+                                    <div class="hover-wrap">
+                                        <span class="overlay-img-donut"
+                                            >CLASS</span
+                                        >
+                                        <span class="overlay-text-thumb-donut"
+                                            >클래스</span
+                                        >
+                                        <span class="overlay-text-thumb1-donut"
+                                            >클래스</span
+                                        >
+                                        <span class="overlay-text-thumb2-donut"
+                                            >CLASS</span
+                                        >
+                                    </div>
+                                    <img
+                                        src="assets/img/class.svg"
+                                        alt="portfolio"
+                                    />
+                                    <div class="img-text donutImg">
+                                        <h5>CLASS</h5>
+                                        <p>클래스</p>
+                                        <span>CLASS</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </section>
+                        <!-- //box -->
+
+                        <!-- box -->
+                        <section class="color-shape javascript">
+                            <a href="javascript/index.html" target="_blank">
+                                <div class="image-wrap">
+                                    <div class="hover-wrap">
+                                        <span class="overlay-img-donut"
+                                            >JAVASCRIPT</span
+                                        >
+                                        <span class="overlay-text-thumb-donut"
+                                            >자바스크립트</span
+                                        >
+                                        <span class="overlay-text-thumb1-donut"
+                                            >자바스크립트</span
+                                        >
+                                        <span class="overlay-text-thumb2-donut"
+                                            >JAVASCRIPT</span
+                                        >
+                                    </div>
+                                    <img
+                                        src="assets/img/javascript.svg"
+                                        alt="portfolio"
+                                    />
+                                    <div class="img-text donutImg">
+                                        <h5>JAVASCRIPT</h5>
+                                        <p>자바스크립트</p>
+                                        <span>JAVASCRIPT</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </section>
+                        <!-- //box -->
+
+                        <!-- box -->
+                        <section class="color-shape html">
+                            <a href="webd/index.html" target="_blank">
+                                <div class="image-wrap">
+                                    <div class="hover-wrap">
+                                        <span class="overlay-img-donut"
+                                            >HTML</span
+                                        >
+                                        <span class="overlay-text-thumb-donut"
+                                            >레이아웃 연습</span
+                                        >
+                                        <span class="overlay-text-thumb1-donut"
+                                            >레이아웃</span
+                                        >
+                                        <span class="overlay-text-thumb2-donut"
+                                            >HTML</span
+                                        >
+                                    </div>
+                                    <img
+                                        src="assets/img/layout.svg"
+                                        alt="portfolio"
+                                    />
+                                    <div class="img-text donutImg">
+                                        <h5>LAYOUT</h5>
+                                        <p>레이아웃</p>
+                                        <span>LAYOUT</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </section>
+                        <!-- //box -->
+
+                        <!-- box -->
+                        <section class="color-shape site">
+                            <a href="mysql/index.html" target="_blank">
+                                <div class="image-wrap">
+                                    <div class="hover-wrap">
+                                        <span class="overlay-img-donut"
+                                            >MYSQL</span
+                                        >
+                                        <span class="overlay-text-thumb-donut"
+                                            >MYSQL</span
+                                        >
+                                        <span class="overlay-text-thumb1-donut"
+                                            >MYSQL</span
+                                        >
+                                        <span class="overlay-text-thumb2-donut"
+                                            >MYSQL</span
+                                        >
+                                    </div>
+                                    <img
+                                        src="assets/img/mysql.svg"
+                                        alt="portfolio"
+                                    />
+                                    <div class="img-text donutImg">
+                                        <h5>MYSQL</h5>
+                                        <p>MYSQL</p>
+                                        <span>MYSQL</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </section>
+                        <!-- //box -->
+
+                        <!-- box -->
+                        <section class="color-shape site react">
+                            <a href="react/index.html" target="_blank">
+                                <div class="image-wrap">
+                                    <div class="hover-wrap">
+                                        <span class="overlay-img-donut"
+                                            >REACT</span
+                                        >
+                                        <span class="overlay-text-thumb-donut"
+                                            >REACT</span
+                                        >
+                                        <span class="overlay-text-thumb1-donut"
+                                            >REACT</span
+                                        >
+                                        <span class="overlay-text-thumb2-donut"
+                                            >REACT</span
+                                        >
+                                    </div>
+                                    <img
+                                        src="assets/img/react.svg"
+                                        alt="portfolio"
+                                    />
+                                    <div class="img-text donutImg">
+                                        <h5>REACT</h5>
+                                        <p>REACT</p>
+                                        <span>REACT</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </section>
+                        <!-- //box -->
+
+                        <!-- box -->
+                        <section class="color-shape site">
+                            <a href="react/webpack.html" target="_blank">
+                                <div class="image-wrap">
+                                    <div class="hover-wrap">
+                                        <span class="overlay-img-donut"
+                                            >WEBPACK</span
+                                        >
+                                        <span class="overlay-text-thumb-donut"
+                                            >WEBPACK</span
+                                        >
+                                        <span class="overlay-text-thumb1-donut"
+                                            >WEBPACK</span
+                                        >
+                                        <span class="overlay-text-thumb2-donut"
+                                            >WEBPACK</span
+                                        >
+                                    </div>
+                                    <img
+                                        src="assets/img/webpack.svg"
+                                        alt="portfolio"
+                                    />
+                                    <div class="img-text donutImg">
+                                        <h5>WEBPACK</h5>
+                                        <p>WEBPACK</p>
+                                        <span>WEBPACK</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </section>
+                        <!-- //box -->
+
+                        <!-- box -->
+                        <section class="color-shape site">
+                            <a href="react/vite.html" target="_blank">
+                                <div class="image-wrap">
+                                    <div class="hover-wrap">
+                                        <span class="overlay-img-donut"
+                                            >Vite</span
+                                        >
+                                        <span class="overlay-text-thumb-donut"
+                                            >Vite</span
+                                        >
+                                        <span class="overlay-text-thumb1-donut"
+                                            >Vite</span
+                                        >
+                                        <span class="overlay-text-thumb2-donut"
+                                            >Vite</span
+                                        >
+                                    </div>
+                                    <img
+                                        src="assets/img/vite.svg"
+                                        alt="portfolio"
+                                    />
+                                    <div class="img-text donutImg">
+                                        <h5>Vite</h5>
+                                        <p>Vite</p>
+                                        <span>Vite</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </section>
+                        <!-- //box -->
+
+                        <!-- box -->
+                        <section class="color-shape site">
+                            <a href="react/vue.html" target="_blank">
+                                <div class="image-wrap">
+                                    <div class="hover-wrap">
+                                        <span class="overlay-img-donut"
+                                            >Vue</span
+                                        >
+                                        <span class="overlay-text-thumb-donut"
+                                            >Vue</span
+                                        >
+                                        <span class="overlay-text-thumb1-donut"
+                                            >Vue</span
+                                        >
+                                        <span class="overlay-text-thumb2-donut"
+                                            >Vue</span
+                                        >
+                                    </div>
+                                    <img
+                                        src="assets/img/vue.svg"
+                                        alt="portfolio"
+                                    />
+                                    <div class="img-text donutImg">
+                                        <h5>Vue</h5>
+                                        <p>Vue</p>
+                                        <span>Vue</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </section>
+                        <!-- //box -->
+
+                        <!-- box -->
+                        <section class="color-shape site">
+                            <a href="site/index.html" target="_blank">
+                                <div class="image-wrap">
+                                    <div class="hover-wrap">
+                                        <span class="overlay-img-donut"
+                                            >SITE</span
+                                        >
+                                        <span class="overlay-text-thumb-donut"
+                                            >사이트 만들기</span
+                                        >
+                                        <span class="overlay-text-thumb1-donut"
+                                            >사이트 만들기</span
+                                        >
+                                        <span class="overlay-text-thumb2-donut"
+                                            >SITE</span
+                                        >
+                                    </div>
+                                    <img
+                                        src="assets/img/site.svg"
+                                        alt="portfolio"
+                                    />
+                                    <div class="img-text donutImg">
+                                        <h5>SITE</h5>
+                                        <p>사이트 만들기</p>
+                                        <span>SITE</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </section>
+                        <!-- //box -->
+
+                        <!-- box -->
+                        <section class="color-shape site">
+                            <a href="site/site1/index.html" target="_blank">
+                                <div class="image-wrap">
+                                    <div class="hover-wrap">
+                                        <span class="overlay-img-donut"
+                                            >SITE1</span
+                                        >
+                                        <span class="overlay-text-thumb-donut"
+                                            >SITE 유형 완성</span
+                                        >
+                                        <span class="overlay-text-thumb1-donut"
+                                            >SITE 유형 완성</span
+                                        >
+                                        <span class="overlay-text-thumb2-donut"
+                                            >SITE1</span
+                                        >
+                                    </div>
+                                    <img
+                                        src="assets/img/site.svg"
+                                        alt="portfolio"
+                                    />
+                                    <div class="img-text donutImg">
+                                        <h5>SITE1</h5>
+                                        <p>SITE 유형 완성</p>
+                                        <span>SITE1</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </section>
+                        <!-- //box -->
+
+                        <!-- box -->
+                        <section class="color-shape site">
+                            <a
+                                href="javascript/parallax/parallaxEffectExam.html"
+                                target="_blank"
+                            >
+                                <div class="image-wrap">
+                                    <div class="hover-wrap">
+                                        <span class="overlay-img-donut"
+                                            >SITE2</span
+                                        >
+                                        <span class="overlay-text-thumb-donut"
+                                            >스크롤 이펙트 사이트</span
+                                        >
+                                        <span class="overlay-text-thumb1-donut"
+                                            >스크롤 이펙트 사이트</span
+                                        >
+                                        <span class="overlay-text-thumb2-donut"
+                                            >SITE2</span
+                                        >
+                                    </div>
+                                    <img
+                                        src="assets/img/site.svg"
+                                        alt="portfolio"
+                                    />
+                                    <div class="img-text donutImg">
+                                        <h5>SITE2</h5>
+                                        <p>스크롤 이펙트 사이트</p>
+                                        <span>SITE2</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </section>
+                        <!-- //box -->
+
+                        <!-- box -->
+                        <section class="color-shape site">
+                            <a
+                                href="http://dongjin6539.dothome.co.kr/php/index.html"
+                                target="_blank"
+                            >
+                                <div class="image-wrap">
+                                    <div class="hover-wrap">
+                                        <span class="overlay-img-donut"
+                                            >SITE3</span
+                                        >
+                                        <span class="overlay-text-thumb-donut"
+                                            >PHP 블로그 사이트</span
+                                        >
+                                        <span class="overlay-text-thumb1-donut"
+                                            >PHP 블로그 사이트</span
+                                        >
+                                        <span class="overlay-text-thumb2-donut"
+                                            >SITE3</span
+                                        >
+                                    </div>
+                                    <img
+                                        src="assets/img/php.svg"
+                                        alt="portfolio"
+                                    />
+                                    <div class="img-text donutImg">
+                                        <h5>SITE3</h5>
+                                        <p>PHP 블로그 사이트</p>
+                                        <span>SITE3</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </section>
+                        <!-- //box -->
+
+                        <!-- box -->
+                        <section class="color-shape site">
+                            <a
+                                href="http://dongjin6539.dothome.co.kr/php2/index.html"
+                                target="_blank"
+                            >
+                                <div class="image-wrap">
+                                    <div class="hover-wrap">
+                                        <span class="overlay-img-donut"
+                                            >SITE4</span
+                                        >
+                                        <span class="overlay-text-thumb-donut"
+                                            >PHP 조별 사이트</span
+                                        >
+                                        <span class="overlay-text-thumb1-donut"
+                                            >PHP 조별 사이트</span
+                                        >
+                                        <span class="overlay-text-thumb2-donut"
+                                            >SITE4</span
+                                        >
+                                    </div>
+                                    <img
+                                        src="assets/img/php.svg"
+                                        alt="portfolio"
+                                    />
+                                    <div class="img-text donutImg">
+                                        <h5>SITE4</h5>
+                                        <p>PHP 조별 사이트</p>
+                                        <span>SITE4</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </section>
+                        <!-- //box -->
+
+                        <!-- box -->
+                        <section class="color-shape javascript">
+                            <a
+                                href="javascript/game/gameEffect01.html"
+                                target="_blank"
+                            >
+                                <div class="image-wrap">
+                                    <div class="hover-wrap">
+                                        <span class="overlay-img-donut"
+                                            >GAME</span
+                                        >
+                                        <span class="overlay-text-thumb-donut"
+                                            >GAME Effect</span
+                                        >
+                                        <span class="overlay-text-thumb1-donut"
+                                            >GAME Effect</span
+                                        >
+                                        <span class="overlay-text-thumb2-donut"
+                                            >GAME</span
+                                        >
+                                    </div>
+                                    <img
+                                        src="assets/img/effect01.svg"
+                                        alt="portfolio"
+                                    />
+                                    <div class="img-text donutImg">
+                                        <h5>GAME</h5>
+                                        <p>GAME Effect</p>
+                                        <span>GAME</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </section>
+                        <!-- //box -->
+
+                        <!-- box -->
+                        <section class="color-shape javascript">
+                            <a
+                                href="javascript/mouse/mouseEffect01.html"
+                                target="_blank"
+                            >
+                                <div class="image-wrap">
+                                    <div class="hover-wrap">
+                                        <span class="overlay-img-donut"
+                                            >MOUSE</span
+                                        >
+                                        <span class="overlay-text-thumb-donut"
+                                            >MOUSE Effect</span
+                                        >
+                                        <span class="overlay-text-thumb1-donut"
+                                            >MOUSE Effect</span
+                                        >
+                                        <span class="overlay-text-thumb2-donut"
+                                            >MOUSE</span
+                                        >
+                                    </div>
+                                    <img
+                                        src="assets/img/effect02.svg"
+                                        alt="portfolio"
+                                    />
+                                    <div class="img-text donutImg">
+                                        <h5>MOUSE</h5>
+                                        <p>MOUSE Effect</p>
+                                        <span>MOUSE</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </section>
+                        <!-- //box -->
+
+                        <!-- box -->
+                        <section class="color-shape javascript">
+                            <a
+                                href="javascript/parallax/parallaxEffect01.html"
+                                target="_blank"
+                            >
+                                <div class="image-wrap">
+                                    <div class="hover-wrap">
+                                        <span class="overlay-img-donut"
+                                            >PARALLAX</span
+                                        >
+                                        <span class="overlay-text-thumb-donut"
+                                            >PARALLAX Effect</span
+                                        >
+                                        <span class="overlay-text-thumb1-donut"
+                                            >PARALLAX Effect</span
+                                        >
+                                        <span class="overlay-text-thumb2-donut"
+                                            >PARALLAX</span
+                                        >
+                                    </div>
+                                    <img
+                                        src="assets/img/effect03.svg"
+                                        alt="portfolio"
+                                    />
+                                    <div class="img-text donutImg">
+                                        <h5>PARALLAX</h5>
+                                        <p>PARALLAX Effect</p>
+                                        <span>PARALLAX</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </section>
+                        <!-- //box -->
+
+                        <!-- box -->
+                        <section class="color-shape javascript">
+                            <a
+                                href="javascript/quiz/quizEffect01.html"
+                                target="_blank"
+                            >
+                                <div class="image-wrap">
+                                    <div class="hover-wrap">
+                                        <span class="overlay-img-donut"
+                                            >QUIZ</span
+                                        >
+                                        <span class="overlay-text-thumb-donut"
+                                            >QUIZ Effect</span
+                                        >
+                                        <span class="overlay-text-thumb1-donut"
+                                            >QUIZ Effect</span
+                                        >
+                                        <span class="overlay-text-thumb2-donut"
+                                            >QUIZ</span
+                                        >
+                                    </div>
+                                    <img
+                                        src="assets/img/effect04.svg"
+                                        alt="portfolio"
+                                    />
+                                    <div class="img-text donutImg">
+                                        <h5>QUIZ</h5>
+                                        <p>QUIZ Effect</p>
+                                        <span>QUIZ</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </section>
+                        <!-- //box -->
+
+                        <!-- box -->
+                        <section class="color-shape javascript">
+                            <a
+                                href="javascript/search/searchEffect01.html"
+                                target="_blank"
+                            >
+                                <div class="image-wrap">
+                                    <div class="hover-wrap">
+                                        <span class="overlay-img-donut"
+                                            >SEARCH</span
+                                        >
+                                        <span class="overlay-text-thumb-donut"
+                                            >SEARCH Effect</span
+                                        >
+                                        <span class="overlay-text-thumb1-donut"
+                                            >SEARCH Effect</span
+                                        >
+                                        <span class="overlay-text-thumb2-donut"
+                                            >SEARCH</span
+                                        >
+                                    </div>
+                                    <img
+                                        src="assets/img/effect05.svg"
+                                        alt="portfolio"
+                                    />
+                                    <div class="img-text donutImg">
+                                        <h5>SEARCH</h5>
+                                        <p>SEARCH Effect</p>
+                                        <span>SEARCH</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </section>
+                        <!-- //box -->
+
+                        <!-- box -->
+                        <section class="color-shape javascript">
+                            <a
+                                href="javascript/slider/sliderEffect01.html"
+                                target="_blank"
+                            >
+                                <div class="image-wrap">
+                                    <div class="hover-wrap">
+                                        <span class="overlay-img-donut"
+                                            >SLIDER</span
+                                        >
+                                        <span class="overlay-text-thumb-donut"
+                                            >SLIDER Effect</span
+                                        >
+                                        <span class="overlay-text-thumb1-donut"
+                                            >SLIDER Effect</span
+                                        >
+                                        <span class="overlay-text-thumb2-donut"
+                                            >SLIDER</span
+                                        >
+                                    </div>
+                                    <img
+                                        src="assets/img/effect06.svg"
+                                        alt="portfolio"
+                                    />
+                                    <div class="img-text donutImg">
+                                        <h5>SLIDER</h5>
+                                        <p>SLIDER Effect</p>
+                                        <span>SLIDER</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </section>
+                        <!-- //box -->
+
+                        <!-- box -->
+                        <section class="color-shape javascript">
+                            <a
+                                href="https://sdj-site-5c4a0.web.app"
+                                target="_blank"
+                            >
+                                <div class="image-wrap">
+                                    <div class="hover-wrap">
+                                        <span class="overlay-img-donut"
+                                            >PORTFOLIO</span
+                                        >
+                                        <span class="overlay-text-thumb-donut"
+                                            >PORTFOLIO</span
+                                        >
+                                        <span class="overlay-text-thumb1-donut"
+                                            >PORTFOLIO</span
+                                        >
+                                        <span class="overlay-text-thumb2-donut"
+                                            >PORTFOLIO</span
+                                        >
+                                    </div>
+                                    <img
+                                        src="assets/img/effect07.svg"
+                                        alt="portfolio"
+                                    />
+                                    <div class="img-text donutImg">
+                                        <h5>PORTFOLIO</h5>
+                                        <p>PORTFOLIO</p>
+                                        <span>PORTFOLIO</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </section>
+                        <!-- //box -->
+                    </div>
+                    <!-- //container-->
+                </div>
+                <!-- //row -->
+            </div>
+            <!-- //container-->
         </div>
-      </div>
-    </div>
-  </div>
-  <!-- //footer -->
+        <!-- //contents -->
 
+        <!-- footer -->
+        <div id="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="span12">
+                        <h5>
+                            <a
+                                href="https://dongjin6539.github.io/web2023/"
+                                target="_blank"
+                                >Shin dongjin</a
+                            >
+                            <span id="clock"></span>
+                            <span id="infor"></span>
+                        </h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- //footer -->
 
-  <!-- script -->
-  <script src="assets/js/jquery-1.9.1.min.js"></script>
-  <script src="assets/js/bootstrap-collapse.js"></script>
-  <script src="assets/js/bootstrap-transition.js"></script>
-  <script src="assets/js/jquery.isotope.min.js"></script>
-  <script>
-    //운영체제 정보 알아내기
-    let os = navigator.userAgent.toLowerCase();
-    let sw = screen.width;
-    let sh = screen.height;
-    let infor = document.getElementById("infor");
+        <!-- script -->
+        <script src="assets/js/jquery-1.9.1.min.js"></script>
+        <script src="assets/js/bootstrap-collapse.js"></script>
+        <script src="assets/js/bootstrap-transition.js"></script>
+        <script src="assets/js/jquery.isotope.min.js"></script>
+        <script>
+            //운영체제 정보 알아내기
+            let os = navigator.userAgent.toLowerCase();
+            let sw = screen.width;
+            let sh = screen.height;
+            let infor = document.getElementById("infor");
 
-    if (os.indexOf("windows") >= 0) {
-      infor.innerHTML = "현재 윈도우를 사용하고 있으며, 화면 크기는 " + sw + "x" + sh + " 입니다."
-    } else if (os.indexOf("macintosh") >= 0) {
-      infor.innerHTML = "현재 맥을 사용하고 있으며, 화면 크기는 " + sw + "x" + sh + " 입니다."
-    } else if (os.indexOf("iphone") >= 0) {
-      infor.innerHTML = "현재 아이폰을 사용하고 있으며, 화면 크기는 " + sw + "x" + sh + " 입니다."
-    } else if (os.indexOf("android") >= 0) {
-      infor.innerHTML = "현재 안드로이드 폰을 사용하고 있으며, 화면 크기는 " + sw + "x" + sh + " 입니다."
-    }
+            if (os.indexOf("windows") >= 0) {
+                infor.innerHTML =
+                    "현재 윈도우를 사용하고 있으며, 화면 크기는 " +
+                    sw +
+                    "x" +
+                    sh +
+                    " 입니다.";
+            } else if (os.indexOf("macintosh") >= 0) {
+                infor.innerHTML =
+                    "현재 맥을 사용하고 있으며, 화면 크기는 " +
+                    sw +
+                    "x" +
+                    sh +
+                    " 입니다.";
+            } else if (os.indexOf("iphone") >= 0) {
+                infor.innerHTML =
+                    "현재 아이폰을 사용하고 있으며, 화면 크기는 " +
+                    sw +
+                    "x" +
+                    sh +
+                    " 입니다.";
+            } else if (os.indexOf("android") >= 0) {
+                infor.innerHTML =
+                    "현재 안드로이드 폰을 사용하고 있으며, 화면 크기는 " +
+                    sw +
+                    "x" +
+                    sh +
+                    " 입니다.";
+            }
 
+            //시간 표현
+            let clock = document.getElementById("clock");
 
-    //시간 표현
-    let clock = document.getElementById("clock");
+            setInterval(function () {
+                clock.innerHTML = new Date().toLocaleTimeString();
+            }, 1000);
 
-    setInterval(function () {
-      clock.innerHTML = new Date().toLocaleTimeString();
-    }, 1000);
+            $(function () {
+                var $container = $("#container"),
+                    filters = {};
 
-    $(function () {
-      var $container = $('#container'),
-        filters = {};
+                $container.isotope({
+                    itemSelector: ".color-shape",
+                    masonry: {
+                        columnWidth: 57,
+                    },
+                });
 
-      $container.isotope({
-        itemSelector: '.color-shape',
-        masonry: {
-          columnWidth: 57
-        }
-      });
+                // filter buttons
+                $(".filter a").click(function () {
+                    var $this = $(this);
+                    // don't proceed if already selected
+                    if ($this.hasClass("selected")) {
+                        return;
+                    }
 
-      // filter buttons
-      $('.filter a').click(function () {
-        var $this = $(this);
-        // don't proceed if already selected
-        if ($this.hasClass('selected')) {
-          return;
-        }
+                    var $optionSet = $this.parents(".option-set");
+                    // change selected class
+                    $optionSet.find(".selected").removeClass("selected");
+                    $this.addClass("selected");
 
-        var $optionSet = $this.parents('.option-set');
-        // change selected class
-        $optionSet.find('.selected').removeClass('selected');
-        $this.addClass('selected');
+                    // store filter value in object
+                    // i.e. filters.color = 'red'
+                    var group = $optionSet.attr("data-filter-group");
+                    filters[group] = $this.attr("data-filter-value");
+                    // convert object into array
+                    var isoFilters = [];
+                    for (var prop in filters) {
+                        isoFilters.push(filters[prop]);
+                    }
+                    var selector = isoFilters.join("");
+                    $container.isotope({
+                        filter: selector,
+                    });
 
-        // store filter value in object
-        // i.e. filters.color = 'red'
-        var group = $optionSet.attr('data-filter-group');
-        filters[group] = $this.attr('data-filter-value');
-        // convert object into array
-        var isoFilters = [];
-        for (var prop in filters) {
-          isoFilters.push(filters[prop])
-        }
-        var selector = isoFilters.join('');
-        $container.isotope({
-          filter: selector
-        });
+                    return false;
+                });
 
-        return false;
-      });
+                $(".tit_btn").on("click", function (e) {
+                    e.preventDefault();
+                    $(".nav_container").toggleClass("on");
+                });
 
-      $('.tit_btn').on('click', function (e) {
-        e.preventDefault();
-        $('.nav_container').toggleClass('on');
-      });
+                $(".click").click(function () {
+                    $(".view").fadeToggle();
+                });
+            });
 
-      $(".click").click(function () {
-        $(".view").fadeToggle();
-      });
+            const indicator = document.querySelector(".nav-indicator");
+            const items = document.querySelectorAll(".nav-item");
 
-    });
+            function handleIndicator(el) {
+                items.forEach((item) => {
+                    item.classList.remove("is-active");
+                    item.removeAttribute("style");
+                });
 
-    const indicator = document.querySelector('.nav-indicator');
-    const items = document.querySelectorAll('.nav-item');
+                indicator.style.width = `${el.offsetWidth}px`;
+                indicator.style.left = `${el.offsetLeft}px`;
+                indicator.style.backgroundColor =
+                    el.getAttribute("active-color");
 
-    function handleIndicator(el) {
-      items.forEach(item => {
-        item.classList.remove('is-active');
-        item.removeAttribute('style');
-      });
-      
-      indicator.style.width = `${el.offsetWidth}px`;
-      indicator.style.left = `${el.offsetLeft}px`;
-      indicator.style.backgroundColor = el.getAttribute('active-color');
+                el.classList.add("is-active");
+                el.style.color = el.getAttribute("active-color");
+            }
 
-      el.classList.add('is-active');
-      el.style.color = el.getAttribute('active-color');
-    }
-
-
-    items.forEach((item, index) => {
-      item.addEventListener('click', (e) => { handleIndicator(e.target)});
-      item.classList.contains('is-active') && handleIndicator(item);
-    });
-  </script>
-</body>
-
+            items.forEach((item, index) => {
+                item.addEventListener("click", (e) => {
+                    handleIndicator(e.target);
+                });
+                item.classList.contains("is-active") && handleIndicator(item);
+            });
+        </script>
+    </body>
 </html>
